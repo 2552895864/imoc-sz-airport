@@ -1,13 +1,17 @@
 import React from "react";
-import styles from "./index.module.css";
 import WeatherAndTime from "./components/WeatherAndTime";
 import DutyBasicInfo from "./components/DutyBasicInfo";
 import Brief from "./components/Brief";
 import DutyListInfo from "./components/DutyListInfo";
-import DutyGroupInfo from './components/DutyGroupInfo';
+import DutyGroupInfo from "./components/DutyGroupInfo";
+
+import data from "@/assets/test.json";
+
+import styles from "./index.module.less";
 
 export default class Duty extends React.Component {
   render() {
+    console.log("data::::", data);
     return (
       <div className={styles.container}>
         <div className={styles.header}>统一运维值班表</div>
@@ -16,14 +20,14 @@ export default class Duty extends React.Component {
           <div className={styles.top}>
             <WeatherAndTime />
             <div className={styles.topRight}>
-              <DutyBasicInfo/>
-              <Brief/>
+              <DutyBasicInfo />
+              <Brief />
             </div>
           </div>
           {/* 下部信息 */}
           <div className={styles.bottom}>
-            <DutyListInfo/>
-            <DutyGroupInfo/>
+            <DutyListInfo />
+            <DutyGroupInfo />
             {/* <DividerLine/> */}
           </div>
         </div>

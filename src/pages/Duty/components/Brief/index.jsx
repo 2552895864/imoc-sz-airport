@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./index.module.css";
+import styles from "./index.module.less";
 
 const data = [
   "【 日常巡检 】：2020年6月12日巡检已完成，巡检项12,456个，巡检报告123个",

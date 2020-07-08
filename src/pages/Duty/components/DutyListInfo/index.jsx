@@ -1,7 +1,7 @@
 import React from "react";
-import HorizontalPhoneCard from "../../../../components/HorizontalPhoneCard";
-import DividerLine from "../../../../components/DividerLine";
-import styles from "./index.module.css";
+import HorizontalPhoneCard from "@/components/HorizontalPhoneCard";
+import DividerLine from "@/components/DividerLine";
+import styles from "./index.module.less";
 
 const data1 = [
   { name: "值班01", value: "李磊 13022221111" },

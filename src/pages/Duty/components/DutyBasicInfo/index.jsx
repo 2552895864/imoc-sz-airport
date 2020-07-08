@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./index.module.css";
-import HorizontalPhoneCard from "../../../../components/HorizontalPhoneCard";
+import styles from "./index.module.less";
+import HorizontalPhoneCard from "@/components/HorizontalPhoneCard";
 
 export default class DutyBasicInfo extends React.Component {
   render() {

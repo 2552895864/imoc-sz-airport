@@ -1,0 +1,63 @@
+.container {
+  justify-content: space-evenly;
+  box-sizing     : border-box;
+  display        : flex;
+  flex-wrap      : wrap;
+  width          : 1340px;
+
+  .cardContainer {
+    width            : 320px;
+    height           : 280px;
+    background-image : url(../../../../assets/groupItem.png);
+    background-repeat: no-repeat;
+    background-size  : 100% 100%;
+
+    box-sizing   : border-box;
+    flex         : none;
+    /*不放大不缩小*/
+    margin-right : 19px;
+    margin-bottom: 20px;
+  }
+
+  .cardContainerExtra {
+    margin-right: 0px;
+  }
+
+  .cardTitle {
+    height        : 40px;
+    font-family   : Helvetica;
+    font-size     : 20px;
+    color         : #FFFFFF;
+    letter-spacing: 0;
+    line-height   : 40px;
+    text-align    : center;
+  }
+
+  .phoneCardContainer {
+    margin-top : 24px;
+    margin-left: 65.4px;
+
+    .phoneCardPosition {
+      font-family   : Helvetica;
+      font-size     : 20px;
+      color         : #FFFFFF;
+      letter-spacing: 0;
+      line-height   : 26px;
+      margin-bottom : 6px;
+    }
+
+    .phoneCardMemberList {
+      margin         : 0;
+      padding-left   : 0px;
+      list-style-type: none;
+
+      .phoneCardMemberItem {
+        font-family   : Helvetica;
+        font-size     : 18px;
+        color         : #FFFFFF;
+        letter-spacing: 0;
+        line-height   : 30px;
+      }
+    }
+  }
+}

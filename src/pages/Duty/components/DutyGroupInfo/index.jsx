@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./index.module.css";
+import classnames from "classnames";
+import styles from "./index.module.less";
 
 const data = [
   {
@@ -46,12 +47,12 @@ const data = [
 
 const PhoneCard = ({ data, isLeader = false, style }) => (
   <div className={styles.phoneCardContainer} style={style}>
-    <div className={styles.cardPosition}>
+    <div className={styles.phoneCardPosition}>
       {`${isLeader ? "组长" : "当班"}：`}
     </div>
-    <ul className={styles.cardMemberList}>
+    <ul className={styles.phoneCardMemberList}>
       {data.map((item) => (
-        <li className={styles.cardMemberItem} key={item}>
+        <li className={styles.phoneCardMemberItem} key={item}>
           {item}
         </li>
       ))}
@@ -59,10 +60,15 @@ const PhoneCard = ({ data, isLeader = false, style }) => (
   </div>
 );
 
-const GroupItemCard = ({ data }) => {
+const GroupItemCard = ({ data, index }) => {
   const { groupName, leaderName, member } = data;
+  const isQuadruple = (index + 1) % 4 === 0; //是否是第四列
+  const cardClass = classnames({
+    [styles.cardContainer]:true,
+    [styles.cardContainerExtra]:isQuadruple,
+  })
   return (
-    <div className={styles.cardContainer}>
+    <div className={cardClass}>
       <div className={styles.cardTitle}>{groupName}</div>
       <PhoneCard data={leaderName} isLeader />
       <PhoneCard data={member} style={{ marginTop: "45px" }} />
@@ -74,8 +80,8 @@ export default class Brief extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        {data.map((item) => (
-          <GroupItemCard key={item.groupName} data={item} />
+        {data.map((item, index) => (
+          <GroupItemCard key={item.groupName} data={item} index={index} />
         ))}
       </div>
     );

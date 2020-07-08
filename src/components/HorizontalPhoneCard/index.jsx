@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./index.module.css";
 import classnames from "classnames";
+import styles from "./index.module.less";
 
 export default class HorizontalPhoneCard extends React.Component {
   render() {
