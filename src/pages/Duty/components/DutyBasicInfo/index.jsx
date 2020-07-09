@@ -8,7 +8,10 @@ export default class DutyBasicInfo extends React.Component {
   render() {
     const { data } = this.props;
     const { dispatchPhone } = dispatchData;
-    const leaderGroup = data.map((item) => generatePhoneCardString(item));
+
+    const leaderGroup = ["D", "N"].map((flag) =>
+      generatePhoneCardString(data.filter((item) => item.shift === flag)[0])
+    );
     return (
       <div className={styles.container}>
         <HorizontalPhoneCard

@@ -156,10 +156,10 @@ function e2c() {
 }
 
 function GetDateString() {
-  let tmp = "";
-  tmp += tgString.charAt((cYear - 4) % 10);
-  tmp += dzString.charAt((cYear - 4) % 12);
-  tmp += "年";
+  let tmp = "农历";
+  // tmp += tgString.charAt((cYear - 4) % 10);
+  // tmp += dzString.charAt((cYear - 4) % 12);
+  // tmp += "年";
   if (cMonth < 1) {
     tmp += "(闰)";
     tmp += monString.charAt(-cMonth - 1);
