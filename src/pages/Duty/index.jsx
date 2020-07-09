@@ -11,7 +11,18 @@ import dutyData from "@/data/dutyInfoByGroup1.json";
 import styles from "./index.module.less";
 
 export default class Duty extends React.Component {
+  state = {
+    currentTimeStamp: getCurrentTimeStamp(),
+  };
+  handleDateChange = (e) => {
+    const selectDate = e.target.value.replace(/-/g, "/");
+    // console.log("selectDate:", selectDate);
+    this.setState({
+      currentTimeStamp: selectDate,
+    });
+  };
   handleDutyData = () => {
+    const { currentTimeStamp } = this.state;
     const staffByGroup = [];
     const groupName = [
       "机位/IOC",
@@ -23,13 +34,12 @@ export default class Duty extends React.Component {
       "数通网络",
       "LTE",
     ];
-    const currentTimeStamp = getCurrentTimeStamp();
+    // const currentTimeStamp = getCurrentTimeStamp();
     const { rotaByDay, leaderList } = dutyData;
 
     const { staffList, leaderList: currentLeaderList } = rotaByDay.filter(
       (item) => item.date === currentTimeStamp
     )[0];
-    
 
     groupName.forEach((item) => {
       staffByGroup.push({
@@ -50,6 +60,12 @@ export default class Duty extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.header}>统一运维值班表</div>
+        <input
+          type="date"
+          style={{ position: "absolute" }}
+          onChange={this.handleDateChange}
+          className={styles.testCalendar}
+        />
         <div className={styles.content}>
           {/* 上部信息 */}
           <div className={styles.top}>

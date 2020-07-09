@@ -4,24 +4,24 @@
             "date": "2020/07/01",
             "leaderList": [
                 {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
-                    "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "伍柏荣",
+                    "staffMobile": "15282771862",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -76,8 +76,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -138,24 +138,24 @@
             "date": "2020/07/02",
             "leaderList": [
                 {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -210,8 +210,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -272,18 +272,18 @@
             "date": "2020/07/03",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
@@ -337,10 +337,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "D",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 },
                 {
@@ -406,24 +406,24 @@
             "date": "2020/07/04",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "谢彦青",
-                    "staffMobile": "18124613787",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -527,10 +527,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "N",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 }
             ],
@@ -540,24 +540,24 @@
             "date": "2020/07/05",
             "leaderList": [
                 {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -612,8 +612,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -674,24 +674,24 @@
             "date": "2020/07/06",
             "leaderList": [
                 {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -746,8 +746,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -808,18 +808,18 @@
             "date": "2020/07/07",
             "leaderList": [
                 {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
@@ -873,15 +873,15 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "D",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -942,16 +942,16 @@
             "date": "2020/07/08",
             "leaderList": [
                 {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
                 }
@@ -1014,8 +1014,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1063,10 +1063,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "N",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 }
             ],
@@ -1076,24 +1076,24 @@
             "date": "2020/07/09",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1148,8 +1148,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1210,24 +1210,24 @@
             "date": "2020/07/10",
             "leaderList": [
                 {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1282,8 +1282,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1344,18 +1344,18 @@
             "date": "2020/07/11",
             "leaderList": [
                 {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
@@ -1409,15 +1409,15 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "D",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1478,18 +1478,18 @@
             "date": "2020/07/12",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
@@ -1599,10 +1599,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "N",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 }
             ],
@@ -1612,24 +1612,24 @@
             "date": "2020/07/13",
             "leaderList": [
                 {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1684,8 +1684,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1746,24 +1746,24 @@
             "date": "2020/07/14",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1818,8 +1818,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -1880,18 +1880,18 @@
             "date": "2020/07/15",
             "leaderList": [
                 {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
@@ -1945,15 +1945,15 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "D",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2014,24 +2014,24 @@
             "date": "2020/07/16",
             "leaderList": [
                 {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2135,10 +2135,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "N",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 }
             ],
@@ -2148,24 +2148,24 @@
             "date": "2020/07/17",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2220,8 +2220,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "谢彦青",
-                    "staffMobile": "18124613787",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2282,24 +2282,24 @@
             "date": "2020/07/18",
             "leaderList": [
                 {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
-                    "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2354,8 +2354,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2416,18 +2416,18 @@
             "date": "2020/07/19",
             "leaderList": [
                 {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "曹孝飞",
-                    "staffMobile": "17744949221",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
@@ -2481,15 +2481,15 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "D",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2550,24 +2550,24 @@
             "date": "2020/07/20",
             "leaderList": [
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "谢彦青",
-                    "staffMobile": "18124613787",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2671,10 +2671,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "N",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 }
             ],
@@ -2684,24 +2684,24 @@
             "date": "2020/07/21",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2756,8 +2756,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "谢彦青",
-                    "staffMobile": "18124613787",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2818,24 +2818,24 @@
             "date": "2020/07/22",
             "leaderList": [
                 {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2890,8 +2890,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -2952,18 +2952,18 @@
             "date": "2020/07/23",
             "leaderList": [
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
@@ -3017,10 +3017,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "D",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 },
                 {
@@ -3086,24 +3086,24 @@
             "date": "2020/07/24",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "谢彦青",
-                    "staffMobile": "18124613787",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3207,10 +3207,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "N",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 }
             ],
@@ -3220,24 +3220,24 @@
             "date": "2020/07/25",
             "leaderList": [
                 {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3292,8 +3292,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "谢彦青",
-                    "staffMobile": "18124613787",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3354,24 +3354,24 @@
             "date": "2020/07/26",
             "leaderList": [
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "肖述军",
-                    "staffMobile": "13260651055",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3426,8 +3426,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3488,18 +3488,18 @@
             "date": "2020/07/27",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
@@ -3553,15 +3553,15 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "D",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3622,24 +3622,24 @@
             "date": "2020/07/28",
             "leaderList": [
                 {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3743,10 +3743,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "N",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 }
             ],
@@ -3756,24 +3756,24 @@
             "date": "2020/07/29",
             "leaderList": [
                 {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3828,8 +3828,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3890,24 +3890,24 @@
             "date": "2020/07/30",
             "leaderList": [
                 {
-                    "staffName": "段峰峰",
-                    "staffMobile": "18968931517",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
                     "shift": "D",
                     "leader": false,
-                    "staffGroup": "机位/IOC"
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "李晓辉",
-                    "staffMobile": "18310074303",
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -3962,8 +3962,8 @@
                     "staffGroup": "LTE"
                 },
                 {
-                    "staffName": "兰正旺",
-                    "staffMobile": "18874651879",
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
                     "shift": "N",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -4024,24 +4024,24 @@
             "date": "2020/07/31",
             "leaderList": [
                 {
-                    "staffName": "刘昊泽",
-                    "staffMobile": "19969013901",
-                    "shift": "N",
-                    "leader": false,
-                    "staffGroup": "机位/IOC"
-                },
-                {
                     "staffName": "常涛",
                     "staffMobile": "17680312454",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
                 }
             ],
             "staffList": [
                 {
-                    "staffName": "常涛",
-                    "staffMobile": "17680312454",
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
                     "shift": "D",
                     "leader": false,
                     "staffGroup": "云计算"
@@ -4089,10 +4089,10 @@
                     "staffGroup": "视频安防"
                 },
                 {
-                    "staffName": null,
-                    "staffMobile": null,
+                    "staffName": "丁骏铎",
+                    "staffMobile": "13127868673",
                     "shift": "D",
-                    "leader": null,
+                    "leader": false,
                     "staffGroup": "LTE"
                 },
                 {

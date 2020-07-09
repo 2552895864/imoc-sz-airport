@@ -6,7 +6,7 @@ import {
   getCurrentHoursAndMinutes,
   getTimeFrame,
 } from "@/utils/getDateTime";
-import weatherData from '@/data/天气.json';
+import weatherData from "@/data/天气.json";
 import styles from "./index.module.less";
 
 export default class WeatherAndTime extends React.Component {
@@ -61,7 +61,9 @@ export default class WeatherAndTime extends React.Component {
         {/* 天气区域 */}
         <div className={styles.weatherContainer}>
           <div className={styles.weather}>{weatherData.weather}</div>
-          <div className={styles.temperature}>{`${weatherData.temperature}℃`}</div>
+          <div
+            className={styles.temperature}
+          >{`${weatherData.temperature}℃`}</div>
         </div>
       </div>
     );
