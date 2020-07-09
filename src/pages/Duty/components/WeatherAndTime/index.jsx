@@ -6,7 +6,7 @@ import {
   getCurrentHoursAndMinutes,
   getTimeFrame,
 } from "@/utils/getDateTime";
-import weatherData from '@/data/weather.json';
+import weatherData from '@/data/天气.json';
 import styles from "./index.module.less";
 
 export default class WeatherAndTime extends React.Component {

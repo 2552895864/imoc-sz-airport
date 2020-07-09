@@ -27,7 +27,6 @@ export default class Duty extends React.Component {
     const { rotaByDay, leaderList } = dutyData;
 
     const { staffList, leaderList: currentLeaderList } = rotaByDay.filter(
-      // (item) => item.date === currentTimeStamp
       (item) => item.date === currentTimeStamp
     )[0];
     

@@ -1,5 +1,5 @@
 import React from "react";
-import data from '@/data/brief.json';
+import data from '@/data/简报通知.json';
 import styles from "./index.module.less";
 
 export default class Brief extends React.Component {

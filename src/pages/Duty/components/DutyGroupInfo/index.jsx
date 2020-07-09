@@ -51,7 +51,7 @@ export default class Brief extends React.Component {
         .filter((staff) => staff.leader === true && !staff.shift)
         .map((item) => generatePhoneCardString(item)),
       member: Object.values(element)[0]
-        .filter((staff) => staff.leader === false)
+        .filter((staff) => staff.shift !== null)
         .map((item) => generatePhoneCardString(item)),
     }));
     return finalGroup;
