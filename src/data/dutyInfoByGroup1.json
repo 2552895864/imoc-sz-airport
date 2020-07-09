@@ -1,0 +1,4216 @@
+{
+    "rotaByDay": [
+        {
+            "date": "2020/07/01",
+            "leaderList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "D",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/02",
+            "leaderList": [
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "N",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/03",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "D",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/04",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "N",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/05",
+            "leaderList": [
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "D",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/06",
+            "leaderList": [
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "N",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/07",
+            "leaderList": [
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "D",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/08",
+            "leaderList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "N",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/09",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "D",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/10",
+            "leaderList": [
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "N",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/11",
+            "leaderList": [
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "D",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/12",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "N",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/13",
+            "leaderList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "D",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/14",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "N",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/15",
+            "leaderList": [
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "D",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/16",
+            "leaderList": [
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "N",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/17",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "D",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/18",
+            "leaderList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "N",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/19",
+            "leaderList": [
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "曹孝飞",
+                    "staffMobile": "17744949221",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "D",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/20",
+            "leaderList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "N",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/21",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "D",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/22",
+            "leaderList": [
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "N",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/23",
+            "leaderList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "D",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/24",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "N",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/25",
+            "leaderList": [
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "D",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/26",
+            "leaderList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "N",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/27",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "D",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/28",
+            "leaderList": [
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "N",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/29",
+            "leaderList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "D",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "谢彦青",
+                    "staffMobile": "18124613787",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "赖如冬",
+                    "staffMobile": "17349721510",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/30",
+            "leaderList": [
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "肖述军",
+                    "staffMobile": "13260651055",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "刘斌斌",
+                    "staffMobile": "15122212535",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "周恩永",
+                    "staffMobile": "18829291215",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "李强",
+                    "staffMobile": "13554752539",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "段峰峰",
+                    "staffMobile": "18968931517",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "刘益伟",
+                    "staffMobile": "18374277189",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "程长青",
+                    "staffMobile": "15870627360",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "罗智霖",
+                    "staffMobile": "13192262350",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "刘路达",
+                    "staffMobile": "15177756699",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "兰正旺",
+                    "staffMobile": "18874651879",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘云鹏",
+                    "staffMobile": "13699885905",
+                    "shift": "N",
+                    "leader": true,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        },
+        {
+            "date": "2020/07/31",
+            "leaderList": [
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                }
+            ],
+            "staffList": [
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "常涛",
+                    "staffMobile": "17680312454",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "周丽龙",
+                    "staffMobile": "13530208179",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "李银桦",
+                    "staffMobile": "18587212294",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "刘伟",
+                    "staffMobile": "15217065094",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "冯子豪",
+                    "staffMobile": "19820223626",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "黄冠华",
+                    "staffMobile": "18177404095",
+                    "shift": "D",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": null,
+                    "staffMobile": null,
+                    "shift": "D",
+                    "leader": null,
+                    "staffGroup": "LTE"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "云计算"
+                },
+                {
+                    "staffName": "刘昊泽",
+                    "staffMobile": "19969013901",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "机位/IOC"
+                },
+                {
+                    "staffName": "尹志军",
+                    "staffMobile": "15718223736",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "ROMA"
+                },
+                {
+                    "staffName": "聂锦华",
+                    "staffMobile": "15179992245",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "UCC"
+                },
+                {
+                    "staffName": "杨昱帆",
+                    "staffMobile": "18779635799",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "大数据"
+                },
+                {
+                    "staffName": "王政",
+                    "staffMobile": "18337631878",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "数通网络"
+                },
+                {
+                    "staffName": "李晓辉",
+                    "staffMobile": "18310074303",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "视频安防"
+                },
+                {
+                    "staffName": "刘志豪",
+                    "staffMobile": "18813924005",
+                    "shift": "N",
+                    "leader": false,
+                    "staffGroup": "LTE"
+                }
+            ],
+            "airPortStaffList": null
+        }
+    ],
+    "leaderList": [
+        {
+            "staffName": "方正东",
+            "staffMobile": "18676387686",
+            "shift": null,
+            "leader": true,
+            "staffGroup": "ROMA"
+        },
+        {
+            "staffName": "林昌宏",
+            "staffMobile": "17602055814",
+            "shift": null,
+            "leader": true,
+            "staffGroup": "UCC"
+        },
+        {
+            "staffName": "庄友深",
+            "staffMobile": "13420018232",
+            "shift": null,
+            "leader": true,
+            "staffGroup": "视频安防"
+        },
+        {
+            "staffName": "梁阳",
+            "staffMobile": "13777126531",
+            "shift": null,
+            "leader": true,
+            "staffGroup": "数通网络"
+        },
+        {
+            "staffName": "欧桂超",
+            "staffMobile": "15875956239",
+            "shift": null,
+            "leader": true,
+            "staffGroup": "云计算"
+        },
+        {
+            "staffName": "刘云鹏",
+            "staffMobile": "13699885905",
+            "shift": null,
+            "leader": true,
+            "staffGroup": "LTE"
+        },
+        {
+            "staffName": "苏自豪",
+            "staffMobile": "15838112352",
+            "shift": null,
+            "leader": true,
+            "staffGroup": "机位/IOC"
+        },
+        {
+            "staffName": "邹鹏锦",
+            "staffMobile": "16620143375",
+            "shift": null,
+            "leader": true,
+            "staffGroup": "大数据"
+        }
+    ]
+}

@@ -1,49 +1,15 @@
 import React from "react";
 import classnames from "classnames";
+import { generatePhoneCardString } from "../../utils";
 import styles from "./index.module.less";
 
-const data = [
-  {
-    groupName: "机位/IOC组",
-    leaderName: ["王超 12200009999"],
-    member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
-  },
-  {
-    groupName: "ROMA组",
-    leaderName: ["王超 12200009999"],
-    member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
-  },
-  {
-    groupName: "大数据组",
-    leaderName: ["王超 12200009999"],
-    member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
-  },
-  {
-    groupName: "云计算组",
-    leaderName: ["王超 12200009999"],
-    member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
-  },
-  {
-    groupName: "视频安防组",
-    leaderName: ["王超 12200009999"],
-    member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
-  },
-  {
-    groupName: "UCC组",
-    leaderName: ["王超 12200009999"],
-    member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
-  },
-  {
-    groupName: "数通网络组",
-    leaderName: ["王超 12200009999"],
-    member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
-  },
-  {
-    groupName: "LTE组",
-    leaderName: ["王超 12200009999"],
-    member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
-  },
-];
+// const data = [
+//   {
+//     groupName: "机位/IOC组",
+//     leaderName: ["王超 12200009999"],
+//     member: ["李丽（白） 13066665555", "王丽（晚） 13299998888"],
+//   },
+// ];
 
 const PhoneCard = ({ data, isLeader = false, style }) => (
   <div className={styles.phoneCardContainer} style={style}>
@@ -64,9 +30,9 @@ const GroupItemCard = ({ data, index }) => {
   const { groupName, leaderName, member } = data;
   const isQuadruple = (index + 1) % 4 === 0; //是否是第四列
   const cardClass = classnames({
-    [styles.cardContainer]:true,
-    [styles.cardContainerExtra]:isQuadruple,
-  })
+    [styles.cardContainer]: true,
+    [styles.cardContainerExtra]: isQuadruple,
+  });
   return (
     <div className={cardClass}>
       <div className={styles.cardTitle}>{groupName}</div>
@@ -77,10 +43,24 @@ const GroupItemCard = ({ data, index }) => {
 };
 
 export default class Brief extends React.Component {
+  convertData = () => {
+    const { data } = this.props;
+    const finalGroup = data.map((element) => ({
+      groupName: `${Object.keys(element)[0]}组`,
+      leaderName: Object.values(element)[0]
+        .filter((staff) => staff.leader === true && !staff.shift)
+        .map((item) => generatePhoneCardString(item)),
+      member: Object.values(element)[0]
+        .filter((staff) => staff.leader === false)
+        .map((item) => generatePhoneCardString(item)),
+    }));
+    return finalGroup;
+  };
   render() {
+    const groupData = this.convertData();
     return (
       <div className={styles.container}>
-        {data.map((item, index) => (
+        {groupData.map((item, index) => (
           <GroupItemCard key={item.groupName} data={item} index={index} />
         ))}
       </div>

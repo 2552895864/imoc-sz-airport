@@ -10,18 +10,28 @@
     line-height   : 40px;
     margin-right  : 16px;
     font-weight   : 600;
+    display       : inline-block;
+  }
+  .labelHidden{
+    visibility: hidden;
   }
 
-  .value {
-    font-family   : Helvetica;
-    font-size     : 20px;
-    color         : #FFFFFF;
-    letter-spacing: 0;
-    line-height   : 40px;
+  .valueContainer {
+    display: inline-block;
+
+    .value {
+      font-family   : Helvetica;
+      font-size     : 20px;
+      color         : #FFFFFF;
+      letter-spacing: 0;
+      line-height   : 40px;
+    }
+
+    .multiValue {
+      .value;
+      margin-right: 70px;
+    }
   }
 
-  .multiValue {
-    .value;
-    margin-right: 70px;
-  }
+
 }

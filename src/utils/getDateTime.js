@@ -67,9 +67,9 @@ const getLunarDate = () => {
 
 const getCurrentTimeStamp = () => {
   const { year, month, day } = getTimeInfo();
-  const currentDate = `${year}-${addZero(month)}-${addZero(day)}`;
-  const currentTimeStamp = new Date(currentDate).valueOf();
-  return currentTimeStamp
+  const currentDate = `${year}/${addZero(month)}/${addZero(day)}`;
+  // const currentTimeStamp = new Date(currentDate).valueOf();
+  return currentDate
 };
 
 export {

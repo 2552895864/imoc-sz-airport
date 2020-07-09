@@ -1,28 +1,15 @@
 import React from "react";
 import HorizontalPhoneCard from "@/components/HorizontalPhoneCard";
 import DividerLine from "@/components/DividerLine";
+import data from "@/data/dutyList.json";
 import styles from "./index.module.less";
 
-const data1 = [
-  { name: "值班01", value: "李磊 13022221111" },
-  { name: "值班经理", value: "李磊 13022221111" },
-];
-const data2 = [
-  { name: "数据中心", value: "李磊 13022221111" },
-  { name: "通讯运维", value: "李磊 13022221111" },
-];
-const data3 = [
-  { name: "系统值班", value: "李磊 13022221111" },
-  { name: "安防值班", value: "李磊 13022221111" },
-  { name: "网络值班", value: "李磊 13022221111" },
-  { name: "通讯值班", value: "李磊 13022221111" },
-];
 
 const List = ({ data }) => (
   <ul className={styles.list}>
     {data.map((item) => (
       <li className={styles.item} key={item.name}>
-        <HorizontalPhoneCard label={item.name} value={item.value} />
+        <HorizontalPhoneCard label={item.name} value={item.value} hideTitle={item.hideTitle}/>
       </li>
     ))}
   </ul>
@@ -30,13 +17,14 @@ const List = ({ data }) => (
 
 export default class DutyListInfo extends React.Component {
   render() {
+    const { groupOne, groupTwo, groupThree } = data;
     return (
       <div className={styles.container}>
-        <List data={data1} />
+        <List data={groupOne} />
         <DividerLine />
-        <List data={data2} />
+        <List data={groupTwo} />
         <DividerLine />
-        <List data={data3} />
+        <List data={groupThree} />
       </div>
     );
   }

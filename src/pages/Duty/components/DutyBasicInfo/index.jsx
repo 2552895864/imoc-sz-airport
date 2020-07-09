@@ -1,20 +1,25 @@
 import React from "react";
-import styles from "./index.module.less";
 import HorizontalPhoneCard from "@/components/HorizontalPhoneCard";
+import { generatePhoneCardString } from "../../utils";
+import dispatchData from "@/data/dispatch";
+import styles from "./index.module.less";
 
 export default class DutyBasicInfo extends React.Component {
   render() {
+    const { data } = this.props;
+    const { dispatchPhone } = dispatchData;
+    const leaderGroup = data.map((item) => generatePhoneCardString(item));
     return (
       <div className={styles.container}>
         <HorizontalPhoneCard
           className={styles.groupLeader}
           label="值班组长"
-          value={["李磊 13022221111", "王力 130XXXXXXXX"]}
+          value={leaderGroup}
         />
         <HorizontalPhoneCard
           className={styles.dispatchRoom}
           label="调度室"
-          value="联系电话：11233344"
+          value={dispatchPhone}
         />
       </div>
     );

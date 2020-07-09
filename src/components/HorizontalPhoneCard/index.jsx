@@ -4,25 +4,30 @@ import styles from "./index.module.less";
 
 export default class HorizontalPhoneCard extends React.Component {
   render() {
-    const { className, label, value } = this.props;
+    const { className, label, value, hideTitle } = this.props;
     const containerClass = classnames({
       [styles.container]: true,
       [className]: className,
     });
+    const labelClass = classnames({
+      [styles.label]: true,
+      [styles.labelHidden]: hideTitle,
+    })
     const valueIsArray = Array.isArray(value);
     return (
       <div className={containerClass}>
-        <span className={styles.label}>{`${label}:`}</span>
-        {valueIsArray ? (
-          value.map((item) => (
-            <span className={styles.multiValue} key={item}>
-              {item}
-            </span>
-          ))
-        ) : (
-          <span className={styles.value}>{value}</span>
-        )}
-        {/* <span className={styles.value}>{value}</span> */}
+        <div className={labelClass}>{`${label}:`}</div>
+        <div className={styles.valueContainer}>
+          {valueIsArray ? (
+            value.map((item) => (
+              <span className={styles.multiValue} key={item}>
+                {item}
+              </span>
+            ))
+          ) : (
+            <span className={styles.value}>{value}</span>
+          )}
+        </div>
       </div>
     );
   }

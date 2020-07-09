@@ -5,14 +5,49 @@ import Brief from "./components/Brief";
 import DutyListInfo from "./components/DutyListInfo";
 import DutyGroupInfo from "./components/DutyGroupInfo";
 
-// import { getCurrentTimeStamp } from "@/utils/getDateTime";
+import { getCurrentTimeStamp } from "@/utils/getDateTime";
+import dutyData from "@/data/dutyInfoByGroup1.json";
 
-// import data from "@/assets/test.json";
 import styles from "./index.module.less";
 
 export default class Duty extends React.Component {
+  handleDutyData = () => {
+    const staffByGroup = [];
+    const groupName = [
+      "机位/IOC",
+      "ROMA",
+      "大数据",
+      "云计算",
+      "视频安防",
+      "UCC",
+      "数通网络",
+      "LTE",
+    ];
+    const currentTimeStamp = getCurrentTimeStamp();
+    const { rotaByDay, leaderList } = dutyData;
+
+    const { staffList, leaderList: currentLeaderList } = rotaByDay.filter(
+      // (item) => item.date === currentTimeStamp
+      (item) => item.date === currentTimeStamp
+    )[0];
+    
+
+    groupName.forEach((item) => {
+      staffByGroup.push({
+        [item]: [
+          ...staffList.filter((staff) => staff.staffGroup === item),
+          ...leaderList.filter((leader) => leader.staffGroup === item),
+        ],
+      });
+    });
+    console.log("staffList::", staffList);
+    console.log("staffByGroup::", staffByGroup);
+
+    return { currentLeaderList, staffByGroup };
+  };
+
   render() {
-    // console.log("data::::", getCurrentTimeStamp());
+    const { currentLeaderList, staffByGroup } = this.handleDutyData();
     return (
       <div className={styles.container}>
         <div className={styles.header}>统一运维值班表</div>
@@ -21,14 +56,14 @@ export default class Duty extends React.Component {
           <div className={styles.top}>
             <WeatherAndTime />
             <div className={styles.topRight}>
-              <DutyBasicInfo />
+              <DutyBasicInfo data={currentLeaderList} />
               <Brief />
             </div>
           </div>
           {/* 下部信息 */}
           <div className={styles.bottom}>
             <DutyListInfo />
-            <DutyGroupInfo />
+            <DutyGroupInfo data={staffByGroup} />
             {/* <DividerLine/> */}
           </div>
         </div>
