@@ -9,10 +9,20 @@ export default class HorizontalPhoneCard extends React.Component {
       [styles.container]: true,
       [className]: className,
     });
+    const valueIsArray = Array.isArray(value);
     return (
       <div className={containerClass}>
         <span className={styles.label}>{`${label}:`}</span>
-        <span className={styles.value}>{value}</span>
+        {valueIsArray ? (
+          value.map((item) => (
+            <span className={styles.multiValue} key={item}>
+              {item}
+            </span>
+          ))
+        ) : (
+          <span className={styles.value}>{value}</span>
+        )}
+        {/* <span className={styles.value}>{value}</span> */}
       </div>
     );
   }

@@ -5,13 +5,14 @@ import Brief from "./components/Brief";
 import DutyListInfo from "./components/DutyListInfo";
 import DutyGroupInfo from "./components/DutyGroupInfo";
 
-import data from "@/assets/test.json";
+// import { getCurrentTimeStamp } from "@/utils/getDateTime";
 
+// import data from "@/assets/test.json";
 import styles from "./index.module.less";
 
 export default class Duty extends React.Component {
   render() {
-    console.log("data::::", data);
+    // console.log("data::::", getCurrentTimeStamp());
     return (
       <div className={styles.container}>
         <div className={styles.header}>统一运维值班表</div>

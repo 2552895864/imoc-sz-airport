@@ -9,7 +9,7 @@ export default class DutyBasicInfo extends React.Component {
         <HorizontalPhoneCard
           className={styles.groupLeader}
           label="值班组长"
-          value="李磊 13022221111 王力 130XXXXXXXX"
+          value={["李磊 13022221111", "王力 130XXXXXXXX"]}
         />
         <HorizontalPhoneCard
           className={styles.dispatchRoom}

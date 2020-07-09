@@ -1,3 +1,15 @@
+.basicText {
+  font-family   : Helvetica;
+  color         : #FFFFFF;
+  letter-spacing: 0;
+}
+
+.commonTitle {
+  .basicText;
+  font-size  : 20px;
+  font-weight: 600;
+}
+
 .container {
   justify-content: space-evenly;
   box-sizing     : border-box;
@@ -24,11 +36,8 @@
   }
 
   .cardTitle {
+    .commonTitle;
     height        : 40px;
-    font-family   : Helvetica;
-    font-size     : 20px;
-    color         : #FFFFFF;
-    letter-spacing: 0;
     line-height   : 40px;
     text-align    : center;
   }
@@ -38,10 +47,7 @@
     margin-left: 65.4px;
 
     .phoneCardPosition {
-      font-family   : Helvetica;
-      font-size     : 20px;
-      color         : #FFFFFF;
-      letter-spacing: 0;
+      .commonTitle;
       line-height   : 26px;
       margin-bottom : 6px;
     }
@@ -52,10 +58,8 @@
       list-style-type: none;
 
       .phoneCardMemberItem {
-        font-family   : Helvetica;
+        .basicText;
         font-size     : 18px;
-        color         : #FFFFFF;
-        letter-spacing: 0;
         line-height   : 30px;
       }
     }

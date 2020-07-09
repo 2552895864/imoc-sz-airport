@@ -61,10 +61,22 @@ const getLunarDate = () => {
   return GetLunarDate(year, month, day);
 };
 
+/**
+ * 获取当天时间戳
+ */
+
+const getCurrentTimeStamp = () => {
+  const { year, month, day } = getTimeInfo();
+  const currentDate = `${year}-${addZero(month)}-${addZero(day)}`;
+  const currentTimeStamp = new Date(currentDate).valueOf();
+  return currentTimeStamp
+};
+
 export {
   getNowFormatDate,
   getWeekDay,
   getLunarDate,
   getCurrentHoursAndMinutes,
   getTimeFrame,
+  getCurrentTimeStamp
 };
