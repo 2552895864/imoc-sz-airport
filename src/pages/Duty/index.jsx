@@ -61,12 +61,12 @@ export default class Duty extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.header}>统一运维值班表</div>
-        <input
+        {/* <input
           type="date"
           style={{ position: "absolute" }}
           onChange={this.handleDateChange}
           className={styles.testCalendar}
-        />
+        /> */}
         <div className={styles.content}>
           {/* 上部信息 */}
           <div className={styles.top}>
