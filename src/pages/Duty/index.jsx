@@ -37,6 +37,7 @@ export default class Duty extends React.Component {
     // const currentTimeStamp = getCurrentTimeStamp();
     const { rotaByDay, leaderList } = dutyData;
 
+    // console.log("currentTimeStamp:", currentTimeStamp);
     const { staffList, leaderList: currentLeaderList } = rotaByDay.filter(
       (item) => item.date === currentTimeStamp
     )[0];
@@ -49,8 +50,8 @@ export default class Duty extends React.Component {
         ],
       });
     });
-    console.log("staffList::", staffList);
-    console.log("staffByGroup::", staffByGroup);
+    // console.log("staffList::", staffList);
+    // console.log("staffByGroup::", staffByGroup);
 
     return { currentLeaderList, staffByGroup };
   };

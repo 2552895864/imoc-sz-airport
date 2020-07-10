@@ -18,7 +18,7 @@ const getTimeInfo = () => {
   };
 };
 
-const addZero = (number) => (number > 10 ? number : `0${number}`);
+const addZero = (number) => (number > 9 ? number : `0${number}`);
 
 /**
  * 获取当前时分
