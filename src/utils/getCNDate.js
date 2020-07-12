@@ -101,11 +101,11 @@ let CalendarData = [
   0x40e95,
 ];
 let monthDay = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
-let tgString = "甲乙丙丁戊己庚辛壬癸";
-let dzString = "子丑寅卯辰巳午未申酉戌亥";
+// let tgString = "甲乙丙丁戊己庚辛壬癸";
+// let dzString = "子丑寅卯辰巳午未申酉戌亥";
 let numString = "一二三四五六七八九十";
 let monString = "正二三四五六七八九十冬腊";
-let cYear, cMonth, cDay, TheDate;
+let cMonth, cDay, TheDate; //cYear,
 
 function GetBit(m, n) {
   return (m >> n) & 1;
@@ -142,7 +142,7 @@ function e2c() {
     }
     if (isEnd) break;
   }
-  cYear = 1921 + m;
+  // cYear = 1921 + m;
   cMonth = k - n + 1;
   cDay = total;
   if (k === 12) {

@@ -1,45 +1,18 @@
-.container {
-  background-color: #040733;
-  width           : 1921px;
-  height          : 1080px;
+.content {
+  margin: 26px 31px;
 
-  .header {
-    height           : 76px;
-    background-image : url(../../assets/header.png);
-    background-repeat: no-repeat;
-    background-size  : 100% 100%;
-    font-family      : PingFangSC-Regular;
-    font-size        : 36px;
-    font-weight      : 600;
-    color            : #FFFFFF;
-    letter-spacing   : 2px;
-    text-align       : center;
-    line-height      : 76px;
+  .top {
+    display      : flex;
+    height       : 340px;
+    margin-bottom: 20px;
+
+    .topRight {
+      width: 1340px;
+    }
   }
 
-  .testCalendar {
-    position: absolute;
-    opacity : 0;
-    left    : 149px;
-    top     : 256px;
-  }
-
-  .content {
-    margin: 26px 31px;
-
-    .top {
-      display      : flex;
-      height       : 340px;
-      margin-bottom: 20px;
-
-      .topRight {
-        width: 1340px;
-      }
-    }
-
-    .bottom {
-      display: flex;
-      height : 580px;
-    }
+  .bottom {
+    display: flex;
+    height : 580px;
   }
 }

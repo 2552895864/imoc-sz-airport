@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import DutyPage from './pages/Duty';
-import './global.less';
+import React from "react";
+import ReactDOM from "react-dom";
+import Routes from "@/routes/Routes";
+import "./global.less";
 
 ReactDOM.render(
   <React.StrictMode>
-    <DutyPage />
+    <Routes />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
-
