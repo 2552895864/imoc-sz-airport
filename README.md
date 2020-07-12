@@ -12,8 +12,12 @@
 
 - 构建：create-react-app构建
 - 打包扩展：customize-cra 进行webpack扩展配置
+- 请求：axios框架
 - 框架：React
 - 样式：使用 less预处理、css模块化
+- UI组件库：Antd
+- 图表组件库：Bizcharts && eCharts
+- 开发环境代理  src/setupProxy.js中更改
 
 ### `项目结构（src）`
  - assets 静态资源
