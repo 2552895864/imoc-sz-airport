@@ -38,7 +38,7 @@ const PageContainer = ({
         <span>{getNowFormatDate()}</span>
         <Clock className={styles.clock} />
       </div>
-      {children}
+      <div className={styles.content}>{children}</div>
     </div>
   );
 };
