@@ -4,6 +4,7 @@ import DutyPage from "@/pages/Duty";
 import DutyAdmin from '@/pages/DutyAdmin';
 import AppState from "@/pages/AppState";
 import FlowSubject from "@/pages/FlowSubject";
+import ResourceState from "@/pages/ResourceState";
 
 export default function Routes() {
   return (
@@ -16,6 +17,7 @@ export default function Routes() {
         <Route path="/dutyAdmin" component={DutyAdmin} />
         <Route path="/appState" component={AppState} />
         <Route path="/flowSubject" component={FlowSubject} />
+        <Route path="/resourceState" component={ResourceState} />
       </Switch>
     </HashRouter>
   );
