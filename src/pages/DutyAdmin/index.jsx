@@ -32,7 +32,6 @@ export default class DutyAdmin extends React.Component {
   }
 
   getSelectedItemValue = (value) => {
-    console.log("index value:", value);
     this.setState({
       currentModule: value,
     });
