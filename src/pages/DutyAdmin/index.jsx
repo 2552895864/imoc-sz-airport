@@ -8,7 +8,6 @@ import WorkingSchedule from "./businessComponents/WorkingSchedule";
 import StaffInfo from "./businessComponents/StaffInfo";
 import Brief from "./businessComponents/Brief";
 import AirDuty from "./businessComponents/AirDuty";
-import * as service from "./service";
 import styles from "./index.module.less";
 
 const moduleEnum = {
@@ -27,10 +26,7 @@ export default class DutyAdmin extends React.Component {
   state = {
     currentModule: moduleEnum.workingSchedule,
   };
-  getStaffInfo = async () => {
-    let result = await service.getStaffInfoByCondition();
-    console.log("result:", result);
-  };
+  getStaffInfo = async () => {};
   componentDidMount() {
     this.getStaffInfo();
   }
