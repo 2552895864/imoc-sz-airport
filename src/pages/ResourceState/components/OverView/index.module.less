@@ -1,0 +1,328 @@
+/* 根据文件名设置背景图片 */
+._getbgimg(@name) {
+  background-image: url(~"../../../../assets/ResourceState/@{name}");
+}
+
+/* BackGround组件部分 */
+
+.opacitybg {
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  width: 700px;
+  height: 455px;
+  ._getbgimg("bg_1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+.netbg {
+  position: absolute;
+  top: 135px;
+  height: 650px;
+  width: 100%;
+  ._getbgimg("bg_2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@keyframes bgcircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.overview {
+  position: absolute;
+  left: 274px;
+  top: 190px;
+  width: 350px;
+  height: 350px;
+  ._getbgimg("center_bg_circle.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 3;
+  animation: bgcircle 10s linear infinite;
+}
+
+.cloudbg {
+  position: absolute;
+  left: 300px;
+  top: 250px;
+  width: 280px;
+  height: 280px;
+  ._getbgimg("bg_cloud.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 3;
+}
+
+/* LineData组件部分 */
+
+.workline {
+  position: absolute;
+  left: 87px;
+  top: 298px;
+  width: 350px;
+  height: 222px;
+  ._getbgimg("line_1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+.appline {
+  position: absolute;
+  left: 152px;
+  top: 200px;
+  width: 290px;
+  height: 320px;
+  ._getbgimg("line_2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.applinecontent {
+  left: 115px;
+  top: 145px;
+}
+.vmline {
+  position: absolute;
+  left: 268px;
+  top: 248px;
+  width: 171px;
+  height: 275px;
+  ._getbgimg("line_3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.vmlinecontent {
+  left: 230px;
+  top: 190px;
+}
+.bzline {
+  position: absolute;
+  left: 360px;
+  top: 147px;
+  width: 76px;
+  height: 371px;
+  ._getbgimg("line_4.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.bzlinecontent {
+  left: 320px;
+  top: 90px;
+}
+.pmline {
+  position: absolute;
+  left: 436px;
+  top: 210px;
+  width: 136px;
+  height: 312px;
+  ._getbgimg("line_5.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.pmlinecontent {
+  left: 520px;
+  top: 150px;
+}
+.bmline {
+  position: absolute;
+  left: 438px;
+  top: 121px;
+  width: 265px;
+  height: 400px;
+  ._getbgimg("line_6.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+.bmlinecontent {
+  left: 665px;
+  top: 65px;
+}
+.bdsline {
+  position: absolute;
+  left: 438px;
+  top: 275px;
+  width: 358px;
+  height: 246px;
+  ._getbgimg("line_7.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+/* SumData组件部分 */
+.value {
+  position: absolute;
+  z-index: 3;
+  line-height: 1.25;
+}
+.label {
+  font-family: MicrosoftYaHei;
+  font-size: 14px;
+}
+.sumdata {
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 24px;
+  .cpuvalue {
+    .value;
+    left: 406px;
+    top: 291px;
+    color: #9ee8ff;
+    .cpulabel {
+      .label;
+      text-align: right;
+      color: #9ee8ff;
+    }
+  }
+  .memvalue {
+    .value;
+    left: 347px;
+    top: 344px;
+    color: #fcfaff;
+    .memlabel {
+      .label;
+      text-align: left;
+      color: #fcfaff;
+      padding-left: 0.5em;
+    }
+  }
+  .storevalue {
+    .value;
+    left: 442px;
+    top: 362px;
+    color: #f0ffc4;
+    .storelabel {
+      .label;
+      text-align: right;
+      color: #f0ffc4;
+    }
+  }
+  .devicevalue {
+    .value;
+    left: 406px;
+    top: 439px;
+    color: #73fffb;
+    .devicelabel {
+      .label;
+      text-align: center;
+      color: #73fffb;
+    }
+  }
+}
+
+/* CircleAnimation组件部分 */
+
+.circlelevel1 {
+  position: absolute;
+  left: 74px;
+  top: 500px;
+  width: 750px;
+  height: 190px;
+  ._getbgimg("run_circle_1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+}
+
+@keyframes runcircle2 {
+  0% {
+    transform: rotateX(-76deg) rotateZ(0deg) scale(1.15);
+  }
+  100% {
+    transform: rotateX(-76deg) rotateZ(360deg) scale(1.15);
+  }
+}
+
+.circlelevel2 {
+  position: absolute;
+  left: 175px;
+  top: 300px;
+  width: 550px;
+  height: 550px;
+  ._getbgimg("run_circle_2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+  transform: rotateX(-76deg) rotateZ(0deg) scale(1.15);
+  animation: runcircle2 5s linear infinite;
+}
+
+@keyframes runcircle3 {
+  0% {
+    transform: rotateX(-76deg) rotateZ(0deg) scale(1.2);
+  }
+  100% {
+    transform: rotateX(-76deg) rotateZ(-360deg) scale(1.2);
+  }
+}
+
+.circlelevel3 {
+  position: absolute;
+  left: 200px;
+  top: 320px;
+  width: 500px;
+  height: 500px;
+  ._getbgimg("run_circle_3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+  transform: rotateX(-76deg) rotateZ(0deg) scale(1.2);
+  animation: runcircle3 10s linear infinite;
+}
+
+@keyframes runcircle4 {
+  0% {
+    transform: rotateX(-74deg) rotateZ(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotateX(-74deg) rotateZ(360deg) scale(1.5);
+  }
+}
+
+.circlelevel4 {
+  position: absolute;
+  left: 335px;
+  top: 506px;
+  width: 200px;
+  height: 200px;
+  ._getbgimg("run_circle_4.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+  transform: rotateX(-74deg) rotateZ(0deg) scale(1.5);
+  animation: runcircle4 4s linear infinite;
+}
+
+@keyframes runcircle5 {
+  0% {
+    transform: rotateX(-74deg) rotateZ(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotateX(-74deg) rotateZ(-360deg) scale(1.5);
+  }
+}
+
+.circlelevel5 {
+  position: absolute;
+  left: 335px;
+  top: 546px;
+  width: 200px;
+  height: 200px;
+  ._getbgimg("run_circle_5.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+  transform: rotateX(-74deg) rotateZ(0deg) scale(1.5);
+  animation: runcircle5 4s linear infinite;
+}
