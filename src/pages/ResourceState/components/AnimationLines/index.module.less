@@ -1,0 +1,64 @@
+/* 根据文件名设置背景图片 */
+._getbgimg(@name) {
+  background-image: url(~"../../../../assets/ResourceState/@{name}");
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.6);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.6);
+  }
+  100% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+}
+
+.animationline1 {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  ._getbgimg("bottom_line1.png");
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+  background-size: 50% 100%;
+  animation: moveLeft 15s linear infinite;
+}
+
+.animationline2 {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  ._getbgimg("bottom_line1.png");
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+  background-size: 50% 100%;
+  animation: moveRight 15s linear infinite;
+}
+
+.animationline3 {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  ._getbgimg("bottom_line1.png");
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+  background-size: 50% 100%;
+  animation: moveLeft 21s linear infinite;
+}

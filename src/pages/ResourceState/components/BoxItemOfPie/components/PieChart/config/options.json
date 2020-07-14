@@ -1,0 +1,36 @@
+{
+  "grid": {
+    "x": "0%",
+    "y": "0%",
+    "x2": "0%",
+    "y2": "0%"
+  },
+  "series": [
+    {
+      "type": "pie",
+      "radius": [48, 59],
+      "avoidLabelOverlap": false,
+      "hoverAnimation": false,
+      "cursor": "auto",
+      "label": {
+        "show": false
+      },
+      "data": [
+        {
+          "value": 0,
+          "name": "使用量",
+          "itemStyle": {
+            "color": "#fff"
+          }
+        },
+        {
+          "value": 0,
+          "name": "剩余量",
+          "itemStyle": {
+            "color": "#0A3D78"
+          }
+        }
+      ]
+    }
+  ]
+}

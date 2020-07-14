@@ -1,0 +1,19 @@
+/* 根据文件名设置背景图片 */
+._getbgimg(@name) {
+  background-image: url(~"../../../../../../assets/ResourceState/@{name}");
+}
+
+.container {
+  height: 100%;
+  ._getbgimg("border_top.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  .content {
+    padding-top: 6px;
+    text-align: center;
+    font-family: "MicrosoftYaHei-Bold";
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.25;
+  }
+}
