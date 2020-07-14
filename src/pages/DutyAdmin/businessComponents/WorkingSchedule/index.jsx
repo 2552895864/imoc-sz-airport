@@ -51,9 +51,14 @@ const staffDataSource = [
     isLeader: false,
   },
 ];
-const StaffSelect = ({ dataSource }) => {
+const StaffSelect = ({ dataSource, onChange }) => {
+  const handleChange = (value) => {
+    if (onChange) {
+      onChange(value);
+    }
+  };
   return (
-    <Select>
+    <Select onChange={handleChange}>
       {dataSource.map((staff) => (
         <Select.Option key={staff.id} value={staff.id}>
           {`(${staff.position})${staff.name}`}
@@ -63,19 +68,74 @@ const StaffSelect = ({ dataSource }) => {
   );
 };
 const WorkingSchedule = () => {
-  const staffSelect = <StaffSelect dataSource={staffDataSource} />;
+  // const staffSelect = <StaffSelect dataSource={staffDataSource} />;
   const formItem = [
-    { label: "日期", name: "date", span: 8, component: <Input /> },
-    { label: "排班类别", name: "type", span: 8, component: <Input /> },
-    { label: "值班组长", name: "leader", span: 8, component: staffSelect },
-    { label: "机位/IOC", name: "ioc", span: 12, component: staffSelect },
-    { label: "ROMA", name: "roma", span: 12, component: staffSelect },
-    { label: "大数据", name: "bData", span: 12, component: staffSelect },
-    { label: "云计算", name: "cloud", span: 12, component: staffSelect },
-    { label: "视频安防", name: "video", span: 12, component: staffSelect },
-    { label: "UCC", name: "ucc", span: 12, component: staffSelect },
-    { label: "数通网络", name: "network", span: 12, component: staffSelect },
-    { label: "LTE", name: "lte", span: 12, component: staffSelect },
+    {
+      label: "日期",
+      name: "date",
+      span: 8,
+      component: <Input disabled />,
+    },
+    {
+      label: "排班类别",
+      name: "type",
+      span: 8,
+      component: <Input disabled />,
+    },
+    {
+      label: "值班组长",
+      name: "leader",
+      span: 8,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
+    {
+      label: "机位/IOC",
+      name: "ioc",
+      span: 12,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
+    {
+      label: "ROMA",
+      name: "roma",
+      span: 12,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
+    {
+      label: "大数据",
+      name: "bData",
+      span: 12,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
+    {
+      label: "云计算",
+      name: "cloud",
+      span: 12,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
+    {
+      label: "视频安防",
+      name: "video",
+      span: 12,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
+    {
+      label: "UCC",
+      name: "ucc",
+      span: 12,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
+    {
+      label: "数通网络",
+      name: "network",
+      span: 12,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
+    {
+      label: "LTE",
+      name: "lte",
+      span: 12,
+      component: <StaffSelect dataSource={staffDataSource} />,
+    },
   ];
   const columns = [
     { title: "日期", dataIndex: "date", key: "date" },

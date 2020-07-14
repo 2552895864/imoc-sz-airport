@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "dva";
 import { Checkbox, Input } from "antd";
 import HTable from "../../components/Table";
 import HModal from "../../components/Modal";
 // import styles from "./index.module.less";
 
-
-const StaffInfo = ({ dispatch, staffList }) => {
+const StaffInfo = ({ dispatch, staffList, leaderList }) => {
+  const [onlyLeader, setLeaderList] = useState(false);
   const onChange = (e) => {
-    console.log(`checked = ${e.target.checked}`);
+    // console.log(`checked = ${e.target.checked}`);
+    setLeaderList(e.target.checked);
   };
   const formItem = [
     { label: "专业", name: "staffGroup", component: <Input /> },
@@ -54,7 +55,7 @@ const StaffInfo = ({ dispatch, staffList }) => {
         pagination={{
           hideOnSinglePage: true,
         }}
-        dataSource={staffList}
+        dataSource={onlyLeader ? leaderList : staffList}
         columns={columns}
       />
     </>

@@ -95,7 +95,7 @@ const HModal = ({
             <div className={styles.buttonArea}>
               <Space size={10}>
                 <Button onClick={hideModal}>取消</Button>
-                <Button type="primary">确定</Button>
+                <Button type="primary" htmlType="submit">确定</Button>
               </Space>
             </div>
           </Form.Item>

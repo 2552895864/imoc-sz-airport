@@ -57,21 +57,19 @@ export default class Duty extends React.Component {
     const { currentLeaderList, staffByGroup } = this.handleDutyData();
     return (
       <PageContainer title="统一运维值班表" needTimeZone={false}>
-        <div className={styles.content}>
-          {/* 上部信息 */}
-          <div className={styles.top}>
-            <WeatherAndTime weatherData={weatherData} />
-            <div className={styles.topRight}>
-              <DutyBasicInfo data={currentLeaderList}/>
-              <Brief data={briefData} />
-            </div>
+        {/* 上部信息 */}
+        <div className={styles.top}>
+          <WeatherAndTime weatherData={weatherData} />
+          <div className={styles.topRight}>
+            <DutyBasicInfo data={currentLeaderList} />
+            <Brief data={briefData} />
           </div>
-          {/* 下部信息 */}
-          <div className={styles.bottom}>
-            <DutyListInfo data={dutyListData} />
-            <DutyGroupInfo data={staffByGroup} />
-            {/* <DividerLine/> */}
-          </div>
+        </div>
+        {/* 下部信息 */}
+        <div className={styles.bottom}>
+          <DutyListInfo data={dutyListData} />
+          <DutyGroupInfo data={staffByGroup} />
+          {/* <DividerLine/> */}
         </div>
       </PageContainer>
     );
