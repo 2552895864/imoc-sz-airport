@@ -8,6 +8,22 @@ import BoxInnerLine from "./components/BoxInnerLine";
 import BoxItemOfPie from "./components/BoxItemOfPie";
 import SwitchableLineChart from "./components/SwitchableLineChart";
 
+import {
+  queryLineData,
+  querySumData,
+  queryDeviceData,
+  queryVMPieChartData,
+  queryPMPieChartData,
+  queryVMLineChartData,
+  queryPMLineChartData,
+} from "./services";
+import {
+  normalizeLineData,
+  normalizeSumData,
+  normalizeDeviceData,
+  normalizePieChartData,
+  normalizeLineChartData,
+} from "./utils/normalize";
 import resourceDevices from "@/data/resourceDevices";
 import resourceLineChart from "@/data/resourceLineChart";
 import resourcePieChart from "@/data/resourcePieChart";
@@ -15,7 +31,77 @@ import resourceLineData from "@/data/resourceLineData";
 import resourceSumData from "@/data/resourceSumData";
 import styles from "./index.module.less";
 
+const DataFuncsMap = {
+  resourceLineData: {
+    query: queryLineData,
+    normalize: normalizeLineData,
+  },
+  resourceSumData: {
+    query: querySumData,
+    normalize: normalizeSumData,
+  },
+  resourceDevices: {
+    query: queryDeviceData,
+    normalize: normalizeDeviceData,
+  },
+  resourceVMPieChart: {
+    query: queryVMPieChartData,
+    normalize: normalizePieChartData,
+  },
+  resourcePMPieChart: {
+    query: queryPMPieChartData,
+    normalize: normalizePieChartData,
+  },
+  resourceVMLineChart: {
+    query: queryVMLineChartData,
+    normalize: normalizeLineChartData,
+  },
+  resourcePMLineChart: {
+    query: queryPMLineChartData,
+    normalize: normalizeLineChartData,
+  },
+};
+
 export default class ResourceState extends React.Component {
+  state = {
+    resourceLineData,
+    resourceSumData,
+    resourceDevices,
+    resourceVMPieChart: resourcePieChart,
+    resourcePMPieChart: resourcePieChart,
+    resourceVMLineChart: resourceLineChart,
+    resourcePMLineChart: resourceLineChart,
+  };
+
+  async componentDidMount() {
+    /**
+     * 对于已声明的state：
+     *  1.获取对应数据
+     *  2.使用对应方法对数据进行标准化
+     *
+     * 注：state名与各个函数的对应关系见DataFuncsMap
+     */
+    const results = await Promise.all(
+      Object.keys(this.state).map(async (key) => {
+        const apiData = await DataFuncsMap[key].query();
+        const data = DataFuncsMap[key].normalize(apiData);
+        return {
+          [key]: data,
+        };
+      })
+    );
+    /**
+     * results:[{resourceLineData:data1},{resourceSumData:data2}]
+     */
+    const datas = results.reduce((acc, val) => {
+      return {
+        ...acc,
+        ...val,
+      };
+    }, {});
+    this.setState(datas);
+  }
+
   render() {
     return (
       <PageContainer title="资源态势">
@@ -23,7 +109,7 @@ export default class ResourceState extends React.Component {
           <div className={styles.left}>
             <div className={styles.lefttop}>
               <ShineNoteBoxWrapper title="虚拟资源概览">
-                {resourcePieChart.data.map(
+                {this.state.resourceVMPieChart.map(
                   ({ label, usage, sumCount, unit, usedCount }, index) => (
                     <>
                       <BoxItemOfPie
@@ -35,7 +121,8 @@ export default class ResourceState extends React.Component {
                           usedCount,
                         }}
                       ></BoxItemOfPie>
-                      {index === resourcePieChart.data.length - 1 ? null : (
+                      {index ===
+                      this.state.resourceVMPieChart.length - 1 ? null : (
                         <BoxInnerLine />
                       )}
                     </>
@@ -45,25 +132,25 @@ export default class ResourceState extends React.Component {
             </div>
             <div className={styles.leftbottom}>
               <ShineNoteBoxWrapper title="虚拟资源使用趋势">
-                <SwitchableLineChart data={resourceLineChart} />
+                <SwitchableLineChart data={this.state.resourceVMLineChart} />
               </ShineNoteBoxWrapper>
             </div>
           </div>
           <div className={styles.center}>
             <div className={styles.centertop}>
               <OverView
-                lineData={resourceLineData}
-                sumData={resourceSumData}
+                lineData={this.state.resourceLineData}
+                sumData={this.state.resourceSumData}
               ></OverView>
             </div>
             <div className={styles.centerbottom}>
-              <DeviceInfo data={resourceDevices.data}></DeviceInfo>
+              <DeviceInfo data={this.state.resourceDevices}></DeviceInfo>
             </div>
           </div>
           <div className={styles.right}>
             <div className={styles.righttop}>
               <ShineNoteBoxWrapper title="物理资源概览">
-                {resourcePieChart.data.map(
+                {this.state.resourcePMPieChart.map(
                   ({ label, usage, sumCount, unit, usedCount }, index) => (
                     <>
                       <BoxItemOfPie
@@ -75,7 +162,8 @@ export default class ResourceState extends React.Component {
                           usedCount,
                         }}
                       ></BoxItemOfPie>
-                      {index === resourcePieChart.data.length - 1 ? null : (
+                      {index ===
+                      this.state.resourcePMPieChart.length - 1 ? null : (
                         <BoxInnerLine />
                       )}
                     </>
@@ -85,7 +173,7 @@ export default class ResourceState extends React.Component {
             </div>
             <div className={styles.rightbottom}>
               <ShineNoteBoxWrapper title="物理资源使用趋势">
-                <SwitchableLineChart data={resourceLineChart} />
+                <SwitchableLineChart data={this.state.resourcePMLineChart} />
               </ShineNoteBoxWrapper>
             </div>
           </div>

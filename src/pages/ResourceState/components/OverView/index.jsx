@@ -93,11 +93,12 @@ const CircleAnimation = () => (
 );
 
 const OverView = ({ lineData, sumData }) => {
+ 
   return (
     <>
       <BackGround />
-      <LineData data={lineData} />
-      <SumData data={sumData} />
+      {lineData ? <LineData data={lineData} /> : null}
+      {sumData ? <SumData data={sumData} /> : null}
       <CircleAnimation />
     </>
   );
