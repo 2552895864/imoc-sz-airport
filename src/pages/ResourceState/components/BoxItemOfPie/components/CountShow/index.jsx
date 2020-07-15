@@ -31,7 +31,7 @@ const CountShow = ({
   return (
     <div className={ContainerClass}>
       <div className={styles.countcontent}>
-        <div className={CountClass}>{count}</div>
+        <div className={CountClass}>{count.toLocaleString()}</div>
         <div className={UnitClass}>{unit}</div>
       </div>
       <div className={LabelClass}>{label}</div>

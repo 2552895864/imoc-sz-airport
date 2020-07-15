@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classnames from "classnames";
-import styles from "./index.module.less";
 import DateTime from "./components/DateTime";
-import getDateTimeString from "../../utils/getDateTimeString";
+import getDateTimeString from "./utils/getDateTimeString";
+
+import styles from "./index.module.less";
 
 /**
  * 
@@ -19,6 +20,14 @@ const PageContainer = ({
   datetime = new Date(),
   headerClassName,
 }) => {
+  const [dateTime, setDateTime] = useState(getDateTimeString(datetime));
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (timer) clearTimeout(timer);
+      setDateTime(getDateTimeString(new Date()));
+    }, 1000);
+    return () => clearTimeout(timer);
+  });
   const containerClass = classnames({
     [styles.container]: true,
     [className]: className,
@@ -31,7 +40,7 @@ const PageContainer = ({
     <div className={containerClass}>
       <div className={headerClass}>
         {title}
-        <DateTime {...getDateTimeString(datetime)}></DateTime>
+        <DateTime {...dateTime}></DateTime>
       </div>
       {children}
     </div>
