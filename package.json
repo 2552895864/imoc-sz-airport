@@ -29,6 +29,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "mock": "dotenv -e .env.mock react-app-rewired start",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
