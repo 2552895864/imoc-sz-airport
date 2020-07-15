@@ -1,0 +1,11 @@
+/* 根据文件名设置背景图片 */
+._getbgimg(@name) {
+  background-image: url(~"../../../../../../assets/ResourceState/@{name}");
+}
+
+.container {
+  height: 100%;
+  ._getbgimg("border_bottom.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
