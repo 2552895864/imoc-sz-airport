@@ -11,7 +11,7 @@ export default {
       // console.log("getDutyData modal");
       try {
         let { data } = yield call(service.getLatestOneBrief);
-        const briefList = _.get(data, "content", "")
+        const briefList = _.get(data[0], "content", "")
           .split(/[(\r\n)\r\n]+/)
           .filter((item) => item !== "");
         yield put({ type: "save", payload: { briefList } });

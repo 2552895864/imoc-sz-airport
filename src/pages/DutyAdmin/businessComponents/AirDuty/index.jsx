@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Space, Input } from "antd";
+import React, { useState, useRef } from "react";
+import { Space, Input, Button } from "antd";
 import HTable from "../../components/Table";
 import HModal from "../../components/Modal";
 
@@ -95,6 +95,14 @@ const NamePhoneInput = ({ value = {}, onChange }) => {
 };
 
 const AirDuty = () => {
+  const modalRef = useRef();
+  const handleAction = (record) => {
+    // staffId = record.id;
+    // setFormInitialValues(
+    //   Object.assign({}, record, { leader: record.leader ? "是" : "否" })
+    // );
+    modalRef.current.showModal();
+  };
   const formItem = [
     { label: "值班01", name: "duty01", component: <NamePhoneInput /> },
     { label: "值班经理", name: "dutyManager", component: <NamePhoneInput /> },
@@ -131,16 +139,9 @@ const AirDuty = () => {
       title: "操作",
       key: "action",
       render: (text, record) => (
-        <HModal
-          title="修改机场值班信息"
-          buttonType="link"
-          buttonText="修改"
-          // needGrid
-          // buttonClassName={styles.add}
-          width={800}
-          formItem={formItem}
-          formLabelWidth={70}
-        />
+        <Button type="link" onClick={() => handleAction(record)}>
+          修改
+        </Button>
       ),
     },
   ];
@@ -153,6 +154,14 @@ const AirDuty = () => {
         }}
         dataSource={dataSource}
         columns={columns}
+      />
+      <HModal
+        title="修改机场值班信息"
+        hideDefaultButton
+        formLabelWidth={70}
+        width={800}
+        formItem={formItem}
+        mRef={modalRef}
       />
     </>
   );

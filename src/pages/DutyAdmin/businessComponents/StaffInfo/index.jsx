@@ -1,21 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { connect } from "dva";
-import { Checkbox, Input } from "antd";
+import { Checkbox, Input, message, Button } from "antd";
 import HTable from "../../components/Table";
 import HModal from "../../components/Modal";
 // import styles from "./index.module.less";
-
-const StaffInfo = ({ dispatch, staffList, leaderList }) => {
+let staffId = "";
+const StaffInfo = ({
+  dispatch,
+  staffList,
+  leaderList,
+  staffListLoading,
+  updateStaffLoading,
+}) => {
+  const modalRef = useRef();
+  const [formInitialValues, setFormInitialValues] = useState({});
   const [onlyLeader, setLeaderList] = useState(false);
   const onChange = (e) => {
-    // console.log(`checked = ${e.target.checked}`);
     setLeaderList(e.target.checked);
   };
+  const handleAction = (record) => {
+    staffId = record.id;
+    setFormInitialValues(
+      Object.assign({}, record, { leader: record.leader ? "是" : "否" })
+    );
+    modalRef.current.showModal();
+  };
+  const getValues = async (values) => {
+    const params = {
+      id: staffId,
+      staffMobile: values.staffMobile,
+    };
+    const result = await dispatch({
+      type: "DutyAdmin/updateStaffInfo",
+      payload: params,
+    });
+    if (result) {
+      message.success("修改成功");
+      modalRef.current.hideModal();
+    } else {
+      message.success("修改失败");
+    }
+  };
+  const hideModalCallback = () => {
+    staffId = "";
+  };
   const formItem = [
-    { label: "专业", name: "staffGroup", component: <Input /> },
-    { label: "姓名", name: "staffName", component: <Input /> },
+    { label: "专业", name: "staffGroup", component: <Input disabled /> },
+    { label: "姓名", name: "staffName", component: <Input disabled /> },
     { label: "联系电话", name: "staffMobile", component: <Input /> },
-    { label: "是否组长", name: "leader", component: <Input /> },
+    { label: "是否组长", name: "leader", component: <Input disabled /> },
   ];
   const columns = [
     { title: "专业", dataIndex: "staffGroup", key: "staffGroup" },
@@ -31,14 +64,9 @@ const StaffInfo = ({ dispatch, staffList, leaderList }) => {
       title: "操作",
       key: "action",
       render: (text, record) => (
-        <HModal
-          title="修改运维人员信息"
-          buttonType="link"
-          buttonText="修改"
-          // buttonClassName={styles.add}
-          width={800}
-          formItem={formItem}
-        />
+        <Button type="link" onClick={() => handleAction(record)}>
+          修改
+        </Button>
       ),
     },
   ];
@@ -57,6 +85,19 @@ const StaffInfo = ({ dispatch, staffList, leaderList }) => {
         }}
         dataSource={onlyLeader ? leaderList : staffList}
         columns={columns}
+        loading={staffListLoading}
+      />
+      <HModal
+        title="修改运维人员信息"
+        hideDefaultButton
+        loading={updateStaffLoading}
+        width={600}
+        formLabelWidth={70}
+        formItem={formItem}
+        formInitialValues={formInitialValues}
+        getValues={getValues}
+        mRef={modalRef}
+        hideModalCallback={hideModalCallback}
       />
     </>
   );

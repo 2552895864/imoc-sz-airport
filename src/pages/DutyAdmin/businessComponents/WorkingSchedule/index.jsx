@@ -1,183 +1,203 @@
-import React from "react";
-import { Input, Select } from "antd";
+import React, { useEffect, useState } from "react";
+import _ from "lodash";
+import { connect } from "dva";
+import { Select, Button, Space, Modal } from "antd";
 import HTable from "../../components/Table";
-import HModal from "../../components/Modal";
 
-// import styles from "./index.module.less";
+import styles from "./index.module.less";
 
-const dataSource = [
-  {
-    id: "1",
-    date: "2020/7/1",
-    type: "白班",
-    leader: "兰正旺",
-    ioc: "伍柏荣",
-    roma: "伍柏荣",
-    bData: "伍柏荣",
-    cloud: "伍柏荣",
-    video: "伍柏荣",
-    ucc: "伍柏荣",
-    network: "伍柏荣",
-    lte: "伍柏荣",
-  },
-  {
-    id: "2",
-    date: "2020/7/1",
-    type: "晚班",
-    leader: "兰正旺",
-    ioc: "伍柏荣",
-    roma: "伍柏荣",
-    bData: "伍柏荣",
-    cloud: "伍柏荣",
-    video: "伍柏荣",
-    ucc: "伍柏荣",
-    network: "伍柏荣",
-    lte: "伍柏荣",
-  },
-];
-const staffDataSource = [
-  {
-    id: "1",
-    position: "云计算",
-    name: "兰正旺",
-    phone: "13599998888",
-    isLeader: true,
-  },
-  {
-    id: "2",
-    position: "机位/IOC",
-    name: "罗智霖",
-    phone: "13476565333",
-    isLeader: false,
-  },
-];
-const StaffSelect = ({ dataSource, onChange }) => {
-  const handleChange = (value) => {
-    if (onChange) {
-      onChange(value);
+
+let selectedUpdateId = "";
+let staffMobile = "";
+let staffName = "";
+const setSelectLabel = (staff) => `(${staff.staffGroup})${staff.staffName}`;
+const WorkingSchedule = ({
+  dispatch,
+  staffList,
+  currentDutyMonth,
+  workingScheduleList,
+  workingScheduleListLoading,
+  updateWorkingScheduleListLoading,
+}) => {
+  const [visible, setVisible] = useState(false);
+  const [selectValue, setSelectValue] = useState("");
+  const [selectedUpdateInfo, setSelectedUpdateInfo] = useState("");
+
+  const handleOpenUpdateModal = (record, groupName) => {
+    setVisible(true);
+    const { date, type } = record;
+    const groupLabel = groupName ? `${groupName}组` : "";
+    const levelLabel = `值班${groupName ? "人员" : "组长"}`;
+
+    const selectedStaff = groupName
+      ? _.get(record, "member", []).filter(
+          (staff) => staff.staffGroup === groupName
+        )[0]
+      : _.get(record, "leader", [])[0];
+    selectedUpdateId = _.get(selectedStaff, "id", "");
+    setSelectedUpdateInfo(`更新 ${date} ${type} ${groupLabel} ${levelLabel}`);
+  };
+  const hideModal = () => {
+    setVisible(false);
+    setSelectValue("");
+    selectedUpdateId = "";
+    staffMobile = "";
+    staffName = "";
+  };
+  const handleUpdateMs = async (value, options) => {
+    setSelectValue(value);
+    const { key } = options;
+    const [mobilePhone, name] = key.split("_");
+    staffMobile = mobilePhone;
+    staffName = name;
+  };
+  const updateConfirm = async () => {
+    const result = await dispatch({
+      type: "DutyAdmin/updateWorkingScheduleList",
+      payload: { id: selectedUpdateId, staffMobile, staffName },
+    });
+    if (result) {
+      hideModal();
     }
   };
-  return (
-    <Select onChange={handleChange}>
-      {dataSource.map((staff) => (
-        <Select.Option key={staff.id} value={staff.id}>
-          {`(${staff.position})${staff.name}`}
-        </Select.Option>
-      ))}
-    </Select>
-  );
-};
-const WorkingSchedule = () => {
-  // const staffSelect = <StaffSelect dataSource={staffDataSource} />;
-  const formItem = [
-    {
-      label: "日期",
-      name: "date",
-      span: 8,
-      component: <Input disabled />,
-    },
-    {
-      label: "排班类别",
-      name: "type",
-      span: 8,
-      component: <Input disabled />,
-    },
-    {
-      label: "值班组长",
-      name: "leader",
-      span: 8,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-    {
-      label: "机位/IOC",
-      name: "ioc",
-      span: 12,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-    {
-      label: "ROMA",
-      name: "roma",
-      span: 12,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-    {
-      label: "大数据",
-      name: "bData",
-      span: 12,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-    {
-      label: "云计算",
-      name: "cloud",
-      span: 12,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-    {
-      label: "视频安防",
-      name: "video",
-      span: 12,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-    {
-      label: "UCC",
-      name: "ucc",
-      span: 12,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-    {
-      label: "数通网络",
-      name: "network",
-      span: 12,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-    {
-      label: "LTE",
-      name: "lte",
-      span: 12,
-      component: <StaffSelect dataSource={staffDataSource} />,
-    },
-  ];
+  const setTableName = (record, groupName, staffName = null) => {
+    let member, target;
+    if (!staffName) {
+      member = _.get(record, "member", []);
+      target = member.filter((item) => item.staffGroup === groupName);
+    }
+
+    return (
+      <Button
+        type="link"
+        className={styles.staffName}
+        onClick={() => {
+          handleOpenUpdateModal(record, groupName);
+        }}
+      >
+        {staffName || _.get(target[0], "staffName", "-")}
+      </Button>
+    );
+  };
   const columns = [
     { title: "日期", dataIndex: "date", key: "date" },
     { title: "排班类别", dataIndex: "type", key: "type" },
-    { title: "值班组长", dataIndex: "leader", key: "leader" },
-    { title: "机位/IOC", dataIndex: "ioc", key: "ioc" },
-    { title: "ROMA", dataIndex: "roma", key: "roma" },
-    { title: "大数据", dataIndex: "bData", key: "bData" },
-    { title: "云计算", dataIndex: "cloud", key: "cloud" },
-    { title: "视频安防", dataIndex: "video", key: "video" },
-    { title: "UCC", dataIndex: "ucc", key: "ucc" },
-    { title: "数通网络", dataIndex: "network", key: "network" },
-    { title: "LTE", dataIndex: "lte", key: "lte" },
     {
-      title: "操作",
-      key: "action",
-      render: (text, record) => (
-        <HModal
-          title="修改排班信息"
-          buttonType="link"
-          buttonText="修改"
-          needGrid
-          // buttonClassName={styles.add}
-          width={1000}
-          formItem={formItem}
-          formLabelWidth={80}
-        />
-      ),
+      title: "值班组长",
+      dataIndex: "groupLeader",
+      key: "groupLeader",
+      render: (value, record) =>
+        setTableName(record, null, _.get(record, "leader[0].staffName")),
+    },
+    {
+      title: "机位/IOC",
+      dataIndex: "ioc",
+      key: "ioc",
+      render: (value, record) => setTableName(record, "机位/IOC"),
+    },
+    {
+      title: "ROMA",
+      dataIndex: "roma",
+      key: "roma",
+      render: (value, record) => setTableName(record, "ROMA"),
+    },
+    {
+      title: "大数据",
+      dataIndex: "bData",
+      key: "bData",
+      render: (value, record) => setTableName(record, "大数据"),
+    },
+    {
+      title: "云计算",
+      dataIndex: "cloud",
+      key: "cloud",
+      render: (value, record) => setTableName(record, "云计算"),
+    },
+    {
+      title: "视频安防",
+      dataIndex: "video",
+      key: "video",
+      render: (value, record) => setTableName(record, "视频安防"),
+    },
+    {
+      title: "UCC",
+      dataIndex: "ucc",
+      key: "ucc",
+      render: (value, record) => setTableName(record, "UCC"),
+    },
+    {
+      title: "数通网络",
+      dataIndex: "network",
+      key: "network",
+      render: (value, record) => setTableName(record, "数通网络"),
+    },
+    {
+      title: "LTE",
+      dataIndex: "lte",
+      key: "lte",
+      render: (value, record) => setTableName(record, "LTE"),
     },
   ];
-
+  useEffect(() => {
+    dispatch({
+      type: "DutyAdmin/getWorkingScheduleList",
+      payload: { month: currentDutyMonth },
+    });
+    dispatch({
+      type: "DutyAdmin/getStaffInfoByCondition",
+    });
+  }, [currentDutyMonth, dispatch]);
   return (
     <>
+      <div className={styles.extraInfo} style={{ marginBottom: "15px" }}>
+        点击人员名称进行更改
+      </div>
       <HTable
-        pagination={{
-          hideOnSinglePage: true,
-        }}
-        dataSource={dataSource}
+        dataSource={workingScheduleList}
         columns={columns}
+        loading={workingScheduleListLoading}
       />
+      <Modal footer={null} visible={visible} onCancel={hideModal}>
+        <span className={styles.title}>修改排班信息</span>
+        <div className={styles.extraInfo}>{selectedUpdateInfo}</div>
+        <div className={styles.content}>
+          <span>选择值班人员</span>
+          <Select
+            value={selectValue}
+            onChange={handleUpdateMs}
+            showSearch
+            className={styles.select}
+            filterOption={(input, option) =>
+              option.props.children
+                .toLowerCase()
+                .indexOf(input.toLowerCase()) >= 0
+            }
+          >
+            {staffList.map((staff) => (
+              <Select.Option
+                key={`${staff.staffMobile}_${staff.staffName}`}
+                value={setSelectLabel(staff)}
+              >
+                {setSelectLabel(staff)}
+              </Select.Option>
+            ))}
+          </Select>
+        </div>
+
+        <div className={styles.buttonArea}>
+          <Space size={10}>
+            <Button onClick={hideModal}>取消</Button>
+            <Button
+              type="primary"
+              loading={updateWorkingScheduleListLoading}
+              onClick={updateConfirm}
+            >
+              确定
+            </Button>
+          </Space>
+        </div>
+      </Modal>
     </>
   );
 };
-
-export default WorkingSchedule;
+export default connect(({ DutyAdmin }) => DutyAdmin)(WorkingSchedule);

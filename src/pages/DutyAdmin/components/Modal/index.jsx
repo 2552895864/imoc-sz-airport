@@ -27,23 +27,32 @@ const HModal = ({
   getValues,
   loading = false,
   mRef,
+  buttonAction,
+  hideModalCallback,
+  hideDefaultButton,
 }) => {
   const [visible, setVisible] = useState(false);
   const [form] = Form.useForm();
+
   const showModal = () => {
     setVisible(true);
+    if (buttonAction) {
+      buttonAction();
+    }
   };
   const hideModal = () => {
     setVisible(false);
     if (form) {
       form.resetFields();
     }
+    if (hideModalCallback) {
+      hideModalCallback();
+    }
   };
   const onFinish = (values) => {
     if (typeof getValues === "function") {
       getValues(values);
     }
-    // console.log(values);
   };
   const onValuesChange = (changedValues, allValues) => {
     if (onChangeOfValue) {
@@ -73,13 +82,20 @@ const HModal = ({
   useImperativeHandle(mRef, () => ({
     // changeVal 就是暴露给父组件的方法
     hideModal,
+    showModal,
   }));
 
   return (
     <>
-      <Button type={buttonType} onClick={showModal} className={buttonClassName}>
-        {buttonText}
-      </Button>
+      {hideDefaultButton ? null : (
+        <Button
+          type={buttonType}
+          onClick={showModal}
+          className={buttonClassName}
+        >
+          {buttonText}
+        </Button>
+      )}
       <Modal
         visible={visible}
         footer={null}
@@ -88,7 +104,6 @@ const HModal = ({
         width={width}
       >
         <div className={styles.title}>{title || buttonText}</div>
-        {/* {children} */}
         <Form
           {...formLayout}
           onFinish={onFinish}
@@ -102,14 +117,6 @@ const HModal = ({
               {formItem.map((item) => (
                 <Col span={item.span || 8} key={item.name}>
                   {renderFormItem(item)}
-                  {/* <Form.Item
-                    name={item.name}
-                    label={item.label}
-                    rules={item.rules}
-                    key={item.name}
-                  >
-                    {item.component}
-                  </Form.Item> */}
                 </Col>
               ))}
             </Row>

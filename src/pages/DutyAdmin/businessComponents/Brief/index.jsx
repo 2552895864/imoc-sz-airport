@@ -3,23 +3,11 @@ import { Button, Input, message } from "antd";
 import { connect } from "dva";
 import _ from "lodash";
 import BriefPreview from "@/pages/Duty/components/Brief";
-import { getNowFormatDate } from "@/utils/getDateTime";
+import { getNowFormatDate, getTimeFormatFromTTime } from "@/utils/getDateTime";
 import HTable from "../../components/Table";
 import HModal from "../../components/Modal";
 import styles from "./index.module.less";
 
-// const dataSource = [
-//   {
-//     id: "1",
-//     date: "2020/7/1",
-//     content: "白班",
-//   },
-//   {
-//     id: "2",
-//     date: "2020/7/1",
-//     content: "fff",
-//   },
-// ];
 
 const Brief = ({ dispatch, briefList, briefLoading }) => {
   const [previewData, setPreviewData] = useState([]);
@@ -31,7 +19,6 @@ const Brief = ({ dispatch, briefList, briefLoading }) => {
     setPreviewData(newData);
   };
   const getValues = async (values) => {
-    console.log("values:", values);
     const params = {
       title: values.date,
       content: values.content,
@@ -52,7 +39,7 @@ const Brief = ({ dispatch, briefList, briefLoading }) => {
       title: "日期",
       dataIndex: "createTime",
       key: "createTime",
-      render: (value) => value.split("T")[0],
+      render: (value) => getTimeFormatFromTTime(value), // value.split("T")[0],
     },
     { title: "内容", dataIndex: "content", key: "content", ellipsis: true },
     {

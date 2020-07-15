@@ -1,23 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "dva";
 import { Select, Button } from "antd";
 
 const { Option } = Select;
 
-const MonthPanel = () => {
+const MonthPanel = ({ dispatch, dutyMonthList, currentDutyMonth }) => {
   const handleChange = () => {};
+
+  useEffect(() => {
+    dispatch({
+      type: "DutyAdmin/getAllMonth",
+    });
+  }, [dispatch]);
   return (
     <div>
       <Select
-        defaultValue="202006"
+        defaultValue={currentDutyMonth}
         style={{ width: 120, marginRight: "10px" }}
         onChange={handleChange}
       >
-        <Option value="202006">2020年6月</Option>
-        <Option value="202007">2020年7月</Option>
+        {dutyMonthList.map((item) => (
+          <Option value={item} key={item}>
+            {item}
+          </Option>
+        ))}
       </Select>
       <Button>删除排班信息</Button>
     </div>
   );
 };
 
-export default MonthPanel;
+export default connect(({ DutyAdmin }) => DutyAdmin)(MonthPanel);
