@@ -11,7 +11,7 @@ const BackGround = () => (
   </>
 );
 
-const LineData = () => (
+const LineData = ({ data: { app, vm, bz, pm, bm } }) => (
   <>
     <div>
       <div className={styles.workline}></div>
@@ -20,7 +20,7 @@ const LineData = () => (
       <div className={styles.appline}></div>
       <OverviewFloatItem
         label="应用数"
-        value={14}
+        value={app}
         className={styles.applinecontent}
       ></OverviewFloatItem>
     </div>
@@ -28,7 +28,7 @@ const LineData = () => (
       <div className={styles.vmline}></div>
       <OverviewFloatItem
         label="虚拟机数"
-        value={154}
+        value={vm}
         className={styles.vmlinecontent}
       ></OverviewFloatItem>
     </div>
@@ -36,7 +36,7 @@ const LineData = () => (
       <div className={styles.bzline}></div>
       <OverviewFloatItem
         label="业务区域数"
-        value={3}
+        value={bz}
         className={styles.bzlinecontent}
       ></OverviewFloatItem>
     </div>
@@ -44,7 +44,7 @@ const LineData = () => (
       <div className={styles.pmline}></div>
       <OverviewFloatItem
         label="宿主机数"
-        value={30}
+        value={pm}
         className={styles.pmlinecontent}
       ></OverviewFloatItem>
     </div>
@@ -52,7 +52,7 @@ const LineData = () => (
       <div className={styles.bmline}></div>
       <OverviewFloatItem
         label="裸金属数"
-        value={3}
+        value={bm}
         className={styles.bmlinecontent}
       ></OverviewFloatItem>
     </div>
@@ -62,22 +62,21 @@ const LineData = () => (
   </>
 );
 
-const SumData = () => (
+const SumData = ({ data: { cpu, mem, storage, device } }) => (
   <div className={styles.sumdata}>
     <div className={styles.cpuvalue}>
       <div className={styles.cpulabel}>CPU总量</div>
-      123,234核
+      {cpu.toLocaleString()}核
     </div>
     <div className={styles.memvalue}>
-      123,234G
-      <div className={styles.memlabel}>内存总量</div>
+      {mem.toLocaleString()}G<div className={styles.memlabel}>内存总量</div>
     </div>
     <div className={styles.storevalue}>
       <div className={styles.storelabel}>存储总量</div>
-      123,234T
+      {storage.toLocaleString()}T
     </div>
     <div className={styles.devicevalue}>
-      1239台
+      {device.toLocaleString()}台
       <div className={styles.devicelabel}>设备总量</div>
     </div>
   </div>
@@ -93,12 +92,12 @@ const CircleAnimation = () => (
   </>
 );
 
-const OverView = () => {
+const OverView = ({ lineData, sumData }) => {
   return (
     <>
       <BackGround />
-      <LineData />
-      <SumData />
+      <LineData data={lineData} />
+      <SumData data={sumData} />
       <CircleAnimation />
     </>
   );

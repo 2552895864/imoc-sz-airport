@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "label": "CPU",
+      "usage": 58.24,
+      "sumCount": 24234,
+      "unit": "核",
+      "usedCount": 7000
+    },
+    {
+      "label": "内存",
+      "usage": 88.24,
+      "sumCount": 24234,
+      "unit": "G",
+      "usedCount": 17000
+    },
+    {
+      "label": "存储",
+      "usage": 18.24,
+      "sumCount": 24234,
+      "unit": "G",
+      "usedCount": 400
+    }
+  ]
+}
