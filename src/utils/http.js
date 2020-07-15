@@ -1,9 +1,13 @@
 import axios from "axios";
+import config from "@/config/config";
+
+const { baseURL, port } = config;
 
 // 创建axios实例
 const service = axios.create({
   // baseURL: process.env.BASE_API, // api 的 base_url
-  timeout: 20000, // 请求超时时间
+  timeout: 50000, // 请求超时时间
+  baseURL: `${baseURL}:${port}`,
 });
 
 // request拦截器

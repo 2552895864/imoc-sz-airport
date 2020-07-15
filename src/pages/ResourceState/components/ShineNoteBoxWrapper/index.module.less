@@ -1,10 +1,38 @@
+/* 根据文件名设置背景图片 */
+._getbgimg(@name) {
+  background-image: url(~"../../../../assets/ResourceState/@{name}");
+}
+
+@keyframes shine {
+  0% {
+    background-position: 170% 50%;
+  }
+  50% {
+    background-position: -60% 50%;
+  }
+  100% {
+    background-position: 170% 50%;
+  }
+}
+
 .container {
   position: relative;
   .header {
     height: 55px;
+    .shinenote {
+      position: absolute;
+      left: 114px;
+      top: 39px;
+      ._getbgimg("shine.png");
+      background-position: 170% 50%;
+      background-repeat: no-repeat;
+      width: 53%;
+      height: 5px;
+      animation: shine 5s linear 0s infinite normal none running;
+    }
   }
   .content {
-    background-image: url("../../../../assets/ResourceState/border_center.png");
+    ._getbgimg("border_center.png");
     background-repeat: no-repeat;
     background-size: 100% calc(~"100% - 50px");
   }
