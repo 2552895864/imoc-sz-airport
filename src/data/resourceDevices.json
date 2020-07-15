@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "value": 54,
+      "label": "服务器总数",
+      "iconName": "services"
+    },
+    {
+      "value": 54,
+      "label": "存储设备数",
+      "iconName": "storage"
+    },
+    {
+      "value": 54,
+      "label": "网络设备数",
+      "iconName": "net"
+    }
+  ]
+}

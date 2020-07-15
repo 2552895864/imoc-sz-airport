@@ -1,0 +1,45 @@
+/* 根据文件名设置背景图片 */
+
+._getbgimg(@name) {
+  background-image: url(~"../../../../../../assets/ResourceState/@{name}");
+}
+
+/* 图标class */
+
+.services {
+  ._getbgimg("services.png");
+}
+
+.storage {
+  ._getbgimg("storage.png");
+}
+
+.net {
+  ._getbgimg("net.png");
+}
+
+/* 组件class */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 50px;
+  .icon {
+    width: 23px;
+    height: 29px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .content {
+    width: 70px;
+    font-family: "MicrosoftYaHei";
+    font-size: 24px;
+    line-height: 1.25;
+    color: #ffffff;
+    .label {
+      font-size: 14px;
+    }
+  }
+}
