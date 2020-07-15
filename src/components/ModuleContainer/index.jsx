@@ -3,10 +3,10 @@ import classnames from "classnames";
 import styles from "./index.module.less";
 const Decorate = () => (
   <>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span className={styles.angle}></span>
+    <span className={styles.angle}></span>
+    <span className={styles.angle}></span>
+    <span className={styles.angle}></span>
     <div className={styles.topGradient}></div>
     <div className={styles.bottomGradient}></div>
     <div className={styles.leftLine}></div>

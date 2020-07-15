@@ -6,3 +6,17 @@ export const getStaffInfoByCondition = () => {
     method: "GET",
   });
 };
+
+export const getBrief = () => {
+  return request({
+    url: "/billboard/getBillboard",
+    method: "GET",
+  });
+};
+export const addBrief = (params) => {
+  return request({
+    url: "/billboard/add",
+    method: "POST",
+    data: params,
+  });
+};

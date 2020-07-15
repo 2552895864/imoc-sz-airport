@@ -3,6 +3,8 @@ import React from "react";
 import PageContainer from "@/components/PageContainer";
 import ModuleContainer from "@/components/ModuleContainer";
 
+import CurrentWarning from "./components/CurrentWarning";
+
 import styles from "./index.module.less";
 
 export default class AppState extends React.Component {
@@ -13,7 +15,8 @@ export default class AppState extends React.Component {
         <div className={styles.flexBox}>
           <div className={styles.left}>
             <ModuleContainer className={styles.currentWarning} title="当前告警">
-              <p>ff</p>
+              {/* <p>ff</p> */}
+              <CurrentWarning />
             </ModuleContainer>
             <ModuleContainer className={styles.historyWarning} title="历史告警">
               <p>ff</p>

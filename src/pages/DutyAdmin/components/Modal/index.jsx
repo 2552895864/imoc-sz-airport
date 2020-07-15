@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useImperativeHandle } from "react";
 import { Button, Modal, Space, Form, Row, Col } from "antd";
 import styles from "./index.module.less";
 
@@ -22,6 +22,11 @@ const HModal = ({
   onChangeOfValue,
   extra,
   needGrid = false,
+  formLabelWidth,
+  formInitialValues = {},
+  getValues,
+  loading = false,
+  mRef,
 }) => {
   const [visible, setVisible] = useState(false);
   const [form] = Form.useForm();
@@ -35,13 +40,40 @@ const HModal = ({
     }
   };
   const onFinish = (values) => {
-    console.log(values);
+    if (typeof getValues === "function") {
+      getValues(values);
+    }
+    // console.log(values);
   };
   const onValuesChange = (changedValues, allValues) => {
     if (onChangeOfValue) {
       onChangeOfValue(allValues);
     }
   };
+
+  const renderFormItem = (item) => (
+    <Form.Item
+      name={item.name}
+      label={
+        <span
+          style={{
+            width: formLabelWidth,
+            visibility: item.hidden ? "hidden" : "initial",
+          }}
+        >
+          {`${item.label}：`}
+        </span>
+      }
+      rules={item.rules}
+      key={item.name}
+    >
+      {item.component}
+    </Form.Item>
+  );
+  useImperativeHandle(mRef, () => ({
+    // changeVal 就是暴露给父组件的方法
+    hideModal,
+  }));
 
   return (
     <>
@@ -63,39 +95,34 @@ const HModal = ({
           onValuesChange={onValuesChange}
           form={form}
           size={formSize}
+          initialValues={formInitialValues}
         >
           {needGrid ? (
             <Row gutter={48}>
               {formItem.map((item) => (
                 <Col span={item.span || 8} key={item.name}>
-                  <Form.Item
+                  {renderFormItem(item)}
+                  {/* <Form.Item
                     name={item.name}
                     label={item.label}
                     rules={item.rules}
                     key={item.name}
                   >
                     {item.component}
-                  </Form.Item>
+                  </Form.Item> */}
                 </Col>
               ))}
             </Row>
           ) : (
-            formItem.map((item) => (
-              <Form.Item
-                name={item.name}
-                label={item.label}
-                rules={item.rules}
-                key={item.name}
-              >
-                {item.component}
-              </Form.Item>
-            ))
+            formItem.map((item) => renderFormItem(item))
           )}
           <Form.Item>
             <div className={styles.buttonArea}>
               <Space size={10}>
                 <Button onClick={hideModal}>取消</Button>
-                <Button type="primary" htmlType="submit">确定</Button>
+                <Button type="primary" htmlType="submit" loading={loading}>
+                  确定
+                </Button>
               </Space>
             </div>
           </Form.Item>

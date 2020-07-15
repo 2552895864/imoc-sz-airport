@@ -16,4 +16,13 @@
       border-radius: 20px;
     }
   }
+
+  :global {
+    .ant-form-item-label>label::after {
+      content : '';
+      position: relative;
+      top     : -0.5px;
+      margin  : 0 8px 0 2px;
+    }
+  }
 }

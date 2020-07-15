@@ -1,35 +1,60 @@
-import React, { useState } from "react";
-import { Button, Input } from "antd";
+import React, { useState, useEffect, useRef } from "react";
+import { Button, Input, message } from "antd";
+import { connect } from "dva";
 import _ from "lodash";
-import BirefPreview from "@/pages/Duty/components/Brief";
+import BriefPreview from "@/pages/Duty/components/Brief";
+import { getNowFormatDate } from "@/utils/getDateTime";
 import HTable from "../../components/Table";
 import HModal from "../../components/Modal";
 import styles from "./index.module.less";
 
-const dataSource = [
-  {
-    id: "1",
-    date: "2020/7/1",
-    content: "白班",
-  },
-  {
-    id: "2",
-    date: "2020/7/1",
-    content: "fff",
-  },
-];
+// const dataSource = [
+//   {
+//     id: "1",
+//     date: "2020/7/1",
+//     content: "白班",
+//   },
+//   {
+//     id: "2",
+//     date: "2020/7/1",
+//     content: "fff",
+//   },
+// ];
 
-const Brief = () => {
+const Brief = ({ dispatch, briefList, briefLoading }) => {
   const [previewData, setPreviewData] = useState([]);
+  const modalRef = useRef();
   const onChangeOfValue = (value) => {
     const newData = _.get(value, "content", "")
       .split(/[(\r\n)\r\n]+/)
       .filter((item) => item !== "");
     setPreviewData(newData);
   };
+  const getValues = async (values) => {
+    console.log("values:", values);
+    const params = {
+      title: values.date,
+      content: values.content,
+    };
+    const result = await dispatch({
+      type: "DutyAdmin/addBrief",
+      payload: params,
+    });
+    if (result) {
+      message.success("添加成功");
+      modalRef.current.hideModal();
+    } else {
+      message.success("添加失败");
+    }
+  };
   const columns = [
-    { title: "日期", dataIndex: "date", key: "date" },
-    { title: "内容", dataIndex: "content", key: "content" },
+    {
+      title: "日期",
+      dataIndex: "createTime",
+      key: "createTime",
+      render: (value) => value.split("T")[0],
+    },
+    { title: "内容", dataIndex: "content", key: "content", ellipsis: true },
     {
       title: "操作",
       key: "action",
@@ -46,7 +71,7 @@ const Brief = () => {
       name: "date",
       label: "日期",
       rules: [{ required: true, message: "Please input your username!" }],
-      component: <Input />,
+      component: <Input disabled />,
     },
     {
       name: "content",
@@ -55,6 +80,12 @@ const Brief = () => {
       component: <Input.TextArea rows={4} />,
     },
   ];
+
+  useEffect(() => {
+    dispatch({
+      type: "DutyAdmin/getBrief",
+    });
+  }, [dispatch]);
 
   return (
     <>
@@ -65,24 +96,31 @@ const Brief = () => {
         width={1300}
         formItem={formItem}
         onChangeOfValue={onChangeOfValue}
+        formInitialValues={{
+          date: getNowFormatDate(),
+        }}
+        getValues={getValues}
         extra={
           <div className={styles.preview}>
             <div className={styles.title}>预览</div>
             <div className={styles.content}>
-              <BirefPreview data={previewData} />
+              <BriefPreview previewData={previewData} />
             </div>
           </div>
         }
+        mRef={modalRef}
+        loading={briefLoading}
       />
       <HTable
         pagination={{
           hideOnSinglePage: true,
         }}
-        dataSource={dataSource}
+        dataSource={briefList}
         columns={columns}
       />
     </>
   );
 };
 
-export default Brief;
+export default connect(({ DutyAdmin }) => DutyAdmin)(Brief);
+// export default Brief;

@@ -161,6 +161,7 @@ const WorkingSchedule = () => {
           // buttonClassName={styles.add}
           width={1000}
           formItem={formItem}
+          formLabelWidth={80}
         />
       ),
     },

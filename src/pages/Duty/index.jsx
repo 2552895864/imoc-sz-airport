@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "dva";
 import PageContainer from "@/components/PageContainer";
 import WeatherAndTime from "./components/WeatherAndTime";
 import DutyBasicInfo from "./components/DutyBasicInfo";
@@ -14,9 +15,26 @@ import briefData from "@/data/简报通知.json";
 
 import styles from "./index.module.less";
 
-export default class Duty extends React.Component {
+let timer = null;
+@connect(({ Duty }) => Duty)
+class Duty extends React.Component {
   state = {
     currentTimeStamp: getCurrentTimeStamp(),
+  };
+  componentDidMount() {
+    this.getDutyData();
+    // const self = this;
+    // timer = setInterval(() => {
+    //   self.getDutyData();
+    // }, 10000);
+  }
+  componentWillUnmount() {
+    clearInterval(timer);
+  }
+  getDutyData = () => {
+    console.log('getDutyData');
+    const { dispatch } = this.props;
+    dispatch({ type: "Duty/getLatestOneBrief" });
   };
   handleDutyData = () => {
     const { currentTimeStamp } = this.state;
@@ -69,9 +87,10 @@ export default class Duty extends React.Component {
         <div className={styles.bottom}>
           <DutyListInfo data={dutyListData} />
           <DutyGroupInfo data={staffByGroup} />
-          {/* <DividerLine/> */}
         </div>
       </PageContainer>
     );
   }
 }
+
+export default Duty;

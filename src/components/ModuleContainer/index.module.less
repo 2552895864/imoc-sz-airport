@@ -1,9 +1,10 @@
 .container {
-  position: relative;
-  display : inline-block;
-  width   : 400px;
-  height  : 200px;
-  border  : 1px solid #0374A3;
+  position  : relative;
+  display   : inline-block;
+  width     : 400px;
+  height    : 200px;
+  border    : 1px solid #0374A3;
+  background: #051546;
   .borderDecorate;
 
   .title {
@@ -22,40 +23,46 @@
 }
 
 .borderDecorate {
-  .rightAngle {
+  .angle{
     position       : absolute;
-    padding        : 5px;
+    padding        : 4px;
     border-style   : solid;
     border-color   : #00DAFF;
+  }
+  .rightAngle {
+    // position       : absolute;
+    // padding        : 4px;
+    // border-style   : solid;
+    // border-color   : #00DAFF;
     // border-width: 0 5px 5px 0;
   }
 
-  span:nth-child(1) {
+  .angle:nth-child(1) {
     .rightAngle;
-    left        : -3px;
-    top         : -3px;
-    border-width: 3px 0 0 3px;
+    left        : -2px;
+    top         : -2px;
+    border-width: 1.5px 0 0 1.5px;
   }
 
-  span:nth-child(2) {
+  .angle:nth-child(2) {
     .rightAngle;
-    right       : -3px;
-    top         : -3px;
-    border-width: 3px 3px 0 0;
+    right       : -2px;
+    top         : -2px;
+    border-width: 1.5px 1.5px 0 0;
   }
 
-  span:nth-child(3) {
+  .angle:nth-child(3) {
     .rightAngle;
-    right       : -3px;
-    bottom      : -3px;
-    border-width: 0 3px 3px 0;
+    right       : -2px;
+    bottom      : -2px;
+    border-width: 0 1.5px 1.5px 0;
   }
 
-  span:nth-child(4) {
+  .angle:nth-child(4) {
     .rightAngle;
-    left        : -3px;
-    bottom      : -3px;
-    border-width: 0 0 3px 3px;
+    left        : -2px;
+    bottom      : -2px;
+    border-width: 0 0 1.5px 1.5px;
   }
 
   .gradientCommon {
@@ -78,8 +85,8 @@
   }
 
   .lineCommon {
-    width     : 3px;
-    height    : 13%;
+    width     : 2px;
+    height    : 15%;
     background: #00DAFF;
     display   : inline-block;
     position  : absolute;
@@ -88,12 +95,12 @@
   .leftLine {
     .lineCommon;
     top : 25%;
-    left: -3px;
+    left: -2px;
   }
 
   .rightLine {
     .lineCommon;
     bottom: 25%;
-    right : -3px;
+    right : -2px;
   }
 }

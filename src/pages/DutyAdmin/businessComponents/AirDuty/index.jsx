@@ -1,5 +1,5 @@
-import React from "react";
-import { Button, Input } from "antd";
+import React, { useState } from "react";
+import { Space, Input } from "antd";
 import HTable from "../../components/Table";
 import HModal from "../../components/Modal";
 
@@ -32,17 +32,90 @@ const dataSource = [
   },
 ];
 
+const NamePhoneInput = ({ value = {}, onChange }) => {
+  const [phone, setPhone] = useState(null);
+  const [name, setName] = useState("");
+  const triggerChange = (changedValue) => {
+    if (onChange) {
+      onChange({
+        phone,
+        name,
+        ...value,
+        ...changedValue,
+      });
+    }
+  };
+  const onPhoneChange = (e) => {
+    const newPhone = parseInt(e.target.value || 0);
+
+    if (Number.isNaN(newPhone)) {
+      return;
+    }
+
+    if (!("phone" in value)) {
+      setPhone(newPhone);
+    }
+
+    triggerChange({
+      phone: newPhone,
+    });
+  };
+  const onNameChange = (newCurrency) => {
+    if (!("name" in value)) {
+      setName(newCurrency);
+    }
+
+    triggerChange({
+      currency: newCurrency,
+    });
+  };
+  return (
+    <Space size={20}>
+      <Input
+        placeholder="姓名"
+        type="text"
+        value={value.name || name}
+        onChange={onNameChange}
+        style={{
+          width: 300,
+        }}
+      />
+      <Input
+        placeholder="电话"
+        type="text"
+        value={value.phone || phone}
+        onChange={onPhoneChange}
+        style={{
+          width: 300,
+        }}
+        // max={11}
+      />
+    </Space>
+  );
+};
+
 const AirDuty = () => {
   const formItem = [
-    { label: "日期日期", name: "date", component: <Input /> },
-    { label: "值班值班", name: "duty01", component: <Input /> },
-    { label: "值班经理", name: "dutyManager", component: <Input /> },
-    { label: "数据中心", name: "dataCenter", component: <Input /> },
-    { label: "通信运维", name: "comOperation", component: <Input /> },
-    { label: "系统值班", name: "sys", component: <Input /> },
-    { label: "安防值班", name: "security", component: <Input /> },
-    { label: "网络值班", name: "network", component: <Input /> },
-    { label: "通讯值班", name: "com", component: <Input /> },
+    { label: "值班01", name: "duty01", component: <NamePhoneInput /> },
+    { label: "值班经理", name: "dutyManager", component: <NamePhoneInput /> },
+    { label: "数据中心", name: "dataCenter", component: <NamePhoneInput /> },
+    { label: "通信运维", name: "comOperation", component: <NamePhoneInput /> },
+    { label: "系统值班", name: "sys", component: <NamePhoneInput /> },
+    {
+      label: "系统二班",
+      name: "sys.2",
+      component: <NamePhoneInput />,
+      hidden: true,
+    },
+    { label: "安防值班", name: "security", component: <NamePhoneInput /> },
+    { label: "网络值班", name: "network", component: <NamePhoneInput /> },
+    { label: "通讯值班", name: "com", component: <NamePhoneInput /> },
+    {
+      label: "通讯二班",
+      name: "com.2",
+      component: <NamePhoneInput />,
+      hidden: true,
+    },
   ];
   const columns = [
     { title: "日期", dataIndex: "date", key: "date" },
@@ -66,6 +139,7 @@ const AirDuty = () => {
           // buttonClassName={styles.add}
           width={800}
           formItem={formItem}
+          formLabelWidth={70}
         />
       ),
     },
