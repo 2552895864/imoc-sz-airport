@@ -17,7 +17,7 @@ export default class ResourceState extends React.Component {
         <div className={styles.content}>
           <div className={styles.left}>
             <div className={styles.lefttop}>
-              <ShineNoteBoxWrapper>
+              <ShineNoteBoxWrapper title="虚拟资源概览">
                 <BoxItemOfPie
                   label="CPU"
                   data={{
@@ -33,23 +33,25 @@ export default class ResourceState extends React.Component {
                   data={{
                     usage: 88.24,
                     sumCount: 24234,
-                    unit: "核",
-                    usedCount: 7000,
+                    unit: "G",
+                    usedCount: 17000,
                   }}
                 ></BoxItemOfPie>
                 <BoxInnerLine />
                 <BoxItemOfPie
-                  label="CPU"
+                  label="存储"
                   data={{
-                    usage: 58.24,
+                    usage: 18.24,
                     sumCount: 24234,
-                    unit: "核",
-                    usedCount: 7000,
+                    unit: "G",
+                    usedCount: 400,
                   }}
                 ></BoxItemOfPie>
               </ShineNoteBoxWrapper>
             </div>
-            <div className={styles.leftbottom}></div>
+            <div className={styles.leftbottom}>
+              <ShineNoteBoxWrapper title="虚拟资源使用趋势"></ShineNoteBoxWrapper>
+            </div>
           </div>
           <div className={styles.center}>
             <div className={styles.centertop}>
@@ -59,7 +61,42 @@ export default class ResourceState extends React.Component {
               <DeviceInfo data={resourceDevices.data}></DeviceInfo>
             </div>
           </div>
-          <div className={styles.right}></div>
+          <div className={styles.right}>
+            <div className={styles.righttop}>
+              <ShineNoteBoxWrapper title="物理资源概览">
+                <BoxItemOfPie
+                  label="CPU"
+                  data={{
+                    usage: 58.24,
+                    sumCount: 24234,
+                    unit: "核",
+                    usedCount: 7000,
+                  }}
+                ></BoxItemOfPie>
+                <BoxInnerLine />
+                <BoxItemOfPie
+                  label="内存"
+                  data={{
+                    usage: 88.24,
+                    sumCount: 24234,
+                    unit: "G",
+                    usedCount: 17000,
+                  }}
+                ></BoxItemOfPie>
+                <BoxInnerLine />
+                <BoxItemOfPie
+                  label="存储"
+                  data={{
+                    usage: 18.24,
+                    sumCount: 24234,
+                    unit: "G",
+                    usedCount: 400,
+                  }}
+                ></BoxItemOfPie>
+              </ShineNoteBoxWrapper>
+            </div>
+            <div className={styles.rightbottom}></div>
+          </div>
         </div>
         <div className={styles.footer}>
           <AnimationLines />
