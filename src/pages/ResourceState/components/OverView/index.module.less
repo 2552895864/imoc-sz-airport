@@ -62,6 +62,10 @@
 
 /* LineData组件部分 */
 
+.movepoint2center {
+  transform: translate(-50%, -50%);
+}
+
 .workline {
   position: absolute;
   left: 87px;
@@ -86,8 +90,9 @@
   z-index: 2;
 }
 .applinecontent {
-  left: 115px;
-  top: 145px;
+  .movepoint2center;
+  left: 154px;
+  top: 162px;
 }
 .vmline {
   position: absolute;
@@ -101,8 +106,9 @@
   z-index: 2;
 }
 .vmlinecontent {
-  left: 230px;
-  top: 190px;
+  .movepoint2center;
+  left: 272px;
+  top: 210px;
 }
 .bzline {
   position: absolute;
@@ -116,8 +122,9 @@
   z-index: 2;
 }
 .bzlinecontent {
-  left: 320px;
-  top: 90px;
+  .movepoint2center;
+  left: 368px;
+  top: 109px;
 }
 .pmline {
   position: absolute;
@@ -131,8 +138,9 @@
   z-index: 2;
 }
 .pmlinecontent {
-  left: 520px;
-  top: 150px;
+  .movepoint2center;
+  left: 561px;
+  top: 171px;
 }
 .bmline {
   position: absolute;
@@ -146,8 +154,9 @@
   z-index: 2;
 }
 .bmlinecontent {
-  left: 665px;
-  top: 65px;
+  .movepoint2center;
+  left: 695px;
+  top: 83px;
 }
 .bdsline {
   position: absolute;
@@ -164,6 +173,7 @@
 /* SumData组件部分 */
 .value {
   position: absolute;
+  min-width: 100px;
   z-index: 3;
   line-height: 1.25;
 }
@@ -171,51 +181,55 @@
   font-family: MicrosoftYaHei;
   font-size: 14px;
 }
+
 .sumdata {
   font-family: MicrosoftYaHei-Bold;
   font-size: 24px;
   .cpuvalue {
     .value;
-    left: 406px;
-    top: 291px;
+    .movepoint2center;
+    left: 460px;
+    top: 309px;
     color: #9ee8ff;
+    text-align: right;
     .cpulabel {
       .label;
-      text-align: right;
       color: #9ee8ff;
     }
   }
   .memvalue {
     .value;
-    left: 347px;
-    top: 344px;
+    .movepoint2center;
+    left: 394px;
+    top: 362px;
     color: #fcfaff;
+    text-align: left;
     .memlabel {
       .label;
-      text-align: left;
       color: #fcfaff;
-      padding-left: 0.5em;
     }
   }
   .storevalue {
     .value;
-    left: 442px;
-    top: 362px;
+    .movepoint2center;
+    left: 496px;
+    top: 380px;
     color: #f0ffc4;
+    text-align: right;
     .storelabel {
       .label;
-      text-align: right;
       color: #f0ffc4;
     }
   }
   .devicevalue {
     .value;
-    left: 406px;
-    top: 439px;
+    .movepoint2center;
+    left: 445px;
+    top: 465px;
     color: #73fffb;
+    text-align: center;
     .devicelabel {
       .label;
-      text-align: center;
       color: #73fffb;
     }
   }
