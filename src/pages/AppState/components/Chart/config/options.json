@@ -1,0 +1,186 @@
+{
+  "tooltip": {
+    "trigger": "axis",
+    "confine": true,
+    "showDelay": 40,
+    "hideDelay": 100,
+    "transitionDuration": 0.5,
+    "padding": [15, 10],
+    "backgroundColor": "rgba(34,144,204,0.2)",
+    "borderColor": "#2290cc",
+    "borderWidth": 2,
+    "borderRadius": 4,
+    "textStyle": {
+      "color": "#fff"
+    },
+    "axisPointer": {
+      "type": "line",
+      "lineStyle": {
+        "color": "#1b589d",
+        "width": 2,
+        "type": "solid"
+      },
+      "shadowStyle": {
+        "width": "auto",
+        "color": "rgba(150,150,150,0.3)"
+      }
+    }
+  },
+  "backgroundColor": "transparent",
+  "color": ["#fe3657", "#fd8000", "#fede00", "#3f9eff"],
+  "legend": {
+    "icon": "rect",
+    "y": "3%",
+    "right": "5%",
+    "itemWidth": 10,
+    "itemHeight": 12,
+    "itemGap": 10,
+    "data": ["紧急", "严重", "警告", "信息"],
+    "textStyle": {
+      "color": "#cccccc",
+      "fontSize": 14
+    }
+  },
+  "grid": {
+    "x": "5.5%",
+    "y": "18%",
+    "x2": "7%",
+    "y2": "6%",
+    "borderWidth": 0,
+    "containLabel": true
+  },
+  "calculable": false,
+  "xAxis": [
+    {
+      "type": "category",
+      "boundaryGap": false,
+      "verticalAlign": "bottom",
+      "nameTextStyle": {
+        "color": "#ffffff",
+        "fontSize": 12,
+        "verticalAlign": "bottom"
+      },
+      "axisLine": {
+        "lineStyle": {
+          "color": "#666666",
+          "type": "solid",
+          "width": "1"
+        }
+      },
+      "axisTick": {
+        "show": false
+      },
+      "axisLabel": {
+        "show": true,
+        "textStyle": {
+          "color": "#ffffff",
+          "fontSize": 12
+        },
+        "align": "left"
+      },
+      "splitLine": {
+        "lineStyle": {
+          "color": "#666666",
+          "type": "dashed"
+        },
+        "show": true
+      }
+    }
+  ],
+  "yAxis": [
+    {
+      "type": "value",
+      "name": "告警个数",
+      "nameTextStyle": {
+        "color": "#ffffff",
+        "fontSize": 16
+      },
+      "axisLine": {
+        "show": false,
+        "lineStyle": {
+          "color": "#666666",
+          "type": "solid"
+        }
+      },
+      "axisTick": {
+        "show": false
+      },
+      "axisLabel": {
+        "show": true,
+        "textStyle": {
+          "color": "#ffffff",
+          "fontSize": 12
+        }
+      },
+      "splitLine": {
+        "lineStyle": {
+          "color": "#666666",
+          "type": "solid"
+        },
+        "show": true
+      }
+    }
+  ],
+  "series": [
+    {
+      "name": "紧急",
+      "type": "line",
+      "symbol": "none",
+      "symbolSize": 0,
+      "smooth": 0.4,
+      "itemStyle": {
+        "normal": {
+          "lineStyle": {
+            "width": 1,
+            "color": "#fe3657"
+          }
+        }
+      }
+    },
+    {
+      "name": "严重",
+      "type": "line",
+      "symbol": "none",
+      "symbolSize": 0,
+      "smooth": 0.4,
+      "itemStyle": {
+        "normal": {
+          "lineStyle": {
+            "width": 1,
+            "color": "#fd8000"
+          }
+        }
+      }
+    },
+    {
+      "name": "警告",
+      "type": "line",
+      "symbol": "none",
+      "symbolSize": 0,
+      "smooth": 0.4,
+      "itemStyle": {
+        "normal": {
+          "lineStyle": {
+            "width": 1,
+            "color": "#fede00"
+          }
+        }
+      }
+    },
+    {
+      "name": "信息",
+      "type": "line",
+      "symbol": "none",
+      "symbolSize": 0,
+      "smooth": 0.4,
+      "itemStyle": {
+        "normal": {
+          "lineStyle": {
+            "width": 1,
+            "color": "#3f9eff"
+          }
+        }
+      }
+    }
+  ]
+}
