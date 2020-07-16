@@ -8,6 +8,7 @@ const resultFeedback = ({ success, message: msg }, actionName) => {
   } else {
     message.error(`${actionName}失败${msg ? `:${msg}` : ""}`);
   }
+  return success;
 };
 
 const orderWorkingScheduleListByDate = (data) => {
@@ -24,6 +25,7 @@ const orderWorkingScheduleListByDate = (data) => {
 };
 const handleWorkingScheduleList = (data) => {
   const workingScheduleList = [];
+  const workingScheduleListForManager = [];
   const rotaByDay = orderWorkingScheduleListByDate(
     _.get(data, "rotaByDay", [])
   );
@@ -36,6 +38,7 @@ const handleWorkingScheduleList = (data) => {
 
     const staffListDay = staffList.filter((staff) => staff.shift === "D");
     const staffListNight = staffList.filter((staff) => staff.shift === "N");
+    const dailyManagerList = staffList.filter((staff) => staff.shift === null);
 
     const dailyLeaderListDay = dailyLeaderList.filter(
       (staff) => staff.shift === "D"
@@ -60,22 +63,29 @@ const handleWorkingScheduleList = (data) => {
         member: staffListNight,
       }
     );
+    workingScheduleListForManager.push({
+      id: date,
+      date,
+      dailyManagerList,
+    });
   });
-  return workingScheduleList;
+  return { workingScheduleList, workingScheduleListForManager };
 };
 
 export default {
   namespace: "DutyAdmin",
   state: {
-    dutyMonthList: ["2020/06", "2020/07"],
-    currentDutyMonth: "2020/07",
-
-    workingScheduleList: [],
-    workingScheduleListLoading: false,
-    updateWorkingScheduleListLoading: false,
-
     uploadMsLoading: false,
     uploadDataCenterLoading: false,
+    uploadCmLoading: false,
+
+    dutyMonthList: [],
+    currentDutyMonth: "",
+
+    workingScheduleList: [],
+    workingScheduleListForManager: [],
+    workingScheduleListLoading: false,
+    updateWorkingScheduleListLoading: false,
 
     staffList: [],
     leaderList: [],
@@ -84,8 +94,12 @@ export default {
 
     briefList: [],
     briefLoading: false,
+    updateBriefLoading: false,
   },
   effects: {
+    /**
+     * 获取全部月份
+     */
     *getAllMonth({ payload }, { put, call }) {
       try {
         let result = yield call(service.getAllMonth);
@@ -102,6 +116,9 @@ export default {
         console.log("error:", error);
       }
     },
+    /**
+     * 获取排班信息
+     */
     *getWorkingScheduleList({ payload }, { put, call }) {
       yield put({
         type: "save",
@@ -109,11 +126,15 @@ export default {
       });
       try {
         let result = yield call(service.getMaintenanceRotaByDay, payload);
-        const originData = _.get(result, "data", []);
+        const {
+          workingScheduleList,
+          workingScheduleListForManager,
+        } = handleWorkingScheduleList(_.get(result, "data", []));
         yield put({
           type: "save",
           payload: {
-            workingScheduleList: handleWorkingScheduleList(originData),
+            workingScheduleList,
+            workingScheduleListForManager,
             workingScheduleListLoading: false,
           },
         });
@@ -125,6 +146,9 @@ export default {
         });
       }
     },
+    /**
+     * 更新排班信息
+     */
     *updateWorkingScheduleList({ payload }, { put, call, select }) {
       yield put({
         type: "save",
@@ -153,6 +177,31 @@ export default {
         });
       }
     },
+    /**
+     * 获取运维人员信息
+     */
+    *getStaffInfoByCondition({ payload }, { put, call }) {
+      yield put({ type: "save", payload: { staffListLoading: true } });
+      try {
+        let { data } = yield call(service.getStaffInfoByCondition);
+        yield put({
+          type: "save",
+          payload: {
+            staffList: data,
+            leaderList: data.filter((staff) => staff.leader),
+            staffListLoading: false,
+          },
+        });
+        return data;
+      } catch (error) {
+        yield put({ type: "save", payload: { staffListLoading: false } });
+        console.log("error:", error);
+      }
+      // debugger;
+    },
+    /**
+     * 更新运维人员信息
+     */
     *updateStaffInfo({ payload }, { put, call, select }) {
       yield put({
         type: "save",
@@ -175,41 +224,29 @@ export default {
         });
       }
     },
-
-    *getStaffInfoByCondition({ payload }, { put, call }) {
-      yield put({ type: "save", payload: { staffListLoading: true } });
-      try {
-        let { data } = yield call(service.getStaffInfoByCondition);
-        console.log("getStaffInfoByCondition:");
-        yield put({
-          type: "save",
-          payload: {
-            staffList: data,
-            leaderList: data.filter((staff) => staff.leader),
-            staffListLoading: false,
-          },
-        });
-        return data;
-      } catch (error) {
-        yield put({ type: "save", payload: { staffListLoading: false } });
-        console.log("error:", error);
-      }
-      // debugger;
-    },
+    /**
+     * 获取简报信息
+     */
     *getBrief({ payload }, { put, call }) {
+      yield put({ type: "save", payload: { briefLoading: true } });
       try {
         let { data } = yield call(service.getBrief);
         yield put({
           type: "save",
           payload: {
             briefList: data,
+            briefLoading: false,
           },
         });
         return data;
       } catch (error) {
         console.log("error:", error);
+        yield put({ type: "save", payload: { briefLoading: false } });
       }
     },
+    /**
+     * 添加简报信息
+     */
     *addBrief({ payload }, { put, call }) {
       yield put({ type: "save", payload: { briefLoading: true } });
       try {
@@ -223,13 +260,55 @@ export default {
         yield put({ type: "save", payload: { briefLoading: false } });
       }
     },
-
-    *uploadMsData({ payload }, { put, call }) {
+    *deleteBrief({ payload }, { put, call }) {
+      yield put({ type: "save", payload: { briefLoading: true } });
+      try {
+        let { success } = yield call(service.deleteBrief, payload);
+        if (success) {
+          yield put({ type: "getBrief" });
+        }
+        yield put({ type: "save", payload: { briefLoading: false } });
+        return success;
+      } catch (error) {
+        yield put({ type: "save", payload: { briefLoading: false } });
+      }
+    },
+    /**
+     * 更新简报信息
+     */
+    *updateBrief({ payload }, { put, call }) {
+      yield put({ type: "save", payload: { updateBriefLoading: true } });
+      try {
+        let { success } = yield call(service.updateBrief, payload);
+        if (success) {
+          yield put({ type: "getBrief" });
+        }
+        yield put({ type: "save", payload: { updateBriefLoading: false } });
+        return success;
+      } catch (error) {
+        yield put({ type: "save", payload: { updateBriefLoading: false } });
+      }
+    },
+    /**
+     * 上传月度排班信息
+     */
+    *uploadMsData({ payload }, { put, call, select }) {
       yield put({ type: "save", payload: { uploadMsLoading: true } });
       try {
         let result = yield call(service.uploadMsData, payload);
         yield put({ type: "save", payload: { uploadMsLoading: false } });
-        resultFeedback(result, "上传统一运维排班");
+        const isSuccess = resultFeedback(result, "上传统一运维排班");
+        if (isSuccess) {
+          yield put({ type: "getAllMonth" });
+          const month = yield select((state) => {
+            const {
+              DutyAdmin: { currentDutyMonth },
+            } = state;
+            return currentDutyMonth;
+          });
+
+          yield put({ type: "getWorkingScheduleList", payload: { month } });
+        }
         // return success;
       } catch (error) {
         resultFeedback({ success: false }, "上传统一运维排班");
@@ -237,7 +316,47 @@ export default {
         console.log("error:", error);
       }
     },
-    *uploadDataCenterData({ payload }, { put, call }) {
+
+    /**
+     * 删除月度值班信息
+     */
+    *deleteMsByMonth({ payload }, { put, call, select }) {
+      yield put({
+        type: "save",
+        payload: { workingScheduleListLoading: true },
+      });
+      try {
+        let result = yield call(service.deleteMsByMonth, payload);
+        yield put({
+          type: "save",
+          payload: { workingScheduleListLoading: false },
+        });
+        const isSuccess = resultFeedback(result, "删除运维排班");
+        if (isSuccess) {
+          yield put({ type: "getAllMonth" });
+          const month = yield select((state) => {
+            const {
+              DutyAdmin: { currentDutyMonth },
+            } = state;
+            return currentDutyMonth;
+          });
+          yield put({ type: "save", payload: { currentDutyMonth: month } });
+          yield put({ type: "getWorkingScheduleList", payload: { month } });
+        }
+        // return success;
+      } catch (error) {
+        resultFeedback({ success: false }, "删除运维排班");
+        yield put({
+          type: "save",
+          payload: { workingScheduleListLoading: false },
+        });
+        console.log("error:", error);
+      }
+    },
+    /**
+     * 上传数据中心排班信息
+     */
+    *uploadDataCenterData({ payload }, { put, call, select }) {
       yield put({ type: "save", payload: { uploadDataCenterLoading: true } });
       try {
         let result = yield call(service.uploadDataCenterData, payload);
@@ -245,13 +364,55 @@ export default {
           type: "save",
           payload: { uploadDataCenterLoading: false },
         });
-        resultFeedback(result, "上传数据中心排班");
+        const isSuccess = resultFeedback(result, "上传数据中心排班");
+        if (isSuccess) {
+          yield put({ type: "getAllMonth" });
+          const month = yield select((state) => {
+            const {
+              DutyAdmin: { currentDutyMonth },
+            } = state;
+            return currentDutyMonth;
+          });
+          yield put({ type: "getWorkingScheduleList", payload: { month } });
+        }
         // return success;
       } catch (error) {
         resultFeedback({ success: false }, "上传数据中心排班");
         yield put({
           type: "save",
           payload: { uploadDataCenterLoading: false },
+        });
+        console.log("error:", error);
+      }
+    },
+    /**
+     * 上传值班经理信息
+     */
+    *uploadCmData({ payload }, { put, call, select }) {
+      yield put({ type: "save", payload: { uploadCmLoading: true } });
+      try {
+        let result = yield call(service.uploadCmData, payload);
+        yield put({
+          type: "save",
+          payload: { uploadCmLoading: false },
+        });
+        const isSuccess = resultFeedback(result, "上传通讯值班排班");
+        if (isSuccess) {
+          yield put({ type: "getAllMonth" });
+          const month = yield select((state) => {
+            const {
+              DutyAdmin: { currentDutyMonth },
+            } = state;
+            return currentDutyMonth;
+          });
+          yield put({ type: "getWorkingScheduleList", payload: { month } });
+        }
+        // return success;
+      } catch (error) {
+        resultFeedback({ success: false }, "上传通讯值班排班");
+        yield put({
+          type: "save",
+          payload: { uploadCmLoading: false },
         });
         console.log("error:", error);
       }

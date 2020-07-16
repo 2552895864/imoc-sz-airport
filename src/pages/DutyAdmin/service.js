@@ -33,6 +33,15 @@ export const updateMSData = (params) => {
 };
 
 /**
+ * 获取人员信息 /staff/update/{recordId}
+ */
+export const getStaffInfoByCondition = () => {
+  return request({
+    url: "/staff/getByCondition",
+    method: "GET",
+  });
+};
+/**
  * 更新人员信息 /staff/update/{recordId}
  */
 export const updateStaffInfo = (params) => {
@@ -45,6 +54,50 @@ export const updateStaffInfo = (params) => {
   });
 };
 
+/**
+ * 获取简报信息
+ */
+export const getBrief = () => {
+  return request({
+    url: "/billboard/getBillboard",
+    method: "GET",
+  });
+};
+/**
+ * 添加简报信息
+ */
+export const addBrief = (params) => {
+  return request({
+    url: "/billboard/add",
+    method: "POST",
+    data: params,
+  });
+};
+
+/**
+ * 删除简报信息
+ */
+export const deleteBrief = (params) => {
+  return request({
+    url: `/billboard/delete/${params.id}`,
+    method: "delete",
+    // params,
+  });
+};
+/**
+ * 更新简报
+ */
+export const updateBrief = (params) => {
+  return request({
+    url: "/billboard/update",
+    method: "PUT",
+    data: params,
+  });
+};
+
+/**
+ * 上传数据中心排班信息
+ */
 export const uploadMsData = (params) => {
   return request({
     url: "/ms/file/upload",
@@ -53,6 +106,9 @@ export const uploadMsData = (params) => {
   });
 };
 
+/**
+ * 上传数据中心排班信息
+ */
 export const uploadDataCenterData = (params) => {
   return request({
     url: "/dataCenter/file/upload",
@@ -61,23 +117,26 @@ export const uploadDataCenterData = (params) => {
   });
 };
 
-export const getStaffInfoByCondition = () => {
+/**
+ * 上传值班经理信息
+ */
+export const uploadCmData = (params) => {
   return request({
-    url: "/staff/getByCondition",
-    method: "GET",
-  });
-};
-
-export const getBrief = () => {
-  return request({
-    url: "/billboard/getBillboard",
-    method: "GET",
-  });
-};
-export const addBrief = (params) => {
-  return request({
-    url: "/billboard/add",
+    url: "/cm/file/upload",
     method: "POST",
     data: params,
   });
 };
+
+/**
+ * 删除月度值班信息
+ */
+export const deleteMsByMonth = (params) => {
+  return request({
+    url: "/ms/deleteByMonth",
+    method: "delete",
+    params,
+  });
+};
+
+

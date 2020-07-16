@@ -5,7 +5,18 @@ import { Select, Button } from "antd";
 const { Option } = Select;
 
 const MonthPanel = ({ dispatch, dutyMonthList, currentDutyMonth }) => {
-  const handleChange = () => {};
+  const handleChange = (value) => {
+    dispatch({
+      type: "DutyAdmin/save",
+      payload: { currentDutyMonth: value },
+    });
+  };
+  const handleDelete = () => {
+    dispatch({
+      type: "DutyAdmin/deleteMsByMonth",
+      payload: { month: currentDutyMonth },
+    });
+  };
 
   useEffect(() => {
     dispatch({
@@ -15,7 +26,7 @@ const MonthPanel = ({ dispatch, dutyMonthList, currentDutyMonth }) => {
   return (
     <div>
       <Select
-        defaultValue={currentDutyMonth}
+        value={currentDutyMonth}
         style={{ width: 120, marginRight: "10px" }}
         onChange={handleChange}
       >
@@ -25,7 +36,7 @@ const MonthPanel = ({ dispatch, dutyMonthList, currentDutyMonth }) => {
           </Option>
         ))}
       </Select>
-      <Button>删除排班信息</Button>
+      <Button onClick={handleDelete}>删除排班信息</Button>
     </div>
   );
 };

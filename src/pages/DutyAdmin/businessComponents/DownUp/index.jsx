@@ -1,6 +1,9 @@
 import React from "react";
 import { connect } from "dva";
 import { Button, Space, Menu, Dropdown, Upload, message } from "antd";
+import template1 from "@/template/深圳机场统一运维项目排班表.xlsx";
+import template2 from "@/template/数据中心值班表.xlsx";
+import template3 from "@/template/通讯值班经理排班表.xlsx";
 import styles from "./index.module.less";
 
 const ExcelUpload = ({ buttonName, loading = false, uploadRequest }) => {
@@ -35,55 +38,80 @@ const ExcelUpload = ({ buttonName, loading = false, uploadRequest }) => {
   );
 };
 
-const DownUp = ({ dispatch, uploadMsLoading }) => {
+const DownUp = ({
+  dispatch,
+  uploadMsLoading,
+  uploadDataCenterLoading,
+  uploadCmLoading,
+}) => {
   const uploadMsData = (params) => {
     dispatch({
       type: "DutyAdmin/uploadMsData",
       payload: params,
     });
   };
+  const uploadDataCenterData = (params) => {
+    dispatch({
+      type: "DutyAdmin/uploadDataCenterData",
+      payload: params,
+    });
+  };
+  const uploadCmData = (params) => {
+    dispatch({
+      type: "DutyAdmin/uploadCmData",
+      payload: params,
+    });
+  };
+  const uploadConfigGroup = [
+    {
+      buttonName: "上传统一运维排班",
+      uploadRequest: uploadMsData,
+      loading: uploadMsLoading,
+    },
+    {
+      buttonName: "上传数据中心排班",
+      uploadRequest: uploadDataCenterData,
+      loading: uploadDataCenterLoading,
+    },
+    {
+      buttonName: "上传通讯值班排班",
+      uploadRequest: uploadCmData,
+      loading: uploadCmLoading,
+    },
+  ];
+  const downloadFileList = [
+    { name: "统一运维", file: template1 },
+    { name: "数据中心", file: template2 },
+    { name: "通讯值班", file: template3 },
+  ];
   return (
     <>
       <Space>
-        <ExcelUpload
-          buttonName="上传统一运维排班"
-          uploadRequest={uploadMsData}
-          loading={uploadMsLoading}
-        />
-        <ExcelUpload buttonName="上传数据中心排班" />
-        <ExcelUpload buttonName="上传通讯值班排班" />
+        {uploadConfigGroup.map((config) => (
+          <ExcelUpload
+            key={config.buttonName}
+            buttonName={config.buttonName}
+            uploadRequest={config.uploadRequest}
+            loading={config.loading}
+          />
+        ))}
       </Space>
       <Dropdown
         className={styles.down}
         overlay={
           <Menu>
-            <Menu.Item>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="http://www.alipay.com/"
-              >
-                统一运维
-              </a>
-            </Menu.Item>
-            <Menu.Item>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="http://www.taobao.com/"
-              >
-                数据中心
-              </a>
-            </Menu.Item>
-            <Menu.Item>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="http://www.tmall.com/"
-              >
-                通讯值班
-              </a>
-            </Menu.Item>
+            {downloadFileList.map((item) => (
+              <Menu.Item key={item.name}>
+                <a
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={item.file}
+                >
+                  {item.name}
+                </a>
+              </Menu.Item>
+            ))}
           </Menu>
         }
         placement="bottomRight"
