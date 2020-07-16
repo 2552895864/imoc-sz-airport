@@ -8,6 +8,14 @@ import BoxInnerLine from "./components/BoxInnerLine";
 import BoxItemOfPie from "./components/BoxItemOfPie";
 import SwitchableLineChart from "./components/SwitchableLineChart";
 
+/** 数据默认值 */
+import resourceDevices from "@/data/resourceDevices";
+import resourceLineChart from "@/data/resourceLineChart";
+import resourcePieChart from "@/data/resourcePieChart";
+import resourceLineData from "@/data/resourceLineData";
+import resourceSumData from "@/data/resourceSumData";
+
+/** 页面级方法与样式 */
 import {
   queryLineData,
   querySumData,
@@ -24,13 +32,10 @@ import {
   normalizePieChartData,
   normalizeLineChartData,
 } from "./utils/normalize";
-import resourceDevices from "@/data/resourceDevices";
-import resourceLineChart from "@/data/resourceLineChart";
-import resourcePieChart from "@/data/resourcePieChart";
-import resourceLineData from "@/data/resourceLineData";
-import resourceSumData from "@/data/resourceSumData";
+import getDatas from "./utils/getDatas";
 import styles from "./index.module.less";
 
+// 获取数据用函数集
 const DataFuncsMap = {
   resourceLineData: {
     query: queryLineData,
@@ -74,31 +79,7 @@ export default class ResourceState extends React.Component {
   };
 
   async componentDidMount() {
-    /**
-     * 对于已声明的state：
-     *  1.获取对应数据
-     *  2.使用对应方法对数据进行标准化
-     *
-     * 注：state名与各个函数的对应关系见DataFuncsMap
-     */
-    const results = await Promise.all(
-      Object.keys(this.state).map(async (key) => {
-        const apiData = await DataFuncsMap[key].query();
-        const data = DataFuncsMap[key].normalize(apiData);
-        return {
-          [key]: data,
-        };
-      })
-    );
-    /**
-     * results:[{resourceLineData:data1},{resourceSumData:data2}]
-     */
-    const datas = results.reduce((acc, val) => {
-      return {
-        ...acc,
-        ...val,
-      };
-    }, {});
+    const datas = await getDatas(DataFuncsMap);
     this.setState(datas);
   }
 
