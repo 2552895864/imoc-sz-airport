@@ -3,6 +3,7 @@ import React from "react";
 import PageContainer from "@/components/PageContainer";
 import ModuleContainer from "@/components/ModuleContainer";
 import Chart from "./components/Chart";
+import Pie from "@/components/PieChart";
 
 import CurrentWarning from "./components/CurrentWarning";
 
@@ -29,7 +30,7 @@ export default class AppState extends React.Component {
           </div>
           <div className={styles.right}>
             <ModuleContainer className={styles.rightTop} title="操作系统">
-              <p>ff</p>
+              <Pie sumCount={205}></Pie>
             </ModuleContainer>
             <ModuleContainer className={styles.businessApp} title="业务应用">
               <p>ff</p>
