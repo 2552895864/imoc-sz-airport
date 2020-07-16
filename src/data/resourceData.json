@@ -1,0 +1,82 @@
+{
+  "deviceOverviewVO": {
+    "appNum": 1,
+    "vmNum": 2,
+    "ramSize": 4,
+    "cpuSize": 5,
+    "diskSize": 6,
+    "deviceNum": 7,
+    "bmsNum": 8,
+    "serverNum": 9,
+    "storageDeviceNum": 10,
+    "netDeviceNum": 11,
+    "businessAreaNum": 3
+  },
+  "vmResourceOverviewVO": {
+    "vcpuTotal": 1,
+    "vcpuUsed": 2,
+    "vcpuUsage": 3.0,
+    "vramTotal": 3,
+    "vramUsed": 4,
+    "vramUsage": 4.0,
+    "vdiskTotal": 4,
+    "vdiskUsed": 4,
+    "vdiskUsage": 4.0
+  },
+  "resourceTrendVO": {
+    "itemVOListByWeek": [
+      { "key": "07/0", "value": "48" },
+      { "key": "07/1", "value": "54" },
+      { "key": "07/2", "value": "40" },
+      { "key": "07/3", "value": "84" },
+      { "key": "07/4", "value": "69" },
+      { "key": "07/5", "value": "17" },
+      { "key": "07/6", "value": "3" },
+      { "key": "07/7", "value": "0" }
+    ],
+    "itemVOListByHour": [
+      { "key": "0", "value": "4" },
+      { "key": "1", "value": "56" },
+      { "key": "2", "value": "96" },
+      { "key": "3", "value": "74" },
+      { "key": "4", "value": "85" },
+      { "key": "5", "value": "74" },
+      { "key": "6", "value": "91" },
+      { "key": "7", "value": "43" },
+      { "key": "8", "value": "26" },
+      { "key": "9", "value": "56" },
+      { "key": "10", "value": "87" },
+      { "key": "11", "value": "25" },
+      { "key": "12", "value": "88" },
+      { "key": "13", "value": "43" },
+      { "key": "14", "value": "47" },
+      { "key": "15", "value": "36" },
+      { "key": "16", "value": "37" },
+      { "key": "17", "value": "13" },
+      { "key": "18", "value": "61" },
+      { "key": "19", "value": "11" },
+      { "key": "20", "value": "99" },
+      { "key": "21", "value": "2" },
+      { "key": "22", "value": "73" },
+      { "key": "23", "value": "97" },
+      { "key": "24", "value": "22" },
+      { "key": "25", "value": "94" },
+      { "key": "26", "value": "7" },
+      { "key": "27", "value": "33" },
+      { "key": "28", "value": "11" },
+      { "key": "29", "value": "63" },
+      { "key": "30", "value": "56" }
+    ]
+  },
+  "physicsResourceOverviewVO": {
+    "vcpuTotal": 1,
+    "vcpuUsed": 2,
+    "vcpuUsage": 3.0,
+    "vramTotal": 3,
+    "vramUsed": 4,
+    "vramUsage": 4.0,
+    "vdiskTotal": 4,
+    "vdiskUsed": 4,
+    "vdiskUsage": 4.0
+  }
+}
