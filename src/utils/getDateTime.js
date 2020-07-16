@@ -94,8 +94,8 @@ const getTimeFormatFromTTime = (tTime) => {
   //***至此以上是将时间2020-03-18T01:57:23.000+0000转为正常时间格式，以下为将时间进行增加8小时解决时区差异的操作***
   let time = new Date(Date.parse(over_time));
   time.setTime(time.setHours(time.getHours() + 8));
-  let Y = time.getFullYear() + "/";
-  let M = addZero(time.getMonth() + 1) + "/";
+  let Y = time.getFullYear() + "年";
+  let M = addZero(time.getMonth() + 1) + "月";
   let D = addZero(time.getDate()) + " ";
   // let h = addZero(time.getHours()) + ":";
   // let m = addZero(time.getMinutes()) + ":";

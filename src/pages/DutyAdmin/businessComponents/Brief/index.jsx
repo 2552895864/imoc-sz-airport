@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Button, Input, message } from "antd";
+import { Button, Input, message, Popconfirm } from "antd";
 import { connect } from "dva";
 import _ from "lodash";
 import BriefPreview from "@/pages/Duty/components/Brief";
@@ -8,31 +8,64 @@ import HTable from "../../components/Table";
 import HModal from "../../components/Modal";
 import styles from "./index.module.less";
 
+let currentId = "";
+const convertPreviewData = (value) =>
+  value.split(/[(\r\n)\r\n]+/).filter((item) => item !== "");
 
-const Brief = ({ dispatch, briefList, briefLoading }) => {
+const Brief = ({ dispatch, briefList, briefLoading, updateBriefLoading }) => {
   const [previewData, setPreviewData] = useState([]);
   const modalRef = useRef();
+  const updateModalRef = useRef();
+
   const onChangeOfValue = (value) => {
-    const newData = _.get(value, "content", "")
-      .split(/[(\r\n)\r\n]+/)
-      .filter((item) => item !== "");
-    setPreviewData(newData);
+    const str = _.get(value, "content", "");
+    setPreviewData(convertPreviewData(str));
   };
   const getValues = async (values) => {
-    const params = {
-      title: values.date,
-      content: values.content,
-    };
+    const request = currentId ? "updateBrief" : "addBrief";
+    const msg = (result) => `${currentId ? "修改" : "添加"}${result}`;
+    const params = Object.assign(
+      {},
+      {
+        title: values.createTime,
+        content: values.content,
+      },
+      currentId ? { id: currentId } : {}
+    );
     const result = await dispatch({
-      type: "DutyAdmin/addBrief",
+      type: `DutyAdmin/${request}`,
       payload: params,
     });
     if (result) {
-      message.success("添加成功");
-      modalRef.current.hideModal();
+      message.success(msg("成功"));
+      currentId
+        ? updateModalRef.current.hideModal()
+        : modalRef.current.hideModal();
     } else {
-      message.success("添加失败");
+      message.error(msg("失败"));
     }
+  };
+  const deleteBrief = async (id) => {
+    const result = await dispatch({
+      type: "DutyAdmin/deleteBrief",
+      payload: { id },
+    });
+    message.success(result ? "成功" : "失败");
+  };
+  const handleOpenUpdateModal = ({ id, createTime, content }) => {
+    currentId = id;
+    const newRecord = {
+      createTime: getTimeFormatFromTTime(createTime),
+      content,
+    };
+    // console.log("asdasdasdasda:::::::::", convertPreviewData(content));
+    setPreviewData(convertPreviewData(content));
+    updateModalRef.current.form.setFieldsValue(newRecord);
+    updateModalRef.current.showModal();
+  };
+  const hideModalCallback = () => {
+    currentId = "";
+    setPreviewData("");
   };
   const columns = [
     {
@@ -47,15 +80,24 @@ const Brief = ({ dispatch, briefList, briefLoading }) => {
       key: "action",
       render: (text, record) => (
         <>
-          <Button type="link">修改</Button>
-          <Button type="link">删除</Button>
+          <Button type="link" onClick={() => handleOpenUpdateModal(record)}>
+            修改
+          </Button>
+          <Popconfirm
+            title="确认删除?"
+            okText="是"
+            cancelText="否"
+            onConfirm={() => deleteBrief(record.id)}
+          >
+            <Button type="link"> 删除 </Button>
+          </Popconfirm>
         </>
       ),
     },
   ];
   const formItem = [
     {
-      name: "date",
+      name: "createTime",
       label: "日期",
       rules: [{ required: true, message: "Please input your username!" }],
       component: <Input disabled />,
@@ -84,7 +126,7 @@ const Brief = ({ dispatch, briefList, briefLoading }) => {
         formItem={formItem}
         onChangeOfValue={onChangeOfValue}
         formInitialValues={{
-          date: getNowFormatDate(),
+          createTime: getNowFormatDate(),
         }}
         getValues={getValues}
         extra={
@@ -97,6 +139,26 @@ const Brief = ({ dispatch, briefList, briefLoading }) => {
         }
         mRef={modalRef}
         loading={briefLoading}
+        hideModalCallback={hideModalCallback}
+      />
+      <HModal
+        title="修改工作简报"
+        hideDefaultButton
+        width={1300}
+        formItem={formItem}
+        onChangeOfValue={onChangeOfValue}
+        getValues={getValues}
+        extra={
+          <div className={styles.preview}>
+            <div className={styles.title}>预览</div>
+            <div className={styles.content}>
+              <BriefPreview previewData={previewData} />
+            </div>
+          </div>
+        }
+        mRef={updateModalRef}
+        loading={updateBriefLoading}
+        hideModalCallback={hideModalCallback}
       />
       <HTable
         pagination={{
@@ -104,6 +166,7 @@ const Brief = ({ dispatch, briefList, briefLoading }) => {
         }}
         dataSource={briefList}
         columns={columns}
+        loading={briefLoading}
       />
     </>
   );

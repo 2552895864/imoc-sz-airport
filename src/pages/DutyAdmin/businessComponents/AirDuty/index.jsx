@@ -1,170 +1,153 @@
-import React, { useState, useRef } from "react";
-import { Space, Input, Button } from "antd";
+import React, { useState, useEffect } from "react";
+import { Button, Divider } from "antd";
+import { connect } from "dva";
+import _ from "lodash";
 import HTable from "../../components/Table";
-import HModal from "../../components/Modal";
+import StaffSelectModal from "../StaffSelectModal";
 
-// import styles from "./index.module.less";
+import styles from "./index.module.less";
 
-const dataSource = [
-  {
-    id: "1",
-    date: "2020/7/1",
-    duty01: "白班",
-    dutyManager: "兰正旺",
-    dataCenter: "伍柏荣",
-    comOperation: "伍柏荣",
-    sys: "伍柏荣",
-    security: "伍柏荣",
-    network: "伍柏荣",
-    com: "伍柏荣",
-  },
-  {
-    id: "2",
-    date: "2020/7/1",
-    duty01: "晚班",
-    dutyManager: "兰正旺",
-    dataCenter: "伍柏荣",
-    comOperation: "伍柏荣",
-    sys: "伍柏荣",
-    security: "伍柏荣",
-    network: "伍柏荣",
-    com: "伍柏荣",
-  },
-];
+let selectedUpdateId = "";
+const AirDuty = ({
+  dispatch,
+  workingScheduleListForManager,
+  workingScheduleListLoading,
+  updateWorkingScheduleListLoading,
+  currentDutyMonth,
+}) => {
+  const [visible, setVisible] = useState(false);
+  const [selectedUpdateInfo, setSelectedUpdateInfo] = useState("");
 
-const NamePhoneInput = ({ value = {}, onChange }) => {
-  const [phone, setPhone] = useState(null);
-  const [name, setName] = useState("");
-  const triggerChange = (changedValue) => {
-    if (onChange) {
-      onChange({
-        phone,
-        name,
-        ...value,
-        ...changedValue,
-      });
-    }
+  const handleOpenUpdateModal = (id, record, groupName) => {
+    setVisible(true);
+    const { date } = record;
+    const finalGroupName = groupName === "manager" ? "通讯" : groupName;
+    const groupLabel = finalGroupName ? `${finalGroupName}值班人员` : "";
+    selectedUpdateId = id;
+    setSelectedUpdateInfo(`更新 ${date} ${groupLabel}`);
   };
-  const onPhoneChange = (e) => {
-    const newPhone = parseInt(e.target.value || 0);
-
-    if (Number.isNaN(newPhone)) {
-      return;
-    }
-
-    if (!("phone" in value)) {
-      setPhone(newPhone);
-    }
-
-    triggerChange({
-      phone: newPhone,
+  const handleHideUpdateModal = () => {
+    setVisible(false);
+    selectedUpdateId = "";
+  };
+  const confirmUpdateAction = async ({ staffMobile, staffName }) => {
+    const result = await dispatch({
+      type: "DutyAdmin/updateWorkingScheduleList",
+      payload: { id: selectedUpdateId, staffMobile, staffName },
     });
-  };
-  const onNameChange = (newCurrency) => {
-    if (!("name" in value)) {
-      setName(newCurrency);
+    if (result) {
+      handleHideUpdateModal();
     }
-
-    triggerChange({
-      currency: newCurrency,
-    });
   };
-  return (
-    <Space size={20}>
-      <Input
-        placeholder="姓名"
-        type="text"
-        value={value.name || name}
-        onChange={onNameChange}
-        style={{
-          width: 300,
-        }}
-      />
-      <Input
-        placeholder="电话"
-        type="text"
-        value={value.phone || phone}
-        onChange={onPhoneChange}
-        style={{
-          width: 300,
-        }}
-        // max={11}
-      />
-    </Space>
-  );
-};
+  const setCellButton = (record, groupName) => {
+    const member = _.get(record, "dailyManagerList", []);
+    const target = member.filter((item) => item.staffGroup === groupName);
 
-const AirDuty = () => {
-  const modalRef = useRef();
-  const handleAction = (record) => {
-    // staffId = record.id;
-    // setFormInitialValues(
-    //   Object.assign({}, record, { leader: record.leader ? "是" : "否" })
-    // );
-    modalRef.current.showModal();
+    return (
+      <span>
+        {target.map((staff, index) => (
+          <span key={staff.id}>
+            <Button
+              type="link"
+              className={styles.staffName}
+              onClick={() => {
+                handleOpenUpdateModal(staff.id, record, groupName);
+              }}
+            >
+              {_.get(staff, "staffName", "-")}
+            </Button>
+            {index !== target.length - 1 ? <Divider type="vertical" /> : null}
+          </span>
+        ))}
+      </span>
+    );
   };
-  const formItem = [
-    { label: "值班01", name: "duty01", component: <NamePhoneInput /> },
-    { label: "值班经理", name: "dutyManager", component: <NamePhoneInput /> },
-    { label: "数据中心", name: "dataCenter", component: <NamePhoneInput /> },
-    { label: "通信运维", name: "comOperation", component: <NamePhoneInput /> },
-    { label: "系统值班", name: "sys", component: <NamePhoneInput /> },
-    {
-      label: "系统二班",
-      name: "sys.2",
-      component: <NamePhoneInput />,
-      hidden: true,
-    },
-    { label: "安防值班", name: "security", component: <NamePhoneInput /> },
-    { label: "网络值班", name: "network", component: <NamePhoneInput /> },
-    { label: "通讯值班", name: "com", component: <NamePhoneInput /> },
-    {
-      label: "通讯二班",
-      name: "com.2",
-      component: <NamePhoneInput />,
-      hidden: true,
-    },
-  ];
+
   const columns = [
     { title: "日期", dataIndex: "date", key: "date" },
-    { title: "值班01", dataIndex: "duty01", key: "duty01" },
-    { title: "值班经理", dataIndex: "dutyManager", key: "dutyManager" },
-    { title: "数据中心", dataIndex: "dataCenter", key: "dataCenter" },
-    { title: "通信运维", dataIndex: "comOperation", key: "comOperation" },
-    { title: "系统值班", dataIndex: "sys", key: "sys" },
-    { title: "安防值班", dataIndex: "security", key: "security" },
-    { title: "网络值班", dataIndex: "network", key: "network" },
-    { title: "通讯值班", dataIndex: "com", key: "com" },
     {
-      title: "操作",
-      key: "action",
-      render: (text, record) => (
-        <Button type="link" onClick={() => handleAction(record)}>
-          修改
-        </Button>
-      ),
+      title: "值班01",
+      dataIndex: "duty01",
+      key: "duty01",
+      render: (value, record) => setCellButton(record, "值班01"),
+    },
+    {
+      title: "值班经理",
+      dataIndex: "dutyManager",
+      key: "dutyManager",
+      render: (value, record) => setCellButton(record, "值班经理"),
+    },
+    {
+      title: "数据中心",
+      dataIndex: "dataCenter",
+      key: "dataCenter",
+      render: (value, record) => setCellButton(record, "数据中心"),
+    },
+    {
+      title: "通信运维",
+      dataIndex: "comOperation",
+      key: "comOperation",
+      render: (value, record) => setCellButton(record, "通信运维"),
+    },
+    {
+      title: "系统值班",
+      dataIndex: "sys",
+      key: "sys",
+      render: (value, record) => setCellButton(record, "系统"),
+    },
+    {
+      title: "安防值班",
+      dataIndex: "security",
+      key: "security",
+      render: (value, record) => setCellButton(record, "安防"),
+    },
+    {
+      title: "网络值班",
+      dataIndex: "network",
+      key: "network",
+      render: (value, record) => setCellButton(record, "网络"),
+    },
+    {
+      title: "通讯值班",
+      dataIndex: "com",
+      key: "com",
+      render: (value, record) => setCellButton(record, "manager"),
     },
   ];
+
+  useEffect(() => {
+    if (currentDutyMonth !== "") {
+      dispatch({
+        type: "DutyAdmin/getWorkingScheduleList",
+        payload: { month: currentDutyMonth },
+      });
+    }
+  }, [currentDutyMonth, dispatch, workingScheduleListForManager.length]);
 
   return (
     <>
+      <div className={styles.extraInfo} style={{ marginBottom: "15px" }}>
+        点击人员名称进行更改
+      </div>
       <HTable
-        pagination={{
-          hideOnSinglePage: true,
-        }}
-        dataSource={dataSource}
+        // pagination={{
+        //   hideOnSinglePage: true,
+        // }}
+        dataSource={workingScheduleListForManager}
         columns={columns}
+        tableLayout="auto"
+        loading={workingScheduleListLoading}
       />
-      <HModal
+      <StaffSelectModal
+        visible={visible}
+        onCancel={handleHideUpdateModal}
         title="修改机场值班信息"
-        hideDefaultButton
-        formLabelWidth={70}
-        width={800}
-        formItem={formItem}
-        mRef={modalRef}
+        updateInfo={selectedUpdateInfo}
+        confirmLoading={updateWorkingScheduleListLoading}
+        confirmAction={confirmUpdateAction}
       />
     </>
   );
 };
 
-export default AirDuty;
+export default connect(({ DutyAdmin }) => DutyAdmin)(AirDuty);

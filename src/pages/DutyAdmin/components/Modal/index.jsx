@@ -83,6 +83,7 @@ const HModal = ({
     // changeVal 就是暴露给父组件的方法
     hideModal,
     showModal,
+    form
   }));
 
   return (
