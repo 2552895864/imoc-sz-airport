@@ -6,7 +6,7 @@
 - npm install 安装依赖
 - npm start 启动项目
 - npm run build 打包
-
+- npm run mock 运行mock模式  [参考](https://blog.csdn.net/janyxh/article/details/103677586)
 
 ### `项目说明`
 

@@ -7,7 +7,8 @@ const { baseURL, port } = config;
 const service = axios.create({
   // baseURL: process.env.BASE_API, // api 的 base_url
   timeout: 50000, // 请求超时时间
-  baseURL: `${baseURL}:${port}`,
+  baseURL:
+    process.env.REACT_APP_RUN_MODE === "mock" ? `${baseURL}:${port}` : "",
 });
 
 // request拦截器

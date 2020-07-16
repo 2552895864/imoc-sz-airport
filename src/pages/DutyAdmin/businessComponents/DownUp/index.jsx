@@ -1,16 +1,58 @@
 import React from "react";
-import { Button, Space, Menu, Dropdown } from "antd";
+import { connect } from "dva";
+import { Button, Space, Menu, Dropdown, Upload, message } from "antd";
 import styles from "./index.module.less";
 
-const DownUp = () => {
+const ExcelUpload = ({ buttonName, loading = false, uploadRequest }) => {
+  const beforeUpload = (file) => {
+    const { name } = file;
+    const result = /.xlsx$/.test(name);
+    if (!result) {
+      message.error("只能上传xlsx文件");
+    }
+    return result;
+  };
+
+  const customRequest = (option) => {
+    const formData = new FormData();
+    formData.append("file", option.file);
+    if (uploadRequest) {
+      uploadRequest(formData);
+    }
+  };
+
+  return (
+    <Upload
+      name="file"
+      customRequest={customRequest}
+      showUploadList={false}
+      beforeUpload={beforeUpload}
+    >
+      <Button type="primary" loading={loading}>
+        {buttonName}
+      </Button>
+    </Upload>
+  );
+};
+
+const DownUp = ({ dispatch, uploadMsLoading }) => {
+  const uploadMsData = (params) => {
+    dispatch({
+      type: "DutyAdmin/uploadMsData",
+      payload: params,
+    });
+  };
   return (
     <>
       <Space>
-        <Button type="primary">上传统一运维排班</Button>
-        <Button type="primary">上传数据中心排班</Button>
-        <Button type="primary">上传通讯值班排班</Button>
+        <ExcelUpload
+          buttonName="上传统一运维排班"
+          uploadRequest={uploadMsData}
+          loading={uploadMsLoading}
+        />
+        <ExcelUpload buttonName="上传数据中心排班" />
+        <ExcelUpload buttonName="上传通讯值班排班" />
       </Space>
-      {/* <Button className={styles.down}>下载排班模板</Button> */}
       <Dropdown
         className={styles.down}
         overlay={
@@ -52,5 +94,4 @@ const DownUp = () => {
     </>
   );
 };
-
-export default DownUp;
+export default connect(({ DutyAdmin }) => DutyAdmin)(DownUp);

@@ -2,7 +2,7 @@ import React from "react";
 import { Table } from "antd";
 import styles from "./index.module.less";
 
-const HTable = ({ dataSource, columns, pagination }) => {
+const HTable = ({ dataSource, columns, pagination, loading }) => {
   return (
     <Table
       // bordered
@@ -12,6 +12,7 @@ const HTable = ({ dataSource, columns, pagination }) => {
       size="small"
       rowKey="id"
       className={styles.table}
+      loading={loading}
     />
   );
 };

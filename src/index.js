@@ -23,6 +23,7 @@ const app = dva({
 
 //3.Model
 app.model(require('./pages/DutyAdmin/model').default);
+app.model(require('./pages/Duty/model').default);
 
 //4.Router
 app.router(require("./routes/Routes").default);
