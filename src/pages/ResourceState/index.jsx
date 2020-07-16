@@ -24,7 +24,7 @@ import {
   queryPMPieChartData,
   queryVMLineChartData,
   queryPMLineChartData,
-} from "./services";
+} from "./utils/getData";
 import {
   normalizeLineData,
   normalizeSumData,
@@ -80,7 +80,6 @@ export default class ResourceState extends React.Component {
 
   async componentDidMount() {
     const datas = await getDatas(DataFuncsMap);
-    console.log(datas);
     this.setState(datas);
   }
 
