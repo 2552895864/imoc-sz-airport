@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import LineChart from "./components/LineChart";
+import Chart from "./components/Chart";
 import Tab from "./components/Tab";
 
 import styles from "./index.module.less";
 
-const SwitchableLineChart = ({data}) => {
+const SwitchableLineChart = ({ data }) => {
   const [mode, setMode] = useState("week");
   const handleTabClick = (clickMode) => setMode(clickMode);
   const isActive = (target) => (mode === target ? true : false);
@@ -39,7 +39,7 @@ const SwitchableLineChart = ({data}) => {
           ></Tab>
         )}
       </div>
-      <LineChart className={styles.chart} data={data} mode={mode}></LineChart>
+      <Chart className={styles.chart} data={data} mode={mode}></Chart>
     </div>
   );
 };

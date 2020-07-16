@@ -10,7 +10,8 @@ const tooltipFormatter = (params) =>
     }
   }, "");
 
-export default (options, { time, cpu, memory, disk }) => {
+export default (options, data) => {
+  const { time } = data;
   return {
     ...options,
     tooltip: {
@@ -23,19 +24,12 @@ export default (options, { time, cpu, memory, disk }) => {
         data: time,
       },
     ],
-    series: [
-      {
-        ...options.series[0],
-        data: cpu,
-      },
-      {
-        ...options.series[1],
-        data: memory,
-      },
-      {
-        ...options.series[2],
-        data: disk,
-      },
-    ],
+    series: options.series.map((item) => {
+      const { name } = item;
+      return {
+        ...item,
+        data: data[name],
+      };
+    }),
   };
 };

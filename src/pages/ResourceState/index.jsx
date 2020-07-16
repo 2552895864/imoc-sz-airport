@@ -80,6 +80,7 @@ export default class ResourceState extends React.Component {
 
   async componentDidMount() {
     const datas = await getDatas(DataFuncsMap);
+    console.log(datas);
     this.setState(datas);
   }
 
