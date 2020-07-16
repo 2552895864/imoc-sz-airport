@@ -32,7 +32,6 @@ class Duty extends React.Component {
     clearInterval(timer);
   }
   getDutyData = () => {
-    console.log('getDutyData');
     const { dispatch } = this.props;
     dispatch({ type: "Duty/getLatestOneBrief" });
   };

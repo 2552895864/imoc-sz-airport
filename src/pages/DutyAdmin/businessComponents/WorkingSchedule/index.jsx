@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from "react";
 import _ from "lodash";
 import { connect } from "dva";
-import { Select, Button, Space, Modal } from "antd";
+import { Button } from "antd";
 import HTable from "../../components/Table";
+import StaffSelectModal from "../StaffSelectModal";
 
 import styles from "./index.module.less";
 
-
 let selectedUpdateId = "";
-let staffMobile = "";
-let staffName = "";
-const setSelectLabel = (staff) => `(${staff.staffGroup})${staff.staffName}`;
+
 const WorkingSchedule = ({
   dispatch,
-  staffList,
   currentDutyMonth,
   workingScheduleList,
   workingScheduleListLoading,
   updateWorkingScheduleListLoading,
 }) => {
   const [visible, setVisible] = useState(false);
-  const [selectValue, setSelectValue] = useState("");
   const [selectedUpdateInfo, setSelectedUpdateInfo] = useState("");
 
   const handleOpenUpdateModal = (record, groupName) => {
@@ -37,30 +33,20 @@ const WorkingSchedule = ({
     selectedUpdateId = _.get(selectedStaff, "id", "");
     setSelectedUpdateInfo(`更新 ${date} ${type} ${groupLabel} ${levelLabel}`);
   };
-  const hideModal = () => {
+  const handleHideUpdateModal = () => {
     setVisible(false);
-    setSelectValue("");
     selectedUpdateId = "";
-    staffMobile = "";
-    staffName = "";
   };
-  const handleUpdateMs = async (value, options) => {
-    setSelectValue(value);
-    const { key } = options;
-    const [mobilePhone, name] = key.split("_");
-    staffMobile = mobilePhone;
-    staffName = name;
-  };
-  const updateConfirm = async () => {
+  const confirmUpdateAction = async ({ staffMobile, staffName }) => {
     const result = await dispatch({
       type: "DutyAdmin/updateWorkingScheduleList",
       payload: { id: selectedUpdateId, staffMobile, staffName },
     });
     if (result) {
-      hideModal();
+      handleHideUpdateModal();
     }
   };
-  const setTableName = (record, groupName, staffName = null) => {
+  const setCellButton = (record, groupName, staffName = null) => {
     let member, target;
     if (!staffName) {
       member = _.get(record, "member", []);
@@ -75,7 +61,7 @@ const WorkingSchedule = ({
           handleOpenUpdateModal(record, groupName);
         }}
       >
-        {staffName || _.get(target[0], "staffName", "-")}
+        {staffName || _.get(target[0], "staffName", "")}
       </Button>
     );
   };
@@ -87,65 +73,68 @@ const WorkingSchedule = ({
       dataIndex: "groupLeader",
       key: "groupLeader",
       render: (value, record) =>
-        setTableName(record, null, _.get(record, "leader[0].staffName")),
+        setCellButton(record, null, _.get(record, "leader[0].staffName")),
     },
     {
       title: "机位/IOC",
       dataIndex: "ioc",
       key: "ioc",
-      render: (value, record) => setTableName(record, "机位/IOC"),
+      render: (value, record) => setCellButton(record, "机位/IOC"),
     },
     {
       title: "ROMA",
       dataIndex: "roma",
       key: "roma",
-      render: (value, record) => setTableName(record, "ROMA"),
+      render: (value, record) => setCellButton(record, "ROMA"),
     },
     {
       title: "大数据",
       dataIndex: "bData",
       key: "bData",
-      render: (value, record) => setTableName(record, "大数据"),
+      render: (value, record) => setCellButton(record, "大数据"),
     },
     {
       title: "云计算",
       dataIndex: "cloud",
       key: "cloud",
-      render: (value, record) => setTableName(record, "云计算"),
+      render: (value, record) => setCellButton(record, "云计算"),
     },
     {
       title: "视频安防",
       dataIndex: "video",
       key: "video",
-      render: (value, record) => setTableName(record, "视频安防"),
+      render: (value, record) => setCellButton(record, "视频安防"),
     },
     {
       title: "UCC",
       dataIndex: "ucc",
       key: "ucc",
-      render: (value, record) => setTableName(record, "UCC"),
+      render: (value, record) => setCellButton(record, "UCC"),
     },
     {
       title: "数通网络",
       dataIndex: "network",
       key: "network",
-      render: (value, record) => setTableName(record, "数通网络"),
+      render: (value, record) => setCellButton(record, "数通网络"),
     },
     {
       title: "LTE",
       dataIndex: "lte",
       key: "lte",
-      render: (value, record) => setTableName(record, "LTE"),
+      render: (value, record) => setCellButton(record, "LTE"),
     },
   ];
   useEffect(() => {
-    dispatch({
-      type: "DutyAdmin/getWorkingScheduleList",
-      payload: { month: currentDutyMonth },
-    });
-    dispatch({
-      type: "DutyAdmin/getStaffInfoByCondition",
-    });
+    if (currentDutyMonth !== "") {
+      dispatch({
+        type: "DutyAdmin/getWorkingScheduleList",
+        payload: { month: currentDutyMonth },
+      });
+    }
+
+    // dispatch({
+    //   type: "DutyAdmin/getStaffInfoByCondition",
+    // });
   }, [currentDutyMonth, dispatch]);
   return (
     <>
@@ -157,46 +146,14 @@ const WorkingSchedule = ({
         columns={columns}
         loading={workingScheduleListLoading}
       />
-      <Modal footer={null} visible={visible} onCancel={hideModal}>
-        <span className={styles.title}>修改排班信息</span>
-        <div className={styles.extraInfo}>{selectedUpdateInfo}</div>
-        <div className={styles.content}>
-          <span>选择值班人员</span>
-          <Select
-            value={selectValue}
-            onChange={handleUpdateMs}
-            showSearch
-            className={styles.select}
-            filterOption={(input, option) =>
-              option.props.children
-                .toLowerCase()
-                .indexOf(input.toLowerCase()) >= 0
-            }
-          >
-            {staffList.map((staff) => (
-              <Select.Option
-                key={`${staff.staffMobile}_${staff.staffName}`}
-                value={setSelectLabel(staff)}
-              >
-                {setSelectLabel(staff)}
-              </Select.Option>
-            ))}
-          </Select>
-        </div>
-
-        <div className={styles.buttonArea}>
-          <Space size={10}>
-            <Button onClick={hideModal}>取消</Button>
-            <Button
-              type="primary"
-              loading={updateWorkingScheduleListLoading}
-              onClick={updateConfirm}
-            >
-              确定
-            </Button>
-          </Space>
-        </div>
-      </Modal>
+      <StaffSelectModal
+        visible={visible}
+        onCancel={handleHideUpdateModal}
+        title="修改排班信息"
+        updateInfo={selectedUpdateInfo}
+        confirmLoading={updateWorkingScheduleListLoading}
+        confirmAction={confirmUpdateAction}
+      />
     </>
   );
 };
