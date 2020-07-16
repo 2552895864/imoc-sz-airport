@@ -2,9 +2,11 @@ import React from "react";
 // import { Button } from "antd";
 import PageContainer from "@/components/PageContainer";
 import ModuleContainer from "@/components/ModuleContainer";
+import Chart from "./components/Chart";
 
 import CurrentWarning from "./components/CurrentWarning";
 
+import lineChartData from "@/data/appLineChart.json";
 import styles from "./index.module.less";
 
 export default class AppState extends React.Component {
@@ -19,7 +21,7 @@ export default class AppState extends React.Component {
               <CurrentWarning />
             </ModuleContainer>
             <ModuleContainer className={styles.historyWarning} title="历史告警">
-              <p>ff</p>
+              <Chart data={lineChartData}></Chart>
             </ModuleContainer>
             <ModuleContainer className={styles.topFive} title="应用性能Top5">
               <p>ff</p>
