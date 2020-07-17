@@ -1,12 +1,11 @@
-import Data from "../data/Data";
-
-export const data = Data.getInstance();
-
 const getTime = (data) => Object.values(data).map((item) => item.date);
 const getValue = (data, key) => Object.values(data).map((item) => +item[key]);
 
-const queryLineData = async () => {
-  const { deviceOverviewVO } = await data.getData();
+const queryLineData = async (data) => {
+  const {
+    data: { deviceOverviewVO },
+  } = await data.getData();
+  if (!deviceOverviewVO) return {};
   return {
     app: deviceOverviewVO.appNum,
     vm: deviceOverviewVO.vmNum,
@@ -15,8 +14,11 @@ const queryLineData = async () => {
     bm: deviceOverviewVO.bmsNum,
   };
 };
-const querySumData = async () => {
-  const { deviceOverviewVO } = await data.getData();
+const querySumData = async (data) => {
+  const {
+    data: { deviceOverviewVO },
+  } = await data.getData();
+  if (!deviceOverviewVO) return {};
   return {
     cpu: deviceOverviewVO.cpuSize,
     mem: deviceOverviewVO.ramSize,
@@ -24,8 +26,11 @@ const querySumData = async () => {
     device: deviceOverviewVO.deviceNum,
   };
 };
-const queryDeviceData = async () => {
-  const { deviceOverviewVO } = await data.getData();
+const queryDeviceData = async (data) => {
+  const {
+    data: { deviceOverviewVO },
+  } = await data.getData();
+  if (!deviceOverviewVO) return {};
   return [
     {
       value: deviceOverviewVO.serverNum,
@@ -44,8 +49,11 @@ const queryDeviceData = async () => {
     },
   ];
 };
-const queryVMPieChartData = async () => {
-  const { vmResourceOverviewVO } = await data.getData();
+const queryVMPieChartData = async (data) => {
+  const {
+    data: { vmResourceOverviewVO },
+  } = await data.getData();
+  if (!vmResourceOverviewVO) return {};
   return [
     {
       label: "CPU",
@@ -70,8 +78,11 @@ const queryVMPieChartData = async () => {
     },
   ];
 };
-const queryPMPieChartData = async () => {
-  const { physicsResourceOverviewVO } = await data.getData();
+const queryPMPieChartData = async (data) => {
+  const {
+    data: { physicsResourceOverviewVO },
+  } = await data.getData();
+  if (!physicsResourceOverviewVO) return {};
   return [
     {
       label: "CPU",
@@ -96,9 +107,11 @@ const queryPMPieChartData = async () => {
     },
   ];
 };
-const queryVMLineChartData = async () => {
-  const { resourceTrendVO } = await data.getData();
-
+const queryVMLineChartData = async (data) => {
+  const {
+    data: { resourceTrendVO },
+  } = await data.getData();
+  if (!resourceTrendVO) return {};
   return {
     week: {
       time: getTime(resourceTrendVO.itemVOListVMByWeek),
@@ -114,9 +127,11 @@ const queryVMLineChartData = async () => {
     },
   };
 };
-const queryPMLineChartData = async () => {
-  const { resourceTrendVO } = await data.getData();
-
+const queryPMLineChartData = async (data) => {
+  const {
+    data: { resourceTrendVO },
+  } = await data.getData();
+  if (!resourceTrendVO) return {};
   return {
     week: {
       time: getTime(resourceTrendVO.itemVOListPhysicsByWeek),

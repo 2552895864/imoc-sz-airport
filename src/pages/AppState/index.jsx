@@ -1,10 +1,7 @@
 import React from "react";
 import PageContainer from "@/components/PageContainer";
 import ModuleContainer from "@/components/ModuleContainer";
-<<<<<<< HEAD
 import CurveChart from "./components/CurveChart";
-=======
->>>>>>> 9d81de393cc5bc52dadfed8dc6d1c91d4947c629
 import Pie from "@/components/PieChart";
 import GaugeChart from "./components/GaugeChart";
 

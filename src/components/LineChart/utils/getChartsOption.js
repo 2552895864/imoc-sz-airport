@@ -10,8 +10,8 @@ const tooltipFormatter = (params) =>
     }
   }, "");
 
-export default (options, data) => {
-  const { time } = data;
+export default (options, data = {}) => {
+  const { time = [] } = data;
   return {
     ...options,
     tooltip: {

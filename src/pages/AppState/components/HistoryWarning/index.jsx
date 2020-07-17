@@ -1,13 +1,13 @@
 import React from "react";
-import Chart from "../Chart";
+import CurveChart from "../CurveChart";
 
 // import lineChartData from "@/data/appLineChart.json";
 import styles from "./index.module.less";
 
-const HistoryWarning = ({dataSource}) => {
+const HistoryWarning = ({ dataSource }) => {
   return (
     <div className={styles.container}>
-      <Chart data={dataSource}></Chart>
+      <CurveChart data={dataSource}></CurveChart>
     </div>
   );
 };

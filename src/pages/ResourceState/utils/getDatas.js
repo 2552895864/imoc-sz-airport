@@ -1,3 +1,5 @@
+import Data from "../data/Data";
+
 export default async (DataFuncsMap) => {
   /**
    * 对于已声明的state：
@@ -9,9 +11,10 @@ export default async (DataFuncsMap) => {
   /**
    * results:[{resourceLineData:data1},{resourceSumData:data2}]
    */
+  const dataInstance = Data.getInstance();
   const results = await Promise.all(
     Object.entries(DataFuncsMap).map(async ([key, value]) => {
-      const data = await value.query();
+      const data = await value.query(dataInstance);
       return {
         [key]: value.normalize(data),
       };
