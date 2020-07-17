@@ -20,10 +20,10 @@ const querySumData = async (data) => {
   } = await data.getData();
   if (!deviceOverviewVO) return {};
   return {
-    cpu: deviceOverviewVO.cpuSize,
-    mem: deviceOverviewVO.ramSize,
-    storage: deviceOverviewVO.diskSize,
-    device: deviceOverviewVO.deviceNum,
+    cpu: +deviceOverviewVO.cpuSize,
+    mem: +deviceOverviewVO.ramSize,
+    storage: +deviceOverviewVO.diskSize,
+    device: +deviceOverviewVO.deviceNum,
   };
 };
 const queryDeviceData = async (data) => {
@@ -57,24 +57,24 @@ const queryVMPieChartData = async (data) => {
   return [
     {
       label: "CPU",
-      usage: vmResourceOverviewVO.vcpuUsage,
-      sumCount: vmResourceOverviewVO.vcpuTotal,
+      usage: +vmResourceOverviewVO.vcpuUsage,
+      sumCount: +vmResourceOverviewVO.vcpuTotal,
       unit: "核",
-      usedCount: vmResourceOverviewVO.vcpuUsed,
+      usedCount: +vmResourceOverviewVO.vcpuUsed,
     },
     {
       label: "内存",
-      usage: vmResourceOverviewVO.vramUsage,
-      sumCount: vmResourceOverviewVO.vramTotal,
+      usage: +vmResourceOverviewVO.vramUsage,
+      sumCount: +vmResourceOverviewVO.vramTotal,
       unit: "G",
-      usedCount: vmResourceOverviewVO.vramUsed,
+      usedCount: +vmResourceOverviewVO.vramUsed,
     },
     {
       label: "存储",
-      usage: vmResourceOverviewVO.vdiskUsage,
-      sumCount: vmResourceOverviewVO.vdiskTotal,
+      usage: +vmResourceOverviewVO.vdiskUsage,
+      sumCount: +vmResourceOverviewVO.vdiskTotal,
       unit: "G",
-      usedCount: vmResourceOverviewVO.vdiskUsed,
+      usedCount: +vmResourceOverviewVO.vdiskUsed,
     },
   ];
 };
@@ -86,24 +86,24 @@ const queryPMPieChartData = async (data) => {
   return [
     {
       label: "CPU",
-      usage: physicsResourceOverviewVO.vcpuUsage,
-      sumCount: physicsResourceOverviewVO.vcpuTotal,
+      usage: +physicsResourceOverviewVO.vcpuUsage,
+      sumCount: +physicsResourceOverviewVO.vcpuTotal,
       unit: "核",
-      usedCount: physicsResourceOverviewVO.vcpuUsed,
+      usedCount: +physicsResourceOverviewVO.vcpuUsed,
     },
     {
       label: "内存",
-      usage: physicsResourceOverviewVO.vramUsage,
-      sumCount: physicsResourceOverviewVO.vramTotal,
+      usage: +physicsResourceOverviewVO.vramUsage,
+      sumCount: +physicsResourceOverviewVO.vramTotal,
       unit: "G",
-      usedCount: physicsResourceOverviewVO.vramUsed,
+      usedCount: +physicsResourceOverviewVO.vramUsed,
     },
     {
       label: "存储",
-      usage: physicsResourceOverviewVO.vdiskUsage,
-      sumCount: physicsResourceOverviewVO.vdiskTotal,
+      usage: +physicsResourceOverviewVO.vdiskUsage,
+      sumCount: +physicsResourceOverviewVO.vdiskTotal,
       unit: "G",
-      usedCount: physicsResourceOverviewVO.vdiskUsed,
+      usedCount: +physicsResourceOverviewVO.vdiskUsed,
     },
   ];
 };
