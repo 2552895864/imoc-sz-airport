@@ -9,7 +9,7 @@ const { Text } = Typography;
 const setSelectLabel = (staff) =>
   `(${staff.staffGroup === "manager" ? "通讯" : staff.staffGroup})${
     staff.staffName
-  }`;
+  }${staff.staffMobile}`;
 const StaffSelectModal = ({
   dispatch,
   staffList,
@@ -62,7 +62,7 @@ const StaffSelectModal = ({
   }, [initialValue, visible, mode]);
 
   useEffect(() => {
-    if (visible && !staffList.length) {
+    if (visible && !staffList.length && mode === "select") {
       dispatch({
         type: "DutyAdmin/getStaffInfoByCondition",
       });
@@ -71,7 +71,7 @@ const StaffSelectModal = ({
       setSelectValue("");
       setStaffInfo({});
     }
-  }, [dispatch, visible, staffList.length]);
+  }, [dispatch, visible, staffList.length, mode]);
 
   return (
     <Modal footer={null} visible={visible} onCancel={onCancel}>

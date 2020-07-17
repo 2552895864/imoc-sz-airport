@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import _ from "lodash";
 import { connect } from "dva";
-import { Button } from "antd";
+import { Button, Typography } from "antd";
 import HTable from "../../components/Table";
 import StaffSelectModal from "../StaffSelectModal";
 
 import styles from "./index.module.less";
+
+const { Text } = Typography;
 
 let selectedUpdateId = "";
 
@@ -32,7 +34,7 @@ const WorkingSchedule = ({
       : _.get(record, "leader", [])[0];
 
     const { id, staffMobile, staffName } = selectedStaff;
-
+    console.log("selectedStaff:", selectedStaff);
     selectedUpdateId = id;
     setVisible(true);
     setSelectedStaffInfo({ staffMobile, staffName });
@@ -53,22 +55,35 @@ const WorkingSchedule = ({
     }
   };
   const setCellButton = (record, groupName, staffName = null) => {
-    let member, target;
-    if (!staffName) {
-      member = _.get(record, "member", []);
-      target = member.filter((item) => item.staffGroup === groupName);
-    }
+    // let member, target;
+    // if (!staffName) {
+    //   member = _.get(record, "member", []);
+    //   target = member.filter((item) => item.staffGroup === groupName);
+    // }
+    const selectedStaff = groupName
+      ? _.get(record, "member", []).filter(
+          (staff) => staff.staffGroup === groupName
+        )[0]
+      : _.get(record, "leader", [])[0];
 
     return (
-      <Button
-        type="link"
-        className={styles.staffName}
-        onClick={() => {
-          handleOpenUpdateModal(record, groupName);
-        }}
-      >
-        {staffName || _.get(target[0], "staffName", "")}
-      </Button>
+      <>
+        <Button
+          type="link"
+          className={styles.staffName}
+          onClick={() => {
+            handleOpenUpdateModal(record, groupName);
+          }}
+        >
+          <span className={styles.staffNameLabel}>
+            {staffName || _.get(selectedStaff, "staffName", "")}
+          </span>
+          <Text className={styles.staffMobile} type="secondary">
+            {_.get(selectedStaff, "staffMobile", "")}
+          </Text>
+        </Button>
+        {/* <span>{_.get(selectedStaff, "staffMobile", "")}</span> */}
+      </>
     );
   };
   const columns = [

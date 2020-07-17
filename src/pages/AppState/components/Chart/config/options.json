@@ -56,13 +56,13 @@
       "boundaryGap": false,
       "verticalAlign": "bottom",
       "nameTextStyle": {
-        "color": "#ffffff",
+        "color": "#D8D8D8",
         "fontSize": 12,
         "verticalAlign": "bottom"
       },
       "axisLine": {
         "lineStyle": {
-          "color": "#666666",
+          "color": "#687088",
           "type": "solid",
           "width": "1"
         }
@@ -73,7 +73,7 @@
       "axisLabel": {
         "show": true,
         "textStyle": {
-          "color": "#ffffff",
+          "color": "#D8D8D8",
           "fontSize": 12
         },
         "align": "left"
@@ -92,14 +92,15 @@
       "type": "value",
       "name": "告警个数",
       "nameTextStyle": {
-        "color": "#ffffff",
+        "color": "#D8D8D8",
         "fontSize": 16
       },
       "axisLine": {
-        "show": false,
+        "show": true,
         "lineStyle": {
-          "color": "#666666",
-          "type": "solid"
+          "color": "#687088",
+          "type": "solid",
+          "width": "1"
         }
       },
       "axisTick": {
@@ -108,7 +109,7 @@
       "axisLabel": {
         "show": true,
         "textStyle": {
-          "color": "#ffffff",
+          "color": "#D8D8D8",
           "fontSize": 12
         }
       },
