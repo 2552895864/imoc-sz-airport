@@ -3,6 +3,7 @@ import PageContainer from "@/components/PageContainer";
 import ModuleContainer from "@/components/ModuleContainer";
 import Pie from "@/components/PieChart";
 import GaugeChart from "./components/GaugeChart";
+import SliderChart from "@/components/SliderChart";
 
 import CurrentWarning from "./components/CurrentWarning";
 import HistoryWarning from "./components/HistoryWarning";
@@ -32,6 +33,7 @@ export default class AppState extends React.Component {
             </ModuleContainer>
             <ModuleContainer className={styles.businessApp} title="业务应用">
               <GaugeChart percent={56}></GaugeChart>
+              <SliderChart></SliderChart>
             </ModuleContainer>
           </div>
         </div>
