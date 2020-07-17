@@ -65,6 +65,11 @@ const SliderChart = ({ height = 300 }) => {
         marker={{
           symbol: "square",
         }}
+        itemName={{
+          style: {
+            fill: "#ffffff",
+          },
+        }}
       />
       <View data={data}>
         <Coordinate type="theta" radius={0.8} innerRadius={0.75} />

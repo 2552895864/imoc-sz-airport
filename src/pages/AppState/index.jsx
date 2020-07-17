@@ -32,7 +32,7 @@ export default class AppState extends React.Component {
               <Pie sumCount={205}></Pie>
             </ModuleContainer>
             <ModuleContainer className={styles.businessApp} title="业务应用">
-              <GaugeChart percent={56}></GaugeChart>
+              <GaugeChart percent={88}></GaugeChart>
               <SliderChart></SliderChart>
             </ModuleContainer>
           </div>
