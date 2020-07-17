@@ -1,8 +1,8 @@
 import Data from "../data/Data";
 
-const data = Data.getInstance();
+export const data = Data.getInstance();
 
-const getTime = (data) => Object.values(data).map((item) => item.key);
+const getTime = (data) => Object.values(data).map((item) => item.date);
 const getValue = (data, key) => Object.values(data).map((item) => +item[key]);
 
 const queryLineData = async () => {

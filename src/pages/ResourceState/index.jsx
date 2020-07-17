@@ -33,7 +33,11 @@ import {
   normalizeLineChartData,
 } from "./utils/normalize";
 import getDatas from "./utils/getDatas";
+import { data as dataInstance } from "./utils/getData";
+import config from "./config/config";
 import styles from "./index.module.less";
+
+const { DATA_REFRESH_INTERVAL } = config;
 
 // 获取数据用函数集
 const DataFuncsMap = {
@@ -78,9 +82,26 @@ export default class ResourceState extends React.Component {
     resourcePMLineChart: resourceLineChart,
   };
 
+  async loadTickData() {
+    try {
+      const datas = await getDatas(DataFuncsMap);
+      this.setState(datas);
+    } catch (err) {}
+  }
+
+  async update() {
+    dataInstance.updateData();
+    await this.loadTickData();
+    this.timer = setTimeout(this.update.bind(this), DATA_REFRESH_INTERVAL);
+  }
+
   async componentDidMount() {
-    const datas = await getDatas(DataFuncsMap);
-    this.setState(datas);
+    await this.loadTickData();
+    this.timer = setTimeout(this.update.bind(this), DATA_REFRESH_INTERVAL);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 
   render() {

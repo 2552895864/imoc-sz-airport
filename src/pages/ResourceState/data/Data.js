@@ -15,4 +15,8 @@ export default class Data {
   getData() {
     return this.data;
   }
+
+  updateData() {
+    this.data = query();
+  }
 }
