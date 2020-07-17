@@ -5,6 +5,11 @@ import * as service from "./service";
 const handleWorkingScheduleList = (data) => {
   // const { currentTimeStamp } = this.state;
   const staffByGroup = [];
+  const workingScheduleManager = {
+    groupOne: [],
+    groupTwo: [],
+    groupThree: [],
+  };
   const groupName = [
     "机位/IOC",
     "ROMA",
@@ -15,16 +20,10 @@ const handleWorkingScheduleList = (data) => {
     "数通网络",
     "LTE",
   ];
-  // const currentTimeStamp = getCurrentTimeStamp();
   const { rotaByDay, leaderList } = data;
-
-  // console.log("currentTimeStamp:", currentTimeStamp);
   const currentDayData = rotaByDay.filter(
     (item) => item.date === getCurrentTimeStamp()
   );
-  // const { staffList, leaderList: currentLeaderList } = rotaByDay.filter(
-  //   (item) => item.date === getCurrentTimeStamp()
-  // )[0];
   const staffList = _.get(currentDayData[0], "staffList", []);
   const currentLeaderList = _.get(currentDayData[0], "leaderList", []);
 
@@ -36,10 +35,35 @@ const handleWorkingScheduleList = (data) => {
       ],
     });
   });
+  workingScheduleManager.groupOne.push(
+    ...staffList
+      .filter((staff) => ["值班01", "值班经理"].includes(staff.staffGroup))
+      .map((item) => ({
+        name: item.staffGroup,
+        value: `${item.staffName} ${item.staffMobile}`,
+      }))
+  );
+  workingScheduleManager.groupTwo.push(
+    ...staffList
+      .filter((staff) => ["数据中心", "通信运维"].includes(staff.staffGroup))
+      .map((item) => ({
+        name: item.staffGroup,
+        value: `${item.staffName} ${item.staffMobile}`,
+      }))
+  );
+  workingScheduleManager.groupThree.push(
+    ...staffList
+      .filter((staff) =>
+        ["系统", "安防", "网络", "manager"].includes(staff.staffGroup)
+      )
+      .map((item) => ({
+        name: `${item.staffGroup === "manager" ? "通讯" : item.staffGroup}值班`,
+        value: `${item.staffName} ${item.staffMobile}`,
+      }))
+  );
+  // console.log("workingScheduleManager::", workingScheduleManager);
   // console.log("staffList::", staffList);
-  console.log("staffByGroup::", staffByGroup);
-
-  return { currentLeaderList, staffByGroup };
+  return { currentLeaderList, staffByGroup, workingScheduleManager };
 };
 
 export default {
@@ -49,10 +73,10 @@ export default {
     briefLoading: false,
     currentLeaderList: [],
     staffByGroup: [],
+    workingScheduleManager: [],
   },
   effects: {
     *getLatestOneBrief({ payload }, { put, call }) {
-      // console.log("getDutyData modal");
       try {
         let { data } = yield call(service.getLatestOneBrief);
         const briefList = _.get(data[0], "content", "")
@@ -69,30 +93,25 @@ export default {
      * 获取排班信息
      */
     *getWorkingScheduleList({ payload }, { put, call }) {
-      // yield put({
-      //   type: "save",
-      //   payload: { workingScheduleListLoading: true },
-      // });
       try {
         let result = yield call(service.getMaintenanceRotaByDay, payload);
         handleWorkingScheduleList(_.get(result, "data", []));
-        const { currentLeaderList, staffByGroup } = handleWorkingScheduleList(
-          _.get(result, "data", [])
-        );
+        const {
+          currentLeaderList,
+          staffByGroup,
+          workingScheduleManager,
+        } = handleWorkingScheduleList(_.get(result, "data", []));
         yield put({
           type: "save",
           payload: {
             currentLeaderList,
             staffByGroup,
+            workingScheduleManager,
           },
         });
         return result;
       } catch (error) {
         console.log("error:", error);
-        // yield put({
-        //   type: "save",
-        //   payload: { workingScheduleListLoading: false },
-        // });
       }
     },
   },

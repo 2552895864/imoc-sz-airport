@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Button, Divider } from "antd";
+import { Button, Divider,Typography } from "antd";
 import { connect } from "dva";
 import _ from "lodash";
 import HTable from "../../components/Table";
 import StaffSelectModal from "../StaffSelectModal";
 
 import styles from "./index.module.less";
+
+const { Text } = Typography;
 
 let selectedUpdateId = "";
 const AirDuty = ({
@@ -57,7 +59,13 @@ const AirDuty = ({
                 handleOpenUpdateModal(staff, record, groupName);
               }}
             >
-              {_.get(staff, "staffName", "-")}
+              {/* {_.get(staff, "staffName", "-")} */}
+              <span className={styles.staffNameLabel}>
+                {_.get(staff, "staffName", "")}
+              </span>
+              <Text className={styles.staffMobile} type="secondary">
+                {_.get(staff, "staffMobile", "")}
+              </Text>
             </Button>
             {index !== target.length - 1 ? <Divider type="vertical" /> : null}
           </span>
