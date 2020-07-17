@@ -1,7 +1,6 @@
 import React from "react";
 import CurveChart from "../CurveChart";
 
-// import lineChartData from "@/data/appLineChart.json";
 import styles from "./index.module.less";
 
 const HistoryWarning = ({ dataSource }) => {

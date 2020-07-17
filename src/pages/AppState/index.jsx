@@ -1,7 +1,6 @@
 import React from "react";
 import PageContainer from "@/components/PageContainer";
 import ModuleContainer from "@/components/ModuleContainer";
-import CurveChart from "./components/CurveChart";
 import Pie from "@/components/PieChart";
 import GaugeChart from "./components/GaugeChart";
 
@@ -21,7 +20,6 @@ export default class AppState extends React.Component {
               <CurrentWarning />
             </ModuleContainer>
             <ModuleContainer className={styles.historyWarning} title="历史告警">
-              <CurveChart data={lineChartData}></CurveChart>
               <HistoryWarning dataSource={lineChartData} />
             </ModuleContainer>
             <ModuleContainer className={styles.topFive} title="应用性能Top5">
