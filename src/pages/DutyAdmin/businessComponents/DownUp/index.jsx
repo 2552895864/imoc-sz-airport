@@ -1,9 +1,11 @@
 import React from "react";
 import { connect } from "dva";
 import { Button, Space, Menu, Dropdown, Upload, message } from "antd";
+
 import template1 from "@/template/深圳机场统一运维项目排班表.xlsx";
 import template2 from "@/template/数据中心值班表.xlsx";
 import template3 from "@/template/通讯值班经理排班表.xlsx";
+
 import styles from "./index.module.less";
 
 const ExcelUpload = ({ buttonName, loading = false, uploadRequest }) => {
@@ -80,9 +82,13 @@ const DownUp = ({
     },
   ];
   const downloadFileList = [
-    { name: "统一运维", file: template1 },
-    { name: "数据中心", file: template2 },
-    { name: "通讯值班", file: template3 },
+    {
+      name: "统一运维",
+      file: template1,
+      fileName: "深圳机场统一运维项目排班表.xlsx",
+    },
+    { name: "数据中心", file: template2, fileName: "数据中心值班表.xlsx" },
+    { name: "通讯值班", file: template3, fileName: "通讯值班经理排班表.xlsx" },
   ];
   return (
     <>
@@ -103,10 +109,11 @@ const DownUp = ({
             {downloadFileList.map((item) => (
               <Menu.Item key={item.name}>
                 <a
-                  download
+                  download={item.fileName}
                   target="_blank"
                   rel="noopener noreferrer"
                   href={item.file}
+                  // href="../../../../template/深圳机场统一运维项目排班表.xlsx"
                 >
                   {item.name}
                 </a>

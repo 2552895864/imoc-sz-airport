@@ -73,6 +73,17 @@ const getCurrentTimeStamp = () => {
 };
 
 /**
+ *
+ * 获取当月时间
+ */
+const getCurrentTimeStampByMonth = () => {
+  const { year, month } = getTimeInfo();
+  const currentDate = `${year}/${addZero(month)}`;
+  // const currentTimeStamp = new Date(currentDate).valueOf();
+  return currentDate;
+};
+
+/**
  * 处理 2020-03-18T01:57:23.000+0000
  */
 
@@ -111,4 +122,5 @@ export {
   getTimeFrame,
   getCurrentTimeStamp,
   getTimeFormatFromTTime,
+  getCurrentTimeStampByMonth
 };

@@ -13,16 +13,18 @@ const StaffInfo = ({
   updateStaffLoading,
 }) => {
   const modalRef = useRef();
-  const [formInitialValues, setFormInitialValues] = useState({});
+  // const [formInitialValues, setFormInitialValues] = useState({});
   const [onlyLeader, setLeaderList] = useState(false);
   const onChange = (e) => {
     setLeaderList(e.target.checked);
   };
   const handleAction = (record) => {
     staffId = record.id;
-    setFormInitialValues(
-      Object.assign({}, record, { leader: record.leader ? "是" : "否" })
-    );
+    const newRecord =  Object.assign({}, record, { leader: record.leader ? "是" : "否" });
+    // setFormInitialValues(
+    //   Object.assign({}, record, { leader: record.leader ? "是" : "否" })
+    // );
+    modalRef.current.form.setFieldsValue(newRecord);
     modalRef.current.showModal();
   };
   const getValues = async (values) => {
@@ -51,7 +53,12 @@ const StaffInfo = ({
     { label: "是否组长", name: "leader", component: <Input disabled /> },
   ];
   const columns = [
-    { title: "专业", dataIndex: "staffGroup", key: "staffGroup" },
+    {
+      title: "专业",
+      dataIndex: "staffGroup",
+      key: "staffGroup",
+      render: (value) => (value === "manager" ? "通讯" : value),
+    },
     { title: "姓名", dataIndex: "staffName", key: "staffName" },
     { title: "联系电话", dataIndex: "staffMobile", key: "staffMobile" },
     {
@@ -94,7 +101,7 @@ const StaffInfo = ({
         width={600}
         formLabelWidth={70}
         formItem={formItem}
-        formInitialValues={formInitialValues}
+        // formInitialValues={formInitialValues}
         getValues={getValues}
         mRef={modalRef}
         hideModalCallback={hideModalCallback}

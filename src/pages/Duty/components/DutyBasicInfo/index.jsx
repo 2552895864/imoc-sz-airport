@@ -5,9 +5,12 @@ import { dispatchPhone } from "@/data/dispatch.json";
 import styles from "./index.module.less";
 
 const DutyBasicInfo = ({ data }) => {
-  const leaderGroup = ["D", "N"].map((flag) =>
-    generatePhoneCardString(data.filter((item) => item.shift === flag)[0])
-  );
+  const leaderGroup =
+    data && data.length
+      ? ["D", "N"].map((flag) =>
+          generatePhoneCardString(data.filter((item) => item.shift === flag)[0])
+        )
+      : [];
   return (
     <div className={styles.container}>
       <HorizontalPhoneCard
