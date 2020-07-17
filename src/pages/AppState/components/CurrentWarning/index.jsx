@@ -14,7 +14,6 @@ const Badge = ({ dataSource: { type, count, title } }) => {
     warning: "#FEDE00",
     info: "#3F9EFF",
   };
-  console.log("colorMapping[type],:", colorMapping[type]);
   const style = {
     backgroundColor: colorMapping[type],
   };

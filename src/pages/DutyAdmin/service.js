@@ -35,10 +35,11 @@ export const updateMSData = (params) => {
 /**
  * 获取人员信息 /staff/update/{recordId}
  */
-export const getStaffInfoByCondition = () => {
+export const getStaffInfoByCondition = (params) => {
   return request({
     url: "/staff/getByCondition",
     method: "GET",
+    params
   });
 };
 /**

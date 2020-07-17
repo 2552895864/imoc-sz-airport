@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Button, Divider, Typography } from "antd";
+import { Button, Divider, Typography, Space, Menu, Dropdown } from "antd";
 import { connect } from "dva";
 import _ from "lodash";
 import HTable from "../../components/Table";
+import ExcelUpload from "../DownUp";
 import StaffSelectModal from "../StaffSelectModal";
 
+import template2 from "@/template/数据中心值班表.xlsx";
+import template3 from "@/template/通讯值班经理排班表.xlsx";
 import styles from "./index.module.less";
 
 const { Text } = Typography;
@@ -16,6 +19,8 @@ const AirDuty = ({
   workingScheduleListLoading,
   updateWorkingScheduleListLoading,
   currentDutyMonth,
+  uploadDataCenterLoading,
+  uploadCmLoading,
 }) => {
   const [visible, setVisible] = useState(false);
   const [selectedUpdateInfo, setSelectedUpdateInfo] = useState("");
@@ -44,6 +49,34 @@ const AirDuty = ({
       handleHideUpdateModal();
     }
   };
+  const uploadDataCenterData = (params) => {
+    dispatch({
+      type: "DutyAdmin/uploadDataCenterData",
+      payload: params,
+    });
+  };
+  const uploadCmData = (params) => {
+    dispatch({
+      type: "DutyAdmin/uploadCmData",
+      payload: params,
+    });
+  };
+  const uploadConfigGroup = [
+    {
+      buttonName: "上传数据中心排班",
+      uploadRequest: uploadDataCenterData,
+      loading: uploadDataCenterLoading,
+    },
+    {
+      buttonName: "上传通讯值班排班",
+      uploadRequest: uploadCmData,
+      loading: uploadCmLoading,
+    },
+  ];
+  const downloadFileList = [
+    { name: "数据中心", file: template2, fileName: "数据中心值班表.xlsx" },
+    { name: "通讯值班", file: template3, fileName: "通讯值班经理排班表.xlsx" },
+  ];
   const setCellButton = (record, groupName) => {
     const member = _.get(record, "dailyManagerList", []);
     const target = member.filter((item) => item.staffGroup === groupName);
@@ -127,7 +160,7 @@ const AirDuty = ({
   ];
 
   useEffect(() => {
-    if (currentDutyMonth) {
+    if (currentDutyMonth !== "") {
       dispatch({
         type: "DutyAdmin/getWorkingScheduleList",
         payload: { month: currentDutyMonth },
@@ -138,8 +171,49 @@ const AirDuty = ({
   return (
     <>
       <div className={styles.extraInfo} style={{ marginBottom: "15px" }}>
-        点击人员名称进行更改
+        <div>
+          <span>点击人员名称进行更改</span>
+          <div style={{ float: "right" }}>
+            <Space>
+              <Dropdown
+                className={styles.down}
+                overlay={
+                  <Menu>
+                    {downloadFileList.map((item) => (
+                      <Menu.Item key={item.name}>
+                        <a
+                          download={item.fileName}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={item.file}
+                          // href="../../../../template/深圳机场统一运维项目排班表.xlsx"
+                        >
+                          {item.name}
+                        </a>
+                      </Menu.Item>
+                    ))}
+                  </Menu>
+                }
+                placement="bottomRight"
+                arrow
+              >
+                <Button>下载排班模板</Button>
+              </Dropdown>
+              <Space>
+                {uploadConfigGroup.map((config) => (
+                  <ExcelUpload
+                    key={config.buttonName}
+                    buttonName={config.buttonName}
+                    uploadRequest={config.uploadRequest}
+                    loading={config.loading}
+                  />
+                ))}
+              </Space>
+            </Space>
+          </div>
+        </div>
       </div>
+
       <HTable
         // pagination={{
         //   hideOnSinglePage: true,

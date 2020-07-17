@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import _ from "lodash";
 import { connect } from "dva";
-import { Button, Typography } from "antd";
+import { Button, Typography, Space } from "antd";
+import template1 from "@/template/深圳机场统一运维项目排班表.xlsx";
+import ExcelUpload from "../DownUp";
 import HTable from "../../components/Table";
 import StaffSelectModal from "../StaffSelectModal";
 
@@ -18,6 +20,7 @@ const WorkingSchedule = ({
   workingScheduleList,
   workingScheduleListLoading,
   updateWorkingScheduleListLoading,
+  uploadMsLoading,
 }) => {
   const [visible, setVisible] = useState(false);
   const [selectedUpdateInfo, setSelectedUpdateInfo] = useState("");
@@ -35,7 +38,6 @@ const WorkingSchedule = ({
       : _.get(record, "leader", [])[0];
 
     const { id, staffMobile, staffName } = selectedStaff;
-    console.log("selectedStaff:", selectedStaff);
     selectedUpdateId = id;
     setVisible(true);
     setSelectedStaffInfo({ staffMobile, staffName });
@@ -46,7 +48,6 @@ const WorkingSchedule = ({
     selectedUpdateId = "";
   };
   const confirmUpdateAction = async ({ staffMobile, staffName }) => {
-    // console.log("staffMobile:", staffMobile, " staffName:", staffName);
     const result = await dispatch({
       type: "DutyAdmin/updateWorkingScheduleList",
       payload: { id: selectedUpdateId, staffMobile, staffName },
@@ -55,12 +56,14 @@ const WorkingSchedule = ({
       handleHideUpdateModal();
     }
   };
+  const uploadMsData = (params) => {
+    dispatch({
+      type: "DutyAdmin/uploadMsData",
+      payload: params,
+    });
+  };
+
   const setCellButton = (record, groupName, staffName = null) => {
-    // let member, target;
-    // if (!staffName) {
-    //   member = _.get(record, "member", []);
-    //   target = member.filter((item) => item.staffGroup === groupName);
-    // }
     const selectedStaff = groupName
       ? _.get(record, "member", []).filter(
           (staff) => staff.staffGroup === groupName
@@ -83,7 +86,6 @@ const WorkingSchedule = ({
             {_.get(selectedStaff, "staffMobile", "")}
           </Text>
         </Button>
-        {/* <span>{_.get(selectedStaff, "staffMobile", "")}</span> */}
       </>
     );
   };
@@ -147,17 +149,38 @@ const WorkingSchedule = ({
     },
   ];
   useEffect(() => {
-    if (currentDutyMonth) {
+    if (currentDutyMonth !== "") {
       dispatch({
         type: "DutyAdmin/getWorkingScheduleList",
         payload: { month: currentDutyMonth },
       });
     }
-  }, [currentDutyMonth, dispatch]);
+  }, [dispatch, currentDutyMonth]);
   return (
     <>
       <div className={styles.extraInfo} style={{ marginBottom: "15px" }}>
-        点击人员名称进行更改
+        <div>
+          <span>点击人员名称进行更改</span>
+          <div style={{ float: "right" }}>
+            <Space>
+              <a
+                download="深圳机场统一运维项目排班表.xlsx"
+                target="_blank"
+                rel="noopener noreferrer"
+                href={template1}
+                // href="../../../../template/深圳机场统一运维项目排班表.xlsx"
+              >
+                下载统一运维项目排班表
+              </a>
+              <ExcelUpload
+                style={{ float: "right" }}
+                buttonName="上传统一运维排班"
+                uploadRequest={uploadMsData}
+                loading={uploadMsLoading}
+              />
+            </Space>
+          </div>
+        </div>
       </div>
       <HTable
         dataSource={workingScheduleList}
