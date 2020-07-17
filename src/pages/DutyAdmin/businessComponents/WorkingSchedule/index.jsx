@@ -14,6 +14,7 @@ let selectedUpdateId = "";
 const WorkingSchedule = ({
   dispatch,
   currentDutyMonth,
+  // dutyMonthList,
   workingScheduleList,
   workingScheduleListLoading,
   updateWorkingScheduleListLoading,
@@ -146,16 +147,12 @@ const WorkingSchedule = ({
     },
   ];
   useEffect(() => {
-    if (currentDutyMonth !== "") {
+    if (currentDutyMonth) {
       dispatch({
         type: "DutyAdmin/getWorkingScheduleList",
         payload: { month: currentDutyMonth },
       });
     }
-
-    // dispatch({
-    //   type: "DutyAdmin/getStaffInfoByCondition",
-    // });
   }, [currentDutyMonth, dispatch]);
   return (
     <>
