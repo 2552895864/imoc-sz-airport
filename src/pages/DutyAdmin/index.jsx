@@ -2,7 +2,7 @@ import React from "react";
 import ModuleLayout from "./components/ModuleLayout";
 import Radio from "./components/Radio";
 
-import DownUp from "./businessComponents/DownUp";
+// import DownUp from "./businessComponents/DownUp";
 import MonthPanel from "./businessComponents/MonthPanel";
 import WorkingSchedule from "./businessComponents/WorkingSchedule";
 import StaffInfo from "./businessComponents/StaffInfo";
@@ -41,9 +41,9 @@ export default class DutyAdmin extends React.Component {
     const { currentModule } = this.state;
     return (
       <div className={styles.container}>
-        <ModuleLayout>
+        {/* <ModuleLayout>
           <DownUp />
-        </ModuleLayout>
+        </ModuleLayout> */}
         <ModuleLayout title="排班月份">
           <MonthPanel />
         </ModuleLayout>

@@ -11,6 +11,7 @@ const StaffInfo = ({
   leaderList,
   staffListLoading,
   updateStaffLoading,
+  currentDutyMonth,
 }) => {
   const modalRef = useRef();
   // const [formInitialValues, setFormInitialValues] = useState({});
@@ -20,7 +21,9 @@ const StaffInfo = ({
   };
   const handleAction = (record) => {
     staffId = record.id;
-    const newRecord =  Object.assign({}, record, { leader: record.leader ? "是" : "否" });
+    const newRecord = Object.assign({}, record, {
+      leader: record.leader ? "是" : "否",
+    });
     // setFormInitialValues(
     //   Object.assign({}, record, { leader: record.leader ? "是" : "否" })
     // );
@@ -79,10 +82,13 @@ const StaffInfo = ({
   ];
 
   useEffect(() => {
-    dispatch({
-      type: "DutyAdmin/getStaffInfoByCondition",
-    });
-  }, [dispatch]);
+    if (currentDutyMonth !== "") {
+      dispatch({
+        type: "DutyAdmin/getStaffInfoByCondition",
+        payload: { month: currentDutyMonth },
+      });
+    }
+  }, [dispatch, currentDutyMonth]);
   return (
     <>
       <Checkbox onChange={onChange}>只查看组长</Checkbox>

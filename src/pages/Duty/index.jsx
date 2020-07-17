@@ -39,7 +39,10 @@ class Duty extends React.Component {
     dispatch({ type: "Duty/getLatestOneBrief" });
     dispatch({
       type: "Duty/getWorkingScheduleList",
-      payload: { month: getCurrentTimeStampByMonth() },
+      payload: {
+        month: getCurrentTimeStampByMonth(),
+        day: getCurrentTimeStamp(),
+      },
     });
   };
 

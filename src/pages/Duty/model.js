@@ -51,7 +51,6 @@ const handleWorkingScheduleList = (data) => {
   managerNameList.forEach((name) => {
     managerList.push(...staffList.filter((staff) => staff.staffGroup === name));
   });
-  // console.log("managerList::", managerList);
   workingScheduleManager.groupOne.push(
     ...managerList
       .filter((staff) => ["值班01", "值班经理"].includes(staff.staffGroup))
@@ -78,7 +77,7 @@ const handleWorkingScheduleList = (data) => {
         value: `${item.staffName} ${item.staffMobile}`,
       }))
   );
-  console.log("workingScheduleManager::", workingScheduleManager);
+  // console.log("workingScheduleManager::", workingScheduleManager);
   // console.log("staffList::", staffList);
   return { currentLeaderList, staffByGroup, workingScheduleManager };
 };
