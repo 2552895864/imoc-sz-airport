@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Divider,Typography } from "antd";
+import { Button, Divider, Typography } from "antd";
 import { connect } from "dva";
 import _ from "lodash";
 import HTable from "../../components/Table";
@@ -133,7 +133,7 @@ const AirDuty = ({
         payload: { month: currentDutyMonth },
       });
     }
-  }, [currentDutyMonth, dispatch, workingScheduleListForManager.length]);
+  }, [currentDutyMonth, dispatch]);
 
   return (
     <>

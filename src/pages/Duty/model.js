@@ -5,11 +5,7 @@ import * as service from "./service";
 const handleWorkingScheduleList = (data) => {
   // const { currentTimeStamp } = this.state;
   const staffByGroup = [];
-  const workingScheduleManager = {
-    groupOne: [],
-    groupTwo: [],
-    groupThree: [],
-  };
+  const managerList = [];
   const groupName = [
     "机位/IOC",
     "ROMA",
@@ -20,6 +16,22 @@ const handleWorkingScheduleList = (data) => {
     "数通网络",
     "LTE",
   ];
+  const managerNameList = [
+    "值班01",
+    "值班经理",
+    "数据中心",
+    "通信运维",
+    "系统",
+    "安防",
+    "网络",
+    "manager",
+  ];
+  const workingScheduleManager = {
+    groupOne: [],
+    groupTwo: [],
+    groupThree: [],
+  };
+
   const { rotaByDay, leaderList } = data;
   const currentDayData = rotaByDay.filter(
     (item) => item.date === getCurrentTimeStamp()
@@ -35,8 +47,13 @@ const handleWorkingScheduleList = (data) => {
       ],
     });
   });
+
+  managerNameList.forEach((name) => {
+    managerList.push(...staffList.filter((staff) => staff.staffGroup === name));
+  });
+  // console.log("managerList::", managerList);
   workingScheduleManager.groupOne.push(
-    ...staffList
+    ...managerList
       .filter((staff) => ["值班01", "值班经理"].includes(staff.staffGroup))
       .map((item) => ({
         name: item.staffGroup,
@@ -44,7 +61,7 @@ const handleWorkingScheduleList = (data) => {
       }))
   );
   workingScheduleManager.groupTwo.push(
-    ...staffList
+    ...managerList
       .filter((staff) => ["数据中心", "通信运维"].includes(staff.staffGroup))
       .map((item) => ({
         name: item.staffGroup,
@@ -52,7 +69,7 @@ const handleWorkingScheduleList = (data) => {
       }))
   );
   workingScheduleManager.groupThree.push(
-    ...staffList
+    ...managerList
       .filter((staff) =>
         ["系统", "安防", "网络", "manager"].includes(staff.staffGroup)
       )
@@ -61,7 +78,7 @@ const handleWorkingScheduleList = (data) => {
         value: `${item.staffName} ${item.staffMobile}`,
       }))
   );
-  // console.log("workingScheduleManager::", workingScheduleManager);
+  console.log("workingScheduleManager::", workingScheduleManager);
   // console.log("staffList::", staffList);
   return { currentLeaderList, staffByGroup, workingScheduleManager };
 };

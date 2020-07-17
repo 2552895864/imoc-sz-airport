@@ -323,14 +323,14 @@ export default {
         const isSuccess = resultFeedback(result, "上传统一运维排班");
         if (isSuccess) {
           yield put({ type: "getAllMonth" });
-          const month = yield select((state) => {
-            const {
-              DutyAdmin: { currentDutyMonth },
-            } = state;
-            return currentDutyMonth;
-          });
+          // const month = yield select((state) => {
+          //   const {
+          //     DutyAdmin: { currentDutyMonth },
+          //   } = state;
+          //   return currentDutyMonth;
+          // });
 
-          yield put({ type: "getWorkingScheduleList", payload: { month } });
+          // yield put({ type: "getWorkingScheduleList", payload: { month } });
         }
         // return success;
       } catch (error) {
@@ -390,13 +390,13 @@ export default {
         const isSuccess = resultFeedback(result, "上传数据中心排班");
         if (isSuccess) {
           yield put({ type: "getAllMonth" });
-          const month = yield select((state) => {
-            const {
-              DutyAdmin: { currentDutyMonth },
-            } = state;
-            return currentDutyMonth;
-          });
-          yield put({ type: "getWorkingScheduleList", payload: { month } });
+          // const month = yield select((state) => {
+          //   const {
+          //     DutyAdmin: { currentDutyMonth },
+          //   } = state;
+          //   return currentDutyMonth;
+          // });
+          // yield put({ type: "getWorkingScheduleList", payload: { month } });
         }
         // return success;
       } catch (error) {
@@ -422,13 +422,14 @@ export default {
         const isSuccess = resultFeedback(result, "上传通讯值班排班");
         if (isSuccess) {
           yield put({ type: "getAllMonth" });
-          const month = yield select((state) => {
-            const {
-              DutyAdmin: { currentDutyMonth },
-            } = state;
-            return currentDutyMonth;
-          });
-          yield put({ type: "getWorkingScheduleList", payload: { month } });
+          // const month = yield select((state) => {
+          //   const {
+          //     DutyAdmin: { currentDutyMonth },
+          //   } = state;
+          //   return currentDutyMonth;
+          // });
+          // console.log("month:", month);
+          // yield put({ type: "getWorkingScheduleList", payload: { month } });
         }
         // return success;
       } catch (error) {
