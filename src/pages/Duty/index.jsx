@@ -13,7 +13,7 @@ import {
 } from "@/utils/getDateTime";
 // import dutyData from "@/data/dutyInfoByGroup1.json";
 import weatherData from "@/data/天气.json";
-import dutyListData from "@/data/dutyList.json";
+// import dutyListData from "@/data/dutyList.json";
 import briefData from "@/data/简报通知.json";
 
 import styles from "./index.module.less";
@@ -42,9 +42,13 @@ class Duty extends React.Component {
       payload: { month: getCurrentTimeStampByMonth() },
     });
   };
-  
+
   render() {
-    const { currentLeaderList, staffByGroup } = this.props;
+    const {
+      currentLeaderList,
+      staffByGroup,
+      workingScheduleManager,
+    } = this.props;
     return (
       <PageContainer title="统一运维值班表" needTimeZone={false}>
         {/* 上部信息 */}
@@ -57,7 +61,7 @@ class Duty extends React.Component {
         </div>
         {/* 下部信息 */}
         <div className={styles.bottom}>
-          <DutyListInfo data={dutyListData} />
+          <DutyListInfo data={workingScheduleManager} />
           <DutyGroupInfo data={staffByGroup} />
         </div>
       </PageContainer>

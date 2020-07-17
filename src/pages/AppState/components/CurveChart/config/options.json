@@ -83,7 +83,7 @@
           "color": "#666666",
           "type": "dashed"
         },
-        "show": true
+        "show": false
       }
     }
   ],
@@ -116,7 +116,7 @@
       "splitLine": {
         "lineStyle": {
           "color": "#666666",
-          "type": "solid"
+          "type": "dashed"
         },
         "show": true
       }
