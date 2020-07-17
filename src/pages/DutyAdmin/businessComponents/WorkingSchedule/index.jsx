@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import _ from "lodash";
 import { connect } from "dva";
-import { Button } from "antd";
+import { Button, Typography } from "antd";
 import HTable from "../../components/Table";
 import StaffSelectModal from "../StaffSelectModal";
 
 import styles from "./index.module.less";
+
+const { Text } = Typography;
 
 let selectedUpdateId = "";
 
@@ -18,9 +20,9 @@ const WorkingSchedule = ({
 }) => {
   const [visible, setVisible] = useState(false);
   const [selectedUpdateInfo, setSelectedUpdateInfo] = useState("");
+  const [selectedStaffInfo, setSelectedStaffInfo] = useState("");
 
   const handleOpenUpdateModal = (record, groupName) => {
-    setVisible(true);
     const { date, type } = record;
     const groupLabel = groupName ? `${groupName}组` : "";
     const levelLabel = `值班${groupName ? "人员" : "组长"}`;
@@ -30,7 +32,12 @@ const WorkingSchedule = ({
           (staff) => staff.staffGroup === groupName
         )[0]
       : _.get(record, "leader", [])[0];
-    selectedUpdateId = _.get(selectedStaff, "id", "");
+
+    const { id, staffMobile, staffName } = selectedStaff;
+    console.log("selectedStaff:", selectedStaff);
+    selectedUpdateId = id;
+    setVisible(true);
+    setSelectedStaffInfo({ staffMobile, staffName });
     setSelectedUpdateInfo(`更新 ${date} ${type} ${groupLabel} ${levelLabel}`);
   };
   const handleHideUpdateModal = () => {
@@ -38,6 +45,7 @@ const WorkingSchedule = ({
     selectedUpdateId = "";
   };
   const confirmUpdateAction = async ({ staffMobile, staffName }) => {
+    // console.log("staffMobile:", staffMobile, " staffName:", staffName);
     const result = await dispatch({
       type: "DutyAdmin/updateWorkingScheduleList",
       payload: { id: selectedUpdateId, staffMobile, staffName },
@@ -47,22 +55,35 @@ const WorkingSchedule = ({
     }
   };
   const setCellButton = (record, groupName, staffName = null) => {
-    let member, target;
-    if (!staffName) {
-      member = _.get(record, "member", []);
-      target = member.filter((item) => item.staffGroup === groupName);
-    }
+    // let member, target;
+    // if (!staffName) {
+    //   member = _.get(record, "member", []);
+    //   target = member.filter((item) => item.staffGroup === groupName);
+    // }
+    const selectedStaff = groupName
+      ? _.get(record, "member", []).filter(
+          (staff) => staff.staffGroup === groupName
+        )[0]
+      : _.get(record, "leader", [])[0];
 
     return (
-      <Button
-        type="link"
-        className={styles.staffName}
-        onClick={() => {
-          handleOpenUpdateModal(record, groupName);
-        }}
-      >
-        {staffName || _.get(target[0], "staffName", "")}
-      </Button>
+      <>
+        <Button
+          type="link"
+          className={styles.staffName}
+          onClick={() => {
+            handleOpenUpdateModal(record, groupName);
+          }}
+        >
+          <span className={styles.staffNameLabel}>
+            {staffName || _.get(selectedStaff, "staffName", "")}
+          </span>
+          <Text className={styles.staffMobile} type="secondary">
+            {_.get(selectedStaff, "staffMobile", "")}
+          </Text>
+        </Button>
+        {/* <span>{_.get(selectedStaff, "staffMobile", "")}</span> */}
+      </>
     );
   };
   const columns = [
@@ -153,6 +174,7 @@ const WorkingSchedule = ({
         updateInfo={selectedUpdateInfo}
         confirmLoading={updateWorkingScheduleListLoading}
         confirmAction={confirmUpdateAction}
+        initialValue={selectedStaffInfo}
       />
     </>
   );

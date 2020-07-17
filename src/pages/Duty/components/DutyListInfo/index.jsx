@@ -1,4 +1,5 @@
 import React from "react";
+import ModuleContainer from '@/components/ModuleContainer';
 import HorizontalPhoneCard from "@/components/HorizontalPhoneCard";
 import DividerLine from "@/components/DividerLine";
 
@@ -21,13 +22,13 @@ const List = ({ data }) => (
 const DutyListInfo = ({ data }) => {
   const { groupOne, groupTwo, groupThree } = data;
   return (
-    <div className={styles.container}>
+    <ModuleContainer className={styles.container}>
       <List data={groupOne} />
       <DividerLine />
       <List data={groupTwo} />
       <DividerLine />
       <List data={groupThree} />
-    </div>
+    </ModuleContainer>
   );
 };
 

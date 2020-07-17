@@ -11,7 +11,7 @@ const codeHandlers = {
   202: "一个请求已经进入后台排队（异步任务）。",
   204: "删除数据成功。",
   400: async (response) => {
-    const data = await response.json();
+    const data = await response.data;
     const { message: msg = "系统错误" } = data;
     message.error(msg || "系统错误");
   },

@@ -1,10 +1,10 @@
 import React from "react";
 import Clock from "@/components/Clock";
+import ModuleContainer from "@/components/ModuleContainer";
 import {
   getNowFormatDate,
   getWeekDay,
   getLunarDate,
-  getTimeFrame,
 } from "@/utils/getDateTime";
 
 import styles from "./index.module.less";
@@ -16,21 +16,12 @@ const WeatherAndTime = (props) => {
     weekDay: getWeekDay(),
     lunar: getLunarDate(),
   };
-  const timeFrame = getTimeFrame();
   return (
-    <div className={styles.container}>
+    <ModuleContainer className={styles.container}>
       {/* 时间区域 */}
       <div className={styles.timeContainer}>
         {/* 时分 */}
-        <Clock className={styles.currentTime}>
-          {/* 上下午 */}
-          <span
-            className={styles.timeCommonStyle}
-            style={{ marginLeft: "10px" }}
-          >
-            {timeFrame}
-          </span>
-        </Clock>
+        <Clock className={styles.currentTime} needTimeFrame />
         {/* 日期、星期、农历 */}
         {Object.keys(timeData).map((item) => (
           <div className={styles.timeCommonStyle} key={item}>
@@ -45,7 +36,7 @@ const WeatherAndTime = (props) => {
           className={styles.temperature}
         >{`${weatherData.temperature}℃`}</div>
       </div>
-    </div>
+    </ModuleContainer>
   );
 };
 
