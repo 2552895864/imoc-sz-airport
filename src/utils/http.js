@@ -49,7 +49,6 @@ const responseHandler = (response) => {
  * 异常处理程序
  */
 const errorHandler = (response) => {
-  console.log(response);
   if (response && response.status) {
     responseHandler(response);
   } else if (!response) {
