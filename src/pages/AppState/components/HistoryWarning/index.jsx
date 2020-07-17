@@ -3,7 +3,7 @@ import CurveChart from "../CurveChart";
 
 import styles from "./index.module.less";
 
-const HistoryWarning = ({dataSource}) => {
+const HistoryWarning = ({ dataSource }) => {
   return (
     <div className={styles.container}>
       <CurveChart data={dataSource}></CurveChart>
