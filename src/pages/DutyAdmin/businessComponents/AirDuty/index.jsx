@@ -119,7 +119,7 @@ const AirDuty = ({
   ];
 
   useEffect(() => {
-    if (currentDutyMonth !== "") {
+    if (currentDutyMonth) {
       dispatch({
         type: "DutyAdmin/getWorkingScheduleList",
         payload: { month: currentDutyMonth },
