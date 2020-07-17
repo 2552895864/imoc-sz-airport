@@ -82,7 +82,7 @@ const StaffInfo = ({
   ];
 
   useEffect(() => {
-    if (currentDutyMonth !== "") {
+    if (currentDutyMonth !== "" && currentDutyMonth !== undefined)  {
       dispatch({
         type: "DutyAdmin/getStaffInfoByCondition",
         payload: { month: currentDutyMonth },
