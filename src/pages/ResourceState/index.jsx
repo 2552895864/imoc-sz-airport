@@ -33,7 +33,7 @@ import {
   normalizeLineChartData,
 } from "./utils/normalize";
 import getDatas from "./utils/getDatas";
-import { data as dataInstance } from "./utils/getData";
+import Data from "./data/Data";
 import config from "./config/config";
 import styles from "./index.module.less";
 
@@ -86,11 +86,13 @@ export default class ResourceState extends React.Component {
     try {
       const datas = await getDatas(DataFuncsMap);
       this.setState(datas);
-    } catch (err) {}
+    } catch (err) {
+      console.error(err);
+    }
   }
 
   async update() {
-    dataInstance.updateData();
+    Data.getInstance().updateData();
     await this.loadTickData();
     this.timer = setTimeout(this.update.bind(this), DATA_REFRESH_INTERVAL);
   }

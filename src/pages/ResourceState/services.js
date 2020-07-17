@@ -36,6 +36,10 @@ import axios from "@/utils/http";
 // }
 
 export async function query() {
-  const res = await axios.get("/api/real");
+  const res = await axios.get("/rs", {
+    params: {
+      time: "2020071211",
+    },
+  });
   return res;
 }
