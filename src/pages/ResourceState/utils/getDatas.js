@@ -6,6 +6,9 @@ export default async (DataFuncsMap) => {
    *
    * 注：DataFuncsMap的各个key必须与state的key对应
    */
+  /**
+   * results:[{resourceLineData:data1},{resourceSumData:data2}]
+   */
   const results = await Promise.all(
     Object.entries(DataFuncsMap).map(async ([key, value]) => {
       const data = await value.query();
@@ -14,9 +17,8 @@ export default async (DataFuncsMap) => {
       };
     })
   );
-  /**
-   * results:[{resourceLineData:data1},{resourceSumData:data2}]
-   */
+
+  // 对象数组 -> 对象
   return results.reduce((acc, val) => {
     return {
       ...acc,
