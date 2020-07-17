@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import classnames from "classnames";
-import { getCurrentHoursAndMinutes } from "@/utils/getDateTime";
+import { getCurrentHoursAndMinutes, getTimeFrame } from "@/utils/getDateTime";
 import styles from "./index.module.less";
 
-const Clock = ({ children, className }) => {
+const Clock = ({ children, className, needTimeFrame = false }) => {
   const clockClass = classnames({
     [className]: className,
     [styles.container]: true,
   });
+
   const [currentTime, setCurrentTime] = useState(getCurrentHoursAndMinutes());
   useEffect(() => {
     let clockTimer = null;
@@ -21,8 +22,11 @@ const Clock = ({ children, className }) => {
   }, []);
   return (
     <div className={clockClass}>
-      {currentTime}
-      {children}
+      <span className={styles.timeLabel}>{currentTime}</span>
+      {needTimeFrame ? (
+        <span className={styles.timeFrame}>{getTimeFrame()}</span>
+      ) : null}
+      {/* {children} */}
     </div>
   );
 };

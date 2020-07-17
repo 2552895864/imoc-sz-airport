@@ -4,7 +4,6 @@ import {
   getNowFormatDate,
   getWeekDay,
   getLunarDate,
-  getTimeFrame,
 } from "@/utils/getDateTime";
 
 import styles from "./index.module.less";
@@ -16,20 +15,19 @@ const WeatherAndTime = (props) => {
     weekDay: getWeekDay(),
     lunar: getLunarDate(),
   };
-  const timeFrame = getTimeFrame();
   return (
     <div className={styles.container}>
       {/* 时间区域 */}
       <div className={styles.timeContainer}>
         {/* 时分 */}
-        <Clock className={styles.currentTime}>
+        <Clock className={styles.currentTime} needTimeFrame>
           {/* 上下午 */}
-          <span
+          {/* <span
             className={styles.timeCommonStyle}
             style={{ marginLeft: "10px" }}
           >
             {timeFrame}
-          </span>
+          </span> */}
         </Clock>
         {/* 日期、星期、农历 */}
         {Object.keys(timeData).map((item) => (

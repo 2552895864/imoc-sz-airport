@@ -7,8 +7,11 @@ import Brief from "./components/Brief";
 import DutyListInfo from "./components/DutyListInfo";
 import DutyGroupInfo from "./components/DutyGroupInfo";
 
-import { getCurrentTimeStamp } from "@/utils/getDateTime";
-import dutyData from "@/data/dutyInfoByGroup1.json";
+import {
+  getCurrentTimeStamp,
+  getCurrentTimeStampByMonth,
+} from "@/utils/getDateTime";
+// import dutyData from "@/data/dutyInfoByGroup1.json";
 import weatherData from "@/data/天气.json";
 import dutyListData from "@/data/dutyList.json";
 import briefData from "@/data/简报通知.json";
@@ -34,44 +37,14 @@ class Duty extends React.Component {
   getDutyData = () => {
     const { dispatch } = this.props;
     dispatch({ type: "Duty/getLatestOneBrief" });
-  };
-  handleDutyData = () => {
-    const { currentTimeStamp } = this.state;
-    const staffByGroup = [];
-    const groupName = [
-      "机位/IOC",
-      "ROMA",
-      "大数据",
-      "云计算",
-      "视频安防",
-      "UCC",
-      "数通网络",
-      "LTE",
-    ];
-    // const currentTimeStamp = getCurrentTimeStamp();
-    const { rotaByDay, leaderList } = dutyData;
-
-    // console.log("currentTimeStamp:", currentTimeStamp);
-    const { staffList, leaderList: currentLeaderList } = rotaByDay.filter(
-      (item) => item.date === currentTimeStamp
-    )[0];
-
-    groupName.forEach((item) => {
-      staffByGroup.push({
-        [item]: [
-          ...staffList.filter((staff) => staff.staffGroup === item),
-          ...leaderList.filter((leader) => leader.staffGroup === item),
-        ],
-      });
+    dispatch({
+      type: "Duty/getWorkingScheduleList",
+      payload: { month: getCurrentTimeStampByMonth() },
     });
-    // console.log("staffList::", staffList);
-    // console.log("staffByGroup::", staffByGroup);
-
-    return { currentLeaderList, staffByGroup };
   };
-
+  
   render() {
-    const { currentLeaderList, staffByGroup } = this.handleDutyData();
+    const { currentLeaderList, staffByGroup } = this.props;
     return (
       <PageContainer title="统一运维值班表" needTimeZone={false}>
         {/* 上部信息 */}

@@ -18,9 +18,9 @@ const WorkingSchedule = ({
 }) => {
   const [visible, setVisible] = useState(false);
   const [selectedUpdateInfo, setSelectedUpdateInfo] = useState("");
+  const [selectedStaffInfo, setSelectedStaffInfo] = useState("");
 
   const handleOpenUpdateModal = (record, groupName) => {
-    setVisible(true);
     const { date, type } = record;
     const groupLabel = groupName ? `${groupName}组` : "";
     const levelLabel = `值班${groupName ? "人员" : "组长"}`;
@@ -30,7 +30,12 @@ const WorkingSchedule = ({
           (staff) => staff.staffGroup === groupName
         )[0]
       : _.get(record, "leader", [])[0];
-    selectedUpdateId = _.get(selectedStaff, "id", "");
+
+    const { id, staffMobile, staffName } = selectedStaff;
+
+    selectedUpdateId = id;
+    setVisible(true);
+    setSelectedStaffInfo({ staffMobile, staffName });
     setSelectedUpdateInfo(`更新 ${date} ${type} ${groupLabel} ${levelLabel}`);
   };
   const handleHideUpdateModal = () => {
@@ -38,6 +43,7 @@ const WorkingSchedule = ({
     selectedUpdateId = "";
   };
   const confirmUpdateAction = async ({ staffMobile, staffName }) => {
+    // console.log("staffMobile:", staffMobile, " staffName:", staffName);
     const result = await dispatch({
       type: "DutyAdmin/updateWorkingScheduleList",
       payload: { id: selectedUpdateId, staffMobile, staffName },
@@ -153,6 +159,7 @@ const WorkingSchedule = ({
         updateInfo={selectedUpdateInfo}
         confirmLoading={updateWorkingScheduleListLoading}
         confirmAction={confirmUpdateAction}
+        initialValue={selectedStaffInfo}
       />
     </>
   );

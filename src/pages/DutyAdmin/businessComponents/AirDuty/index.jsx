@@ -17,13 +17,16 @@ const AirDuty = ({
 }) => {
   const [visible, setVisible] = useState(false);
   const [selectedUpdateInfo, setSelectedUpdateInfo] = useState("");
+  const [initialValue, setInitialValue] = useState({});
 
-  const handleOpenUpdateModal = (id, record, groupName) => {
-    setVisible(true);
+  const handleOpenUpdateModal = (staff, record, groupName) => {
     const { date } = record;
+    const { id, staffName, staffMobile } = staff;
     const finalGroupName = groupName === "manager" ? "通讯" : groupName;
     const groupLabel = finalGroupName ? `${finalGroupName}值班人员` : "";
     selectedUpdateId = id;
+    setVisible(true);
+    setInitialValue({ staffName, staffMobile });
     setSelectedUpdateInfo(`更新 ${date} ${groupLabel}`);
   };
   const handleHideUpdateModal = () => {
@@ -51,7 +54,7 @@ const AirDuty = ({
               type="link"
               className={styles.staffName}
               onClick={() => {
-                handleOpenUpdateModal(staff.id, record, groupName);
+                handleOpenUpdateModal(staff, record, groupName);
               }}
             >
               {_.get(staff, "staffName", "-")}
@@ -139,7 +142,9 @@ const AirDuty = ({
         loading={workingScheduleListLoading}
       />
       <StaffSelectModal
+        mode="input"
         visible={visible}
+        initialValue={initialValue}
         onCancel={handleHideUpdateModal}
         title="修改机场值班信息"
         updateInfo={selectedUpdateInfo}

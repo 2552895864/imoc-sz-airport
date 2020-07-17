@@ -58,7 +58,6 @@ const Brief = ({ dispatch, briefList, briefLoading, updateBriefLoading }) => {
       createTime: getTimeFormatFromTTime(createTime),
       content,
     };
-    // console.log("asdasdasdasda:::::::::", convertPreviewData(content));
     setPreviewData(convertPreviewData(content));
     updateModalRef.current.form.setFieldsValue(newRecord);
     updateModalRef.current.showModal();

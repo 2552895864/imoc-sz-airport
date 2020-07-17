@@ -72,6 +72,29 @@ const handleWorkingScheduleList = (data) => {
   return { workingScheduleList, workingScheduleListForManager };
 };
 
+const orderStaffList = (data) => {
+  const finalStaffList = [];
+  const leaderList = data.filter((item) => item.leader);
+  const memberList = data.filter((item) => !item.leader);
+  const groupName = [
+    "机位/IOC",
+    "ROMA",
+    "大数据",
+    "云计算",
+    "视频安防",
+    "UCC",
+    "数通网络",
+    "LTE",
+  ];
+  groupName.forEach((name) => {
+    const leader = leaderList.filter((i) => i.staffGroup === name);
+    const member = memberList.filter((i) => i.staffGroup === name);
+    const arr = [...leader, ...member];
+    finalStaffList.push(...arr);
+  });
+  return finalStaffList;
+};
+
 export default {
   namespace: "DutyAdmin",
   state: {
@@ -187,7 +210,7 @@ export default {
         yield put({
           type: "save",
           payload: {
-            staffList: data,
+            staffList: orderStaffList(data),
             leaderList: data.filter((staff) => staff.leader),
             staffListLoading: false,
           },
