@@ -1,7 +1,12 @@
 import React from "react";
 import PageContainer from "@/components/PageContainer";
 import ModuleContainer from "@/components/ModuleContainer";
+<<<<<<< HEAD
+import CurveChart from "./components/CurveChart";
+=======
+>>>>>>> 9d81de393cc5bc52dadfed8dc6d1c91d4947c629
 import Pie from "@/components/PieChart";
+import GaugeChart from "./components/GaugeChart";
 
 import CurrentWarning from "./components/CurrentWarning";
 import HistoryWarning from "./components/HistoryWarning";
@@ -19,6 +24,7 @@ export default class AppState extends React.Component {
               <CurrentWarning />
             </ModuleContainer>
             <ModuleContainer className={styles.historyWarning} title="历史告警">
+              <CurveChart data={lineChartData}></CurveChart>
               <HistoryWarning dataSource={lineChartData} />
             </ModuleContainer>
             <ModuleContainer className={styles.topFive} title="应用性能Top5">
@@ -30,7 +36,7 @@ export default class AppState extends React.Component {
               <Pie sumCount={205}></Pie>
             </ModuleContainer>
             <ModuleContainer className={styles.businessApp} title="业务应用">
-              <p>ff</p>
+              <GaugeChart percent={56}></GaugeChart>
             </ModuleContainer>
           </div>
         </div>

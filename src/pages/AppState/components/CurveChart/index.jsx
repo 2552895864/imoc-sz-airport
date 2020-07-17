@@ -3,7 +3,7 @@ import LineChart from "@/components/LineChart";
 import options from "./config/options.json";
 import styles from "./index.module.less";
 
-const Chart = ({ data }) => {
+const CurveChart = ({ data }) => {
   return (
     <LineChart
       className={styles.chart}
@@ -15,4 +15,4 @@ const Chart = ({ data }) => {
   );
 };
 
-export default Chart;
+export default CurveChart;
