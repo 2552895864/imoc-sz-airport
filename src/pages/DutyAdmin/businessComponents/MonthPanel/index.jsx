@@ -4,7 +4,12 @@ import { Select, Button } from "antd";
 
 const { Option } = Select;
 
-const MonthPanel = ({ dispatch, dutyMonthList, currentDutyMonth }) => {
+const MonthPanel = ({
+  dispatch,
+  dutyMonthList,
+  currentDutyMonth,
+  workingScheduleListLoading,
+}) => {
   const handleChange = (value) => {
     dispatch({
       type: "DutyAdmin/save",
@@ -29,6 +34,7 @@ const MonthPanel = ({ dispatch, dutyMonthList, currentDutyMonth }) => {
         value={currentDutyMonth}
         style={{ width: 120, marginRight: "10px" }}
         onChange={handleChange}
+        disabled={workingScheduleListLoading}
       >
         {dutyMonthList.map((item) => (
           <Option value={item} key={item}>

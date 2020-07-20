@@ -7,6 +7,7 @@ import SliderChart from "@/components/SliderChart";
 
 import CurrentWarning from "./components/CurrentWarning";
 import HistoryWarning from "./components/HistoryWarning";
+import TopFive from "./components/TopFive";
 
 import lineChartData from "@/data/appLineChart.json";
 import pieChartData from "@/data/flowPieChartData.json";
@@ -25,7 +26,7 @@ export default class AppState extends React.Component {
               <HistoryWarning dataSource={lineChartData} />
             </ModuleContainer>
             <ModuleContainer className={styles.topFive} title="应用性能Top5">
-              <p>ff</p>
+              <TopFive />
             </ModuleContainer>
           </div>
           <div className={styles.right}>
