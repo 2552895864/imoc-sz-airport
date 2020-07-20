@@ -10,6 +10,7 @@ import HistoryWarning from "./components/HistoryWarning";
 import TopFive from "./components/TopFive";
 
 import lineChartData from "@/data/appLineChart.json";
+import pieChartData from "@/data/flowPieChartData.json";
 import styles from "./index.module.less";
 
 export default class AppState extends React.Component {
@@ -30,7 +31,7 @@ export default class AppState extends React.Component {
           </div>
           <div className={styles.right}>
             <ModuleContainer className={styles.rightTop} title="操作系统">
-              <Pie sumCount={205}></Pie>
+              <Pie data={pieChartData} sumCount={205}></Pie>
             </ModuleContainer>
             <ModuleContainer className={styles.businessApp} title="业务应用">
               <GaugeChart percent={88}></GaugeChart>

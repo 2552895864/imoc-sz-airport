@@ -9,18 +9,13 @@ import {
 } from "bizcharts";
 import DataSet from "@antv/data-set";
 
-const userData = [
-  { type: "睡眠", value: 70 },
-  { type: "淡茶 & 烟斗 & 冥想", value: 10 },
-  { type: "写作", value: 10 },
-  { type: "教课", value: 40 },
-  { type: "酒吧吃肉配白酒", value: 40 },
-  { type: "散步", value: 10 },
-  { type: "拜访马大大", value: 30 },
-  { type: "阅读", value: 30 },
-];
-
-const PieChart = ({ height = 250, data = userData, sumCount = 0 }) => {
+const PieChart = ({
+  width,
+  height = 250,
+  data = [],
+  sumCount = 0,
+  itemWidth = 120,
+}) => {
   const { DataView } = DataSet;
 
   const userDv = new DataView();
@@ -34,6 +29,7 @@ const PieChart = ({ height = 250, data = userData, sumCount = 0 }) => {
   return (
     <Chart
       placeholder={false}
+      width={width ? width : undefined}
       height={height}
       padding={50}
       autoFit
@@ -48,13 +44,28 @@ const PieChart = ({ height = 250, data = userData, sumCount = 0 }) => {
     >
       <Geom type="interval" position="percent" color="type"></Geom>
       <Legend
+        offsetX={-20}
         visible={true}
         position="right"
-        marker={{ symbol: "square" }}
+        marker={{ symbol: "square", style: { r: 8 } }}
+        itemWidth={itemWidth}
+        itemHeight={35}
         itemName={{
           style: {
+            fontFamily: "MicrosoftYaHei",
+            fontSize: 16,
             fill: "#ffffff",
           },
+        }}
+        itemValue={{
+          alignRight: true,
+          style: {
+            fontFamily: "MicrosoftYaHei",
+            fontSize: 16,
+            fill: "#ffffff",
+          },
+          formatter: (text, item, index) =>
+            `${data.filter((item) => item.type === text)[0].value}`,
         }}
       />
       <Coordinate type="theta" innerRadius={0.75} />
@@ -63,7 +74,8 @@ const PieChart = ({ height = 250, data = userData, sumCount = 0 }) => {
         position={["50%", "45%"]}
         content={sumCount + ""}
         style={{
-          fontSize: "24",
+          fontFamily: "ArialMT",
+          fontSize: "32",
           fill: "#ffffff",
           textAlign: "center",
         }}
@@ -72,7 +84,8 @@ const PieChart = ({ height = 250, data = userData, sumCount = 0 }) => {
         position={["50%", "65%"]}
         content="总数"
         style={{
-          fontSize: "12",
+          fontFamily: "MicrosoftYaHei",
+          fontSize: "16",
           fill: "#ffffff",
           textAlign: "center",
         }}

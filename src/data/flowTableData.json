@@ -1,0 +1,20 @@
+{
+  "number": {
+    "low": 613,
+    "normal": 525,
+    "important": 424,
+    "urgent": 225
+  },
+  "avg": {
+    "low": 113,
+    "normal": 425,
+    "important": 324,
+    "urgent": 125
+  },
+  "percent": {
+    "low": "21%",
+    "normal": "52%",
+    "important": "46%",
+    "urgent": "85%"
+  }
+}
