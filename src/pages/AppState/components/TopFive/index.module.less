@@ -1,0 +1,89 @@
+.container {
+  color: white;
+
+  .top {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin-top     : 24px;
+
+    .line {
+      width     : 96px;
+      height    : 1px;
+      background: white;
+      display   : inline-block;
+      background: #0099FF;
+    }
+
+    .radio {
+      display: inline-block;
+
+      .fontCommon {
+        font-family   : Helvetica;
+        font-size     : 16px;
+        letter-spacing: 0;
+        text-align    : center;
+      }
+
+      .itemClassName {
+        .fontCommon;
+        background  : rgba(0, 137, 255, 0.4);
+        width       : 80px;
+        height      : 30px;
+        color       : rgba(255, 255, 255, 0.70);
+        margin-right: 2px;
+      }
+
+      .itemSelectClassName {
+        .fontCommon;
+        background: rgba(0, 153, 255, 1);
+        color     : #FFFFFF;
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: 28px;
+    .bottomTitle{
+      .bottomTitleNameLabel{
+        
+      }
+    }
+  }
+
+  .processContainer {
+    display    : flex;
+    align-items: center;
+
+    .processLabel {
+      width       : 154px;
+      font-size   : 14px;
+      margin-right: 10px;
+      display     : inline-block;
+      text-align  : right;
+    }
+
+    .processBox {
+      background  : rgba(0, 117, 255, 0.3);
+      width       : 280px;
+      height      : 16px;
+      display     : inline-block;
+      margin-right: 10px;
+      position    : relative;
+    }
+
+    .processInner {
+      height    : 16px;
+      width     : 180px;
+      display   : inline-block;
+      background: #0096FF;
+      position  : absolute;
+      right     : 213px;
+    }
+  }
+
+  // .radio::before {
+  //   content: ".";
+  // }
+
+}

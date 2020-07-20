@@ -1,6 +1,6 @@
 import React from "react";
 import ModuleLayout from "./components/ModuleLayout";
-import Radio from "./components/Radio";
+import Radio from "@/components/Radio";
 
 // import DownUp from "./businessComponents/DownUp";
 import MonthPanel from "./businessComponents/MonthPanel";
