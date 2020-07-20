@@ -19,6 +19,7 @@ export default class FlowSubject extends React.Component {
             <div className={styles.title}>事件管理</div>
             <ModuleContainer className={styles.eventManage} title="">
               <div className={styles.content}>
+                <div className={styles.eventOverview}></div>
                 <div className={styles.pieChart}>
                   <PieChart
                     width={680}
